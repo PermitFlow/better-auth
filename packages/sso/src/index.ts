@@ -300,10 +300,12 @@ export const sso = (options?: SSOOptions) => {
 										description:
 											"The field in the user info response that contains whether the email is verified. defaults to 'email_verified'",
 									})
-									.optional(),
-								name: z.string({
-									description:
-										"The field in the user info response that contains the name. Defaults to 'name'",
+									.optional(),								
+								firstName: z.string({
+									description: "The field in the user info response that contains the first name. Defaults to 'givenName'"
+								}),
+								lastName: z.string({
+									description: "The field in the user info response that contains the last name. Defaults to 'surname'"
 								}),
 								image: z
 									.string({
@@ -564,6 +566,7 @@ export const sso = (options?: SSOOptions) => {
 										privateKey: body.samlConfig.privateKey,
 										decryptionPvk: body.samlConfig.decryptionPvk,
 										additionalParams: body.samlConfig.additionalParams,
+										mapping: body.mapping
 									})
 								: null,
 							organizationId: body.organizationId,
@@ -816,6 +819,8 @@ export const sso = (options?: SSOOptions) => {
 						const sp = saml.ServiceProvider({
 							metadata: parsedSamlConfig.spMetadata.metadata,
 							allowCreate: true,
+              requestSignatureAlgorithm: parsedSamlConfig.spMetadata.requestSignatureAlgorithm,
+              privateKey: parsedSamlConfig.spMetadata.privateKey
 						});
 						const idp = saml.IdentityProvider({
 							metadata: parsedSamlConfig.idpMetadata.metadata,
@@ -1245,13 +1250,8 @@ export const sso = (options?: SSOOptions) => {
 						),
 						id: attributes[mapping.id || "nameID"],
 						email: attributes[mapping.email || "nameID" || "email"],
-						name:
-							[
-								attributes[mapping.firstName || "givenName"],
-								attributes[mapping.lastName || "surname"],
-							]
-								.filter(Boolean)
-								.join(" ") || parsedResponse.extract.attributes?.displayName,
+						firstName: attributes[mapping.firstName || "givenName"],
+            lastName: attributes[mapping.lastName || "surname"],
 						attributes: parsedResponse.extract.attributes,
 					};
 
@@ -1274,7 +1274,8 @@ export const sso = (options?: SSOOptions) => {
 							model: "user",
 							data: {
 								email: userInfo.email,
-								name: userInfo.name,
+								firstName: userInfo.firstName,
+                lastName: userInfo.lastName,
 								emailVerified: true,
 							},
 						});
