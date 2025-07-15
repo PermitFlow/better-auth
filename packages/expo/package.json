@@ -47,7 +47,6 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@better-fetch/fetch": "catalog:",
     "better-auth": "workspace:*",
     "better-sqlite3": "^11.6.0",
     "expo-constants": "~17.0.8",
@@ -62,8 +61,8 @@
     "better-auth": "workspace:*"
   },
   "dependencies": {
-    "@better-fetch/fetch": "catalog:",
-    "better-call": "catalog:",
+    "@better-fetch/fetch": "^1.1.18",
+    "better-call": "^1.0.12",
     "zod": "^3.23.8"
   },
   "files": [
