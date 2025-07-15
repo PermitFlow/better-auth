@@ -7,8 +7,7 @@
     "dev": "pnpx @better-auth/cli migrate && nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "prepare": "npm run build"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@radix-icons/vue": "^1.0.0",

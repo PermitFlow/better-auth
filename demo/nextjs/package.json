@@ -8,8 +8,7 @@
     "typecheck": "tsc --noEmit",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prepare": "npm run build"
+    "lint": "next lint"
   },
   "dependencies": {
     "@better-auth/stripe": "https://gitpkg.now.sh/PermitFlow/better-auth/packages/stripe?v1.3",

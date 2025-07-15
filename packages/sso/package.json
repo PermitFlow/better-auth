@@ -23,7 +23,7 @@
         "build": "unbuild",
         "typecheck": "tsc --noEmit",
         "dev": "unbuild --watch",
-        "prepare": "npm run build"
+        "install": "npm run build"
     },
     "exports": {
         ".": {
