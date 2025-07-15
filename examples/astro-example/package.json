@@ -7,7 +7,8 @@
     "dev": "pnpm migrate:auth && astro dev --port 3000",
     "migrate:auth": "pnpx @better-auth/cli migrate",
     "build": "astro check && astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "@ark-ui/solid": "^3.13.0",

@@ -14,7 +14,8 @@
     "build": "unbuild",
     "stub": "unbuild --stub",
     "start": "node ./dist/index.mjs",
-    "test": "vitest"
+    "test": "vitest",
+    "prepare": "npm run build"
   },
   "publishConfig": {
     "executableFiles": [
