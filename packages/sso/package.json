@@ -48,7 +48,7 @@
     },
     "dependencies": {
         "@better-fetch/fetch": "^1.1.18",
-        "better-auth": "workspace:^",
+        "better-auth": "https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3",
         "fast-xml-parser": "^5.2.5",
         "jose": "^5.9.6",
         "oauth2-mock-server": "^7.2.0",
