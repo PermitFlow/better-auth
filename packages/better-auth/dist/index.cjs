@@ -1,0 +1,58 @@
+'use strict';
+
+const auth = require('./shared/better-auth.B7DsbyxZ.cjs');
+const index = require('./shared/better-auth.ANpbi45u.cjs');
+const misc = require('./shared/better-auth.BLDOwz3i.cjs');
+const socialProviders_index = require('./shared/better-auth.Di4b3h9T.cjs');
+const logger = require('./shared/better-auth.CXhVNgXP.cjs');
+require('./api/index.cjs');
+require('better-call');
+require('zod');
+require('./cookies/index.cjs');
+require('./shared/better-auth.C1hdVENX.cjs');
+require('./shared/better-auth.DiSjtgs9.cjs');
+require('@better-auth/utils/base64');
+require('@better-auth/utils/hmac');
+require('./shared/better-auth.D3mtHEZg.cjs');
+require('./shared/better-auth.C-R0J0n1.cjs');
+require('@better-auth/utils/binary');
+require('./shared/better-auth.DcWKCjjf.cjs');
+require('./shared/better-auth.B7cZ2juS.cjs');
+require('defu');
+require('./shared/better-auth.YUF6P-PB.cjs');
+require('@noble/hashes/scrypt');
+require('@better-auth/utils');
+require('@better-auth/utils/hex');
+require('@noble/hashes/utils');
+require('./shared/better-auth.CTYN90cw.cjs');
+require('@better-auth/utils/hash');
+require('@noble/ciphers/chacha');
+require('@noble/ciphers/utils');
+require('@noble/ciphers/webcrypto');
+require('jose');
+require('./shared/better-auth.CYeOI8C-.cjs');
+require('@better-auth/utils/random');
+require('./shared/better-auth.BEphVDyL.cjs');
+require('./shared/better-auth._dAJf_oa.cjs');
+require('kysely');
+require('./shared/better-auth.CGOCIshw.cjs');
+require('./shared/better-auth.CkL-IpXS.cjs');
+require('./shared/better-auth.CDXNofOe.cjs');
+require('@better-fetch/fetch');
+require('./shared/better-auth.BMYo0QR-.cjs');
+require('jose/errors');
+
+
+
+exports.betterAuth = auth.betterAuth;
+exports.BetterAuthError = index.BetterAuthError;
+exports.MissingDependencyError = index.MissingDependencyError;
+exports.capitalizeFirstLetter = misc.capitalizeFirstLetter;
+exports.HIDE_METADATA = socialProviders_index.HIDE_METADATA;
+exports.generateState = socialProviders_index.generateState;
+exports.parseState = socialProviders_index.parseState;
+exports.createLogger = logger.createLogger;
+exports.generateId = logger.generateId;
+exports.levels = logger.levels;
+exports.logger = logger.logger;
+exports.shouldPublishLog = logger.shouldPublishLog;
