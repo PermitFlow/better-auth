@@ -14,8 +14,7 @@
     "test": "vitest",
     "build": "unbuild --clean",
     "dev": "unbuild --watch",
-    "stub": "unbuild --stub",
-    "prepare": "npm run build"
+    "stub": "unbuild --stub"
   },
   "exports": {
     ".": {

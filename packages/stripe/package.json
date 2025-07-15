@@ -15,8 +15,7 @@
     "test": "vitest",
     "build": "unbuild",
     "typecheck": "tsc --noEmit",
-    "dev": "unbuild --watch",
-    "prepare": "npm run build"
+    "dev": "unbuild --watch"
   },
   "exports": {
     ".": {
