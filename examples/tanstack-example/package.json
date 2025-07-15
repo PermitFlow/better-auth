@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "start": "vinxi start"
+    "start": "vinxi start",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
