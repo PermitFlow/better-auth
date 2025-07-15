@@ -11,7 +11,7 @@
   "dependencies": {
     "@types/better-sqlite3": "^7.6.12",
     "@vercel/mcp-adapter": "^0.4.1",
-    "better-auth": "workspace:^",
+    "better-auth": "https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3",
     "better-sqlite3": "^11.6.0",
     "next": "15.3.2",
     "react": "^19.0.0",

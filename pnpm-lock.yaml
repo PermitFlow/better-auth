@@ -348,8 +348,8 @@ importers:
   dev/cloudflare:
     dependencies:
       better-auth:
-        specifier: workspace:^
-        version: link:../../packages/better-auth
+        specifier: https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3
+        version: https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       drizzle-orm:
         specifier: ^0.39.3
         version: 0.39.3(@cloudflare/workers-types@4.20250531.0)(@libsql/client@0.12.0)(@prisma/client@5.22.0(prisma@5.22.0))(@types/better-sqlite3@7.6.13)(@types/pg@8.15.2)(better-sqlite3@11.10.0)(bun-types@1.2.18(@types/react@19.1.6))(kysely@0.28.2)(mysql2@3.14.1)(pg@8.16.0)(prisma@5.22.0)
@@ -890,8 +890,8 @@ importers:
         specifier: ^0.4.1
         version: 0.4.1(next@15.3.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.89.1))
       better-auth:
-        specifier: workspace:^
-        version: link:../../packages/better-auth
+        specifier: https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3
+        version: https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       better-sqlite3:
         specifier: ^11.6.0
         version: 11.10.0
@@ -1699,8 +1699,8 @@ importers:
         specifier: ^1.1.18
         version: 1.1.18
       better-auth:
-        specifier: workspace:^
-        version: link:../better-auth
+        specifier: https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3
+        version: https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       fast-xml-parser:
         specifier: ^5.2.5
         version: 5.2.5
@@ -1733,8 +1733,8 @@ importers:
   packages/stripe:
     dependencies:
       better-auth:
-        specifier: workspace:^
-        version: link:../better-auth
+        specifier: https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3
+        version: https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       zod:
         specifier: ^3.24.1
         version: 3.25.42
