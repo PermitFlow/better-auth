@@ -1,0 +1,19 @@
+import { A as AdapterDebugLogs, B as BetterAuthOptions, a as Adapter } from '../../shared/better-auth.jTQrz0eG.mjs';
+import '../../shared/better-auth.9XhOL8gb.mjs';
+import 'zod';
+import '../../shared/better-auth.uZ__EClU.mjs';
+import 'kysely';
+import 'better-call';
+import 'better-sqlite3';
+import 'bun:sqlite';
+
+interface MemoryDB {
+    [key: string]: any[];
+}
+interface MemoryAdapterConfig {
+    debugLogs?: AdapterDebugLogs;
+}
+declare const memoryAdapter: (db: MemoryDB, config?: MemoryAdapterConfig) => (options: BetterAuthOptions) => Adapter;
+
+export { memoryAdapter };
+export type { MemoryAdapterConfig, MemoryDB };
