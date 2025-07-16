@@ -960,7 +960,8 @@ const sso = (options) => {
                 email: userInfo.email,
                 firstName: userInfo.firstName,
                 lastName: userInfo.lastName,
-                emailVerified: true
+                emailVerified: true,
+                password: ""
               }
             });
           }

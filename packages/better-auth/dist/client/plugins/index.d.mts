@@ -11,16 +11,16 @@ export { twoFactorClient } from '../../plugins/two-factor/index.mjs';
 import { magicLink } from '../../plugins/magic-link/index.mjs';
 import { phoneNumber } from '../../plugins/phone-number/index.mjs';
 import { anonymous } from '../../plugins/anonymous/index.mjs';
-import { a4 as FieldAttribute, B as BetterAuthOptions, h as BetterAuthPlugin } from '../../shared/better-auth.jTQrz0eG.mjs';
+import { a4 as FieldAttribute, B as BetterAuthOptions, h as BetterAuthPlugin } from '../../shared/better-auth.Nl2UAmQc.mjs';
 import { admin } from '../../plugins/admin/index.mjs';
 import { genericOAuth } from '../../plugins/generic-oauth/index.mjs';
 import { jwt } from '../../plugins/jwt/index.mjs';
 import { multiSession } from '../../plugins/multi-session/index.mjs';
 import { emailOTP } from '../../plugins/email-otp/index.mjs';
-import { S as Store } from '../../shared/better-auth.DALH6WQN.mjs';
+import { S as Store } from '../../shared/better-auth.DApgpj9N.mjs';
 import { sso } from '../../plugins/sso/index.mjs';
 import { oidcProvider } from '../../plugins/oidc-provider/index.mjs';
-import { a as apiKey } from '../../shared/better-auth.Bf3GQ5cB.mjs';
+import { a as apiKey } from '../../shared/better-auth.B_v5MpQB.mjs';
 import { oneTimeToken } from '../../plugins/one-time-token/index.mjs';
 export * from '@simplewebauthn/server';
 export { global } from '@simplewebauthn/server';
@@ -71,8 +71,8 @@ declare const organizationClient: <O extends OrganizationClientOptions>(options?
                 teams: Team[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -81,8 +81,8 @@ declare const organizationClient: <O extends OrganizationClientOptions>(options?
                 invitations: InferInvitation<O>[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -146,8 +146,8 @@ declare const organizationClient: <O extends OrganizationClientOptions>(options?
         activeOrganization: nanostores.PreinitializedWritableAtom<{
             data: Prettify<{
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -170,8 +170,8 @@ declare const organizationClient: <O extends OrganizationClientOptions>(options?
         listOrganizations: nanostores.PreinitializedWritableAtom<{
             data: {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;

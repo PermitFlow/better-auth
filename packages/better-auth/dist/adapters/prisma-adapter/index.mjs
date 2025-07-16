@@ -23,7 +23,8 @@ const prismaAdapter = (prisma, config) => createAdapter({
     adapterId: "prisma",
     adapterName: "Prisma Adapter",
     usePlural: config.usePlural ?? false,
-    debugLogs: config.debugLogs ?? false
+    debugLogs: config.debugLogs ?? false,
+    disableIdGeneration: config.disableIdGeneration ?? false
   },
   adapter: ({ getFieldName }) => {
     const db = prisma;

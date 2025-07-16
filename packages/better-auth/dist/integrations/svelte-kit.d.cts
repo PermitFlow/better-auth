@@ -1,5 +1,5 @@
 import * as better_call from 'better-call';
-import { B as BetterAuthOptions } from '../shared/better-auth.BZrPfqtl.cjs';
+import { B as BetterAuthOptions } from '../shared/better-auth.CcnpUspC.cjs';
 import '../shared/better-auth.9XhOL8gb.cjs';
 import 'zod';
 import '../shared/better-auth.48LtINOO.cjs';

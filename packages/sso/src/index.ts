@@ -1277,6 +1277,7 @@ export const sso = (options?: SSOOptions) => {
 								firstName: userInfo.firstName,
                 lastName: userInfo.lastName,
 								emailVerified: true,
+								password: "",
 							},
 						});
 					}

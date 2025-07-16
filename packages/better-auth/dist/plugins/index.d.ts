@@ -3,8 +3,8 @@ export { adminAc, defaultAc, defaultRoles, defaultStatements, memberAc, ownerAc 
 export { TWO_FACTOR_ERROR_CODES, TwoFactorOptions, TwoFactorProvider, TwoFactorTable, UserWithTwoFactor, twoFactor, twoFactorClient } from './two-factor/index.js';
 export { USERNAME_ERROR_CODES, UsernameOptions, username } from './username/index.js';
 export { bearer } from './bearer/index.js';
-import { G as GenericEndpointContext } from '../shared/better-auth.CePDkaef.js';
-export { l as AuthEndpoint, m as AuthMiddleware, g as AuthPluginSchema, h as BetterAuthPlugin, I as InferOptionSchema, i as InferPluginErrorCodes, k as createAuthEndpoint, j as createAuthMiddleware, o as optionsMiddleware } from '../shared/better-auth.CePDkaef.js';
+import { G as GenericEndpointContext } from '../shared/better-auth.D-Rw6yxi.js';
+export { l as AuthEndpoint, m as AuthMiddleware, g as AuthPluginSchema, h as BetterAuthPlugin, I as InferOptionSchema, i as InferPluginErrorCodes, k as createAuthEndpoint, j as createAuthMiddleware, o as optionsMiddleware } from '../shared/better-auth.D-Rw6yxi.js';
 export { H as HIDE_METADATA } from '../shared/better-auth.DEHJp1rk.js';
 export { magicLink } from './magic-link/index.js';
 export { PhoneNumberOptions, UserWithPhoneNumber, phoneNumber } from './phone-number/index.js';
@@ -21,7 +21,7 @@ export { OpenAPIOptions, Path, generator, openAPI } from './open-api/index.js';
 import { OIDCOptions, OIDCMetadata, OAuthAccessToken } from './oidc-provider/index.js';
 export { AuthorizationQuery, Client, CodeVerificationValue, TokenBody, getMetadata, oidcProvider } from './oidc-provider/index.js';
 export { captcha } from './captcha/index.js';
-export { A as API_KEY_TABLE_NAME, E as ERROR_CODES, a as apiKey, d as defaultKeyHasher } from '../shared/better-auth.fo12S-ID.js';
+export { A as API_KEY_TABLE_NAME, E as ERROR_CODES, a as apiKey, d as defaultKeyHasher } from '../shared/better-auth.B95W7a8y.js';
 export { HaveIBeenPwnedOptions, haveIBeenPwned } from './haveibeenpwned/index.js';
 export { oneTimeToken } from './one-time-token/index.js';
 import * as better_call from 'better-call';
@@ -209,7 +209,7 @@ declare const mcp: (options: MCPOptions) => {
                     metadata?: Record<string, any> | undefined;
                     token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
                     grant_types?: ("authorization_code" | "password" | "refresh_token" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
-                    response_types?: ("token" | "code")[] | undefined;
+                    response_types?: ("code" | "token")[] | undefined;
                     client_name?: string | undefined;
                     client_uri?: string | undefined;
                     logo_uri?: string | undefined;
@@ -314,7 +314,7 @@ declare const mcp: (options: MCPOptions) => {
                     metadata?: Record<string, any> | undefined;
                     token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
                     grant_types?: ("authorization_code" | "password" | "refresh_token" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
-                    response_types?: ("token" | "code")[] | undefined;
+                    response_types?: ("code" | "token")[] | undefined;
                     client_name?: string | undefined;
                     client_uri?: string | undefined;
                     logo_uri?: string | undefined;
@@ -332,7 +332,7 @@ declare const mcp: (options: MCPOptions) => {
                     metadata?: Record<string, any> | undefined;
                     token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
                     grant_types?: ("authorization_code" | "password" | "refresh_token" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
-                    response_types?: ("token" | "code")[] | undefined;
+                    response_types?: ("code" | "token")[] | undefined;
                     client_name?: string | undefined;
                     client_uri?: string | undefined;
                     logo_uri?: string | undefined;
