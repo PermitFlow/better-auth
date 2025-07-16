@@ -1,7 +1,7 @@
 import { AccessControl, Role, Statements } from '../access/index.cjs';
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { I as InferOptionSchema, G as GenericEndpointContext, H as HookEndpointContext, S as Session, U as User } from '../../shared/better-auth.DuZhOx-a.cjs';
+import { I as InferOptionSchema, G as GenericEndpointContext, H as HookEndpointContext, S as Session, U as User } from '../../shared/better-auth.D1pp6p2v.cjs';
 import '../../shared/better-auth.9XhOL8gb.cjs';
 import '../../shared/better-auth.48LtINOO.cjs';
 import 'kysely';
@@ -95,8 +95,7 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                             updatedAt: Date;
                             email: string;
                             emailVerified: boolean;
-                            firstName: string;
-                            lastName: string;
+                            name: string;
                             image?: string | null | undefined;
                         }): Promise<{
                             data: {
@@ -105,8 +104,7 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                                 updatedAt: Date;
                                 email: string;
                                 emailVerified: boolean;
-                                firstName: string;
-                                lastName: string;
+                                name: string;
                                 image?: string | null | undefined;
                                 role: string;
                             };
@@ -326,9 +324,9 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                 method?: "GET" | undefined;
             } & {
                 query: {
-                    sortBy?: string | undefined;
                     limit?: string | number | undefined;
                     offset?: string | number | undefined;
+                    sortBy?: string | undefined;
                     searchValue?: string | undefined;
                     searchField?: "email" | "name" | undefined;
                     searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
@@ -391,9 +389,9 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     filterValue: z.ZodOptional<z.ZodUnion<[z.ZodUnion<[z.ZodString, z.ZodNumber]>, z.ZodBoolean]>>;
                     filterOperator: z.ZodOptional<z.ZodEnum<["eq", "ne", "lt", "lte", "gt", "gte", "contains"]>>;
                 }, "strip", z.ZodTypeAny, {
-                    sortBy?: string | undefined;
                     limit?: string | number | undefined;
                     offset?: string | number | undefined;
+                    sortBy?: string | undefined;
                     searchValue?: string | undefined;
                     searchField?: "email" | "name" | undefined;
                     searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
@@ -402,9 +400,9 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     filterValue?: string | number | boolean | undefined;
                     filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
                 }, {
-                    sortBy?: string | undefined;
                     limit?: string | number | undefined;
                     offset?: string | number | undefined;
+                    sortBy?: string | undefined;
                     searchValue?: string | undefined;
                     searchField?: "email" | "name" | undefined;
                     searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
@@ -757,8 +755,7 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                         updatedAt: Date;
                         email: string;
                         emailVerified: boolean;
-                        firstName: string;
-                        lastName: string;
+                        name: string;
                         image?: string | null | undefined;
                     };
                 };
@@ -779,8 +776,7 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     updatedAt: Date;
                     email: string;
                     emailVerified: boolean;
-                    firstName: string;
-                    lastName: string;
+                    name: string;
                     image?: string | null | undefined;
                 };
             }>;

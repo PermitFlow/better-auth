@@ -1,6 +1,6 @@
 'use strict';
 
-const socialProviders_index = require('../shared/better-auth.DKtenllA.cjs');
+const socialProviders_index = require('../shared/better-auth.Di4b3h9T.cjs');
 require('zod');
 require('better-call');
 require('@better-auth/utils/hash');
@@ -27,7 +27,7 @@ require('@better-auth/utils/binary');
 require('../shared/better-auth.BMYo0QR-.cjs');
 require('jose/errors');
 require('../shared/better-auth.CXhVNgXP.cjs');
-require('../shared/better-auth.BwjvqGUo.cjs');
+require('../shared/better-auth.DcWKCjjf.cjs');
 require('defu');
 
 

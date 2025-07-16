@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { i as createAuthEndpoint, o as originCheck, B as BASE_ERROR_CODES } from '../../shared/better-auth.BOAoJXX4.mjs';
+import { i as createAuthEndpoint, o as originCheck, B as BASE_ERROR_CODES } from '../../shared/better-auth.dm850UlW.mjs';
 import { APIError } from 'better-call';
 import { setSessionCookie } from '../../cookies/index.mjs';
 import { createHash } from '@better-auth/utils/hash';
@@ -13,7 +13,7 @@ import '@better-auth/utils';
 import '@better-auth/utils/hex';
 import '@noble/hashes/utils';
 import { g as generateRandomString } from '../../shared/better-auth.B4Qoxdgc.mjs';
-import '../../shared/better-auth.DSIZrW7f.mjs';
+import '../../shared/better-auth.Cc72UxUH.mjs';
 import '../../shared/better-auth.8zoxzg-F.mjs';
 import '../../shared/better-auth.DBGfIDnh.mjs';
 import 'defu';

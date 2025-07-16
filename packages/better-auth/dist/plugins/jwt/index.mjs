@@ -1,14 +1,14 @@
 import { s as schema } from '../../shared/better-auth.fsvwNeUx.mjs';
 import { generateKeyPair, exportJWK, importJWK, SignJWT } from 'jose';
 import 'better-call';
-import { f as createAuthMiddleware, i as createAuthEndpoint, s as sessionMiddleware } from '../../shared/better-auth.BOAoJXX4.mjs';
+import { f as createAuthMiddleware, i as createAuthEndpoint, s as sessionMiddleware } from '../../shared/better-auth.dm850UlW.mjs';
 import 'zod';
 import { B as BetterAuthError } from '../../shared/better-auth.DdzSJf-n.mjs';
 import '../../shared/better-auth.8zoxzg-F.mjs';
 import '@better-auth/utils/base64';
 import '@better-auth/utils/hmac';
 import '@better-auth/utils/binary';
-import { m as mergeSchema } from '../../shared/better-auth.DSIZrW7f.mjs';
+import { m as mergeSchema } from '../../shared/better-auth.Cc72UxUH.mjs';
 import '../../shared/better-auth.DBGfIDnh.mjs';
 import 'defu';
 import { symmetricEncrypt, symmetricDecrypt } from '../../crypto/index.mjs';

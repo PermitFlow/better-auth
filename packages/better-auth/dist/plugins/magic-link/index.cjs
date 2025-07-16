@@ -1,7 +1,7 @@
 'use strict';
 
 const zod = require('zod');
-const socialProviders_index = require('../../shared/better-auth.DKtenllA.cjs');
+const socialProviders_index = require('../../shared/better-auth.Di4b3h9T.cjs');
 const betterCall = require('better-call');
 const cookies_index = require('../../cookies/index.cjs');
 const hash = require('@better-auth/utils/hash');
@@ -15,7 +15,7 @@ require('@better-auth/utils');
 require('@better-auth/utils/hex');
 require('@noble/hashes/utils');
 const random = require('../../shared/better-auth.CYeOI8C-.cjs');
-require('../../shared/better-auth.BwjvqGUo.cjs');
+require('../../shared/better-auth.DcWKCjjf.cjs');
 require('../../shared/better-auth.DiSjtgs9.cjs');
 require('../../shared/better-auth.CXhVNgXP.cjs');
 require('defu');

@@ -1,8 +1,8 @@
 import { P as ProviderOptions, O as OAuth2Tokens } from '../shared/better-auth.R7C454Vo.js';
 export { a as OAuthProvider } from '../shared/better-auth.R7C454Vo.js';
 import * as jose from 'jose';
-export { g as generateState, p as parseState } from '../shared/better-auth.LsLRdgug.js';
-import { G as GenericEndpointContext, U as User, L as Account } from '../shared/better-auth.CFI1-f79.js';
+export { g as generateState, p as parseState } from '../shared/better-auth.Dq0I8xgb.js';
+import { G as GenericEndpointContext, U as User, L as Account } from '../shared/better-auth.BvuXHWqT.js';
 import '../shared/better-auth.9XhOL8gb.js';
 import 'zod';
 import 'kysely';
@@ -88,8 +88,7 @@ declare function handleOAuthUserInfo(c: GenericEndpointContext, { userInfo, acco
             updatedAt: Date;
             email: string;
             emailVerified: boolean;
-            firstName: string;
-            lastName: string;
+            name: string;
             image?: string | null | undefined;
         };
     };

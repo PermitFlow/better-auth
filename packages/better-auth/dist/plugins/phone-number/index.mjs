@@ -1,7 +1,7 @@
 import { z } from 'zod';
-import { i as createAuthEndpoint, j as getSessionFromCtx, B as BASE_ERROR_CODES } from '../../shared/better-auth.BOAoJXX4.mjs';
+import { i as createAuthEndpoint, j as getSessionFromCtx, B as BASE_ERROR_CODES } from '../../shared/better-auth.dm850UlW.mjs';
 import { APIError } from 'better-call';
-import { m as mergeSchema } from '../../shared/better-auth.DSIZrW7f.mjs';
+import { m as mergeSchema } from '../../shared/better-auth.Cc72UxUH.mjs';
 import { g as generateRandomString } from '../../shared/better-auth.B4Qoxdgc.mjs';
 import { setSessionCookie } from '../../cookies/index.mjs';
 import '../../shared/better-auth.8zoxzg-F.mjs';

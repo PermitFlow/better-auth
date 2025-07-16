@@ -572,8 +572,7 @@ declare const sso: (options?: SSOOptions) => {
                             updatedAt: Date;
                             email: string;
                             emailVerified: boolean;
-                            firstName: string;
-                            lastName: string;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };

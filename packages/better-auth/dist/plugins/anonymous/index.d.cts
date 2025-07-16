@@ -1,4 +1,4 @@
-import { U as User, S as Session, p as AuthContext, I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.DuZhOx-a.cjs';
+import { U as User, S as Session, p as AuthContext, I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.D1pp6p2v.cjs';
 import * as better_call from 'better-call';
 import { EndpointContext } from 'better-call';
 import '../../shared/better-auth.9XhOL8gb.cjs';
@@ -91,7 +91,7 @@ declare const anonymous: (options?: AnonymousOptions) => {
                         id: string;
                         email: string;
                         emailVerified: boolean;
-                        name: any;
+                        name: string;
                         createdAt: Date;
                         updatedAt: Date;
                     };
@@ -102,7 +102,7 @@ declare const anonymous: (options?: AnonymousOptions) => {
                     id: string;
                     email: string;
                     emailVerified: boolean;
-                    name: any;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
                 };

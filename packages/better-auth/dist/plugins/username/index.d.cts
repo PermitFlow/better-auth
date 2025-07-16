@@ -1,4 +1,4 @@
-import { I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.DuZhOx-a.cjs';
+import { I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.D1pp6p2v.cjs';
 import { z } from 'zod';
 import * as better_call from 'better-call';
 import '../../shared/better-auth.9XhOL8gb.cjs';
@@ -97,7 +97,7 @@ declare const username: (options?: UsernameOptions) => {
                         email: string;
                         emailVerified: boolean;
                         username: string;
-                        name: any;
+                        name: string;
                         image: string | null | undefined;
                         createdAt: Date;
                         updatedAt: Date;
@@ -110,7 +110,7 @@ declare const username: (options?: UsernameOptions) => {
                     email: string;
                     emailVerified: boolean;
                     username: string;
-                    name: any;
+                    name: string;
                     image: string | null | undefined;
                     createdAt: Date;
                     updatedAt: Date;
@@ -223,7 +223,7 @@ declare const username: (options?: UsernameOptions) => {
                     unique: true;
                     returned: true;
                     transform: {
-                        input(value: string | number | boolean | string[] | number[] | Date | null | undefined): string | undefined;
+                        input(value: string | number | boolean | Date | string[] | number[] | null | undefined): string | undefined;
                     };
                 };
                 displayUsername: {
