@@ -1,4 +1,4 @@
-import { U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext, G as GenericEndpointContext } from '../../shared/better-auth.jTQrz0eG.mjs';
+import { U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext, G as GenericEndpointContext } from '../../shared/better-auth.Nl2UAmQc.mjs';
 import * as better_call from 'better-call';
 import '../../shared/better-auth.9XhOL8gb.mjs';
 import 'zod';

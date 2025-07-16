@@ -27,6 +27,7 @@ export interface PrismaConfig {
 	 * @default false
 	 */
 	usePlural?: boolean;
+	disableIdGeneration?: boolean;
 }
 
 interface PrismaClient {}
@@ -49,6 +50,7 @@ export const prismaAdapter = (prisma: PrismaClient, config: PrismaConfig) =>
 			adapterName: "Prisma Adapter",
 			usePlural: config.usePlural ?? false,
 			debugLogs: config.debugLogs ?? false,
+			disableIdGeneration: config.disableIdGeneration ?? false,
 		},
 		adapter: ({ getFieldName }) => {
 			const db = prisma as PrismaClientInternal;

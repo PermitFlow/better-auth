@@ -1,4 +1,4 @@
-import { A as AdapterDebugLogs, B as BetterAuthOptions, a as Adapter } from '../../shared/better-auth.jTQrz0eG.mjs';
+import { A as AdapterDebugLogs, B as BetterAuthOptions, a as Adapter } from '../../shared/better-auth.Nl2UAmQc.mjs';
 import { Db } from 'mongodb';
 import '../../shared/better-auth.9XhOL8gb.mjs';
 import 'zod';

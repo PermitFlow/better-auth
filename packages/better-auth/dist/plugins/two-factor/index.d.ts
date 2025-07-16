@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.CePDkaef.js';
+import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.D-Rw6yxi.js';
 import { L as LiteralString } from '../../shared/better-auth.9XhOL8gb.js';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import '../../shared/better-auth.R7C454Vo.js';
