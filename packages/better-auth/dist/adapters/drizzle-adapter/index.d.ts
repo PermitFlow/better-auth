@@ -1,4 +1,4 @@
-import { A as AdapterDebugLogs, B as BetterAuthOptions, a as Adapter } from '../../shared/better-auth.CFI1-f79.js';
+import { A as AdapterDebugLogs, B as BetterAuthOptions, a as Adapter } from '../../shared/better-auth.BvuXHWqT.js';
 import '../../shared/better-auth.9XhOL8gb.js';
 import 'zod';
 import '../../shared/better-auth.R7C454Vo.js';

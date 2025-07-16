@@ -1,7 +1,7 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
 import { O as OAuth2Tokens } from '../../shared/better-auth.R7C454Vo.js';
-import { U as User } from '../../shared/better-auth.CFI1-f79.js';
+import { U as User } from '../../shared/better-auth.BvuXHWqT.js';
 import '../../shared/better-auth.9XhOL8gb.js';
 import 'kysely';
 import 'better-sqlite3';
@@ -71,10 +71,10 @@ declare const sso: (options?: SSOOptions) => {
         createOIDCProvider: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
+                    providerId: string;
                     clientId: string;
                     clientSecret: string;
                     issuer: string;
-                    providerId: string;
                     domain: string;
                     pkce?: boolean | undefined;
                     scopes?: string[] | undefined;
@@ -164,10 +164,10 @@ declare const sso: (options?: SSOOptions) => {
                     organizationId: z.ZodOptional<z.ZodString>;
                     overrideUserInfo: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
                 }, "strip", z.ZodTypeAny, {
+                    providerId: string;
                     clientId: string;
                     clientSecret: string;
                     issuer: string;
-                    providerId: string;
                     domain: string;
                     pkce?: boolean | undefined;
                     scopes?: string[] | undefined;
@@ -188,10 +188,10 @@ declare const sso: (options?: SSOOptions) => {
                     organizationId?: string | undefined;
                     overrideUserInfo?: boolean | undefined;
                 }, {
+                    providerId: string;
                     clientId: string;
                     clientSecret: string;
                     issuer: string;
-                    providerId: string;
                     domain: string;
                     pkce?: boolean | undefined;
                     scopes?: string[] | undefined;
@@ -215,12 +215,12 @@ declare const sso: (options?: SSOOptions) => {
                 use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<{
                     session: {
                         session: Record<string, any> & {
-                            id: string;
                             token: string;
-                            expiresAt: Date;
+                            id: string;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -228,10 +228,9 @@ declare const sso: (options?: SSOOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            firstName: string;
-                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -397,12 +396,12 @@ declare const sso: (options?: SSOOptions) => {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     callbackURL: string;
+                    email?: string | undefined;
+                    providerId?: string | undefined;
                     newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
-                    email?: string | undefined;
-                    providerId?: string | undefined;
                     domain?: string | undefined;
                     organizationSlug?: string | undefined;
                 };
@@ -448,22 +447,22 @@ declare const sso: (options?: SSOOptions) => {
                     requestSignUp: z.ZodOptional<z.ZodBoolean>;
                 }, "strip", z.ZodTypeAny, {
                     callbackURL: string;
+                    email?: string | undefined;
+                    providerId?: string | undefined;
                     newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
-                    email?: string | undefined;
-                    providerId?: string | undefined;
                     domain?: string | undefined;
                     organizationSlug?: string | undefined;
                 }, {
                     callbackURL: string;
+                    email?: string | undefined;
+                    providerId?: string | undefined;
                     newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
-                    email?: string | undefined;
-                    providerId?: string | undefined;
                     domain?: string | undefined;
                     organizationSlug?: string | undefined;
                 }>;
@@ -547,8 +546,8 @@ declare const sso: (options?: SSOOptions) => {
             } & {
                 query: {
                     state: string;
-                    error?: string | undefined;
                     code?: string | undefined;
+                    error?: string | undefined;
                     error_description?: string | undefined;
                 };
             } & {
@@ -580,13 +579,13 @@ declare const sso: (options?: SSOOptions) => {
                     error_description: z.ZodOptional<z.ZodString>;
                 }, "strip", z.ZodTypeAny, {
                     state: string;
-                    error?: string | undefined;
                     code?: string | undefined;
+                    error?: string | undefined;
                     error_description?: string | undefined;
                 }, {
                     state: string;
-                    error?: string | undefined;
                     code?: string | undefined;
+                    error?: string | undefined;
                     error_description?: string | undefined;
                 }>;
                 metadata: {

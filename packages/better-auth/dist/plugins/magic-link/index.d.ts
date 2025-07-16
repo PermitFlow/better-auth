@@ -55,8 +55,8 @@ declare const magicLink: (options: MagicLinkopts) => {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     email: string;
-                    callbackURL?: string | undefined;
                     name?: string | undefined;
+                    callbackURL?: string | undefined;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -93,12 +93,12 @@ declare const magicLink: (options: MagicLinkopts) => {
                     callbackURL: z.ZodOptional<z.ZodString>;
                 }, "strip", z.ZodTypeAny, {
                     email: string;
-                    callbackURL?: string | undefined;
                     name?: string | undefined;
+                    callbackURL?: string | undefined;
                 }, {
                     email: string;
-                    callbackURL?: string | undefined;
                     name?: string | undefined;
+                    callbackURL?: string | undefined;
                 }>;
                 metadata: {
                     openapi: {
@@ -159,7 +159,7 @@ declare const magicLink: (options: MagicLinkopts) => {
                         id: string;
                         email: string;
                         emailVerified: boolean;
-                        name: any;
+                        name: string;
                         image: string | null | undefined;
                         createdAt: Date;
                         updatedAt: Date;
@@ -171,7 +171,7 @@ declare const magicLink: (options: MagicLinkopts) => {
                     id: string;
                     email: string;
                     emailVerified: boolean;
-                    name: any;
+                    name: string;
                     image: string | null | undefined;
                     createdAt: Date;
                     updatedAt: Date;

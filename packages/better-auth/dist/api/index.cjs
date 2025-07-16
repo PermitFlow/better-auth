@@ -1,10 +1,10 @@
 'use strict';
 
 const betterCall = require('better-call');
-const socialProviders_index = require('../shared/better-auth.DKtenllA.cjs');
+const socialProviders_index = require('../shared/better-auth.Di4b3h9T.cjs');
 const zod = require('zod');
 const cookies_index = require('../cookies/index.cjs');
-const schema = require('../shared/better-auth.BwjvqGUo.cjs');
+const schema = require('../shared/better-auth.DcWKCjjf.cjs');
 const env = require('../shared/better-auth.DiSjtgs9.cjs');
 const logger = require('../shared/better-auth.CXhVNgXP.cjs');
 const getRequestIp = require('../shared/better-auth.B7cZ2juS.cjs');

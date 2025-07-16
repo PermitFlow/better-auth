@@ -1,6 +1,6 @@
 import { ZodObject, ZodSchema, ZodOptional } from 'zod';
 import { getEndpoints } from '../../api/index.mjs';
-import '../../shared/better-auth.DSIZrW7f.mjs';
+import '../../shared/better-auth.Cc72UxUH.mjs';
 import '../../shared/better-auth.8zoxzg-F.mjs';
 import '@better-auth/utils/random';
 import { APIError } from 'better-call';
@@ -18,7 +18,7 @@ import '../../shared/better-auth.B4Qoxdgc.mjs';
 import '../../shared/better-auth.DBGfIDnh.mjs';
 import { g as getAuthTables } from '../../shared/better-auth.DORkW_Ge.mjs';
 import 'kysely';
-import { i as createAuthEndpoint } from '../../shared/better-auth.BOAoJXX4.mjs';
+import { i as createAuthEndpoint } from '../../shared/better-auth.dm850UlW.mjs';
 import '@better-auth/utils/hmac';
 import '@better-auth/utils/binary';
 import 'defu';
