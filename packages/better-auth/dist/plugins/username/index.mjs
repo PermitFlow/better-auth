@@ -1,8 +1,8 @@
 import { z } from 'zod';
-import { f as createAuthMiddleware, i as createAuthEndpoint, q as sendVerificationEmailFn, B as BASE_ERROR_CODES } from '../../shared/better-auth.dm850UlW.mjs';
+import { f as createAuthMiddleware, i as createAuthEndpoint, q as sendVerificationEmailFn, B as BASE_ERROR_CODES } from '../../shared/better-auth.BOAoJXX4.mjs';
 import { APIError } from 'better-call';
 import { setSessionCookie } from '../../cookies/index.mjs';
-import { m as mergeSchema } from '../../shared/better-auth.Cc72UxUH.mjs';
+import { m as mergeSchema } from '../../shared/better-auth.DSIZrW7f.mjs';
 import '../../shared/better-auth.8zoxzg-F.mjs';
 import '../../shared/better-auth.DBGfIDnh.mjs';
 import 'defu';

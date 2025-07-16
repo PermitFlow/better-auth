@@ -1,5 +1,5 @@
 import * as better_call from 'better-call';
-import { U as User, p as AuthContext } from '../../shared/better-auth.Nl2UAmQc.mjs';
+import { U as User, p as AuthContext } from '../../shared/better-auth.DLEmqOEu.mjs';
 import { z } from 'zod';
 import { O as OAuth2Tokens, a as OAuthProvider } from '../../shared/better-auth.uZ__EClU.mjs';
 import '../../shared/better-auth.9XhOL8gb.mjs';
@@ -408,7 +408,8 @@ declare const genericOAuth: (options: GenericOAuthOptions) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };

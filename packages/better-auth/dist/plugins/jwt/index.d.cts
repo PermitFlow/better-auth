@@ -1,4 +1,4 @@
-import { U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext, G as GenericEndpointContext } from '../../shared/better-auth.CcnpUspC.cjs';
+import { U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext, G as GenericEndpointContext } from '../../shared/better-auth.DuZhOx-a.cjs';
 import * as better_call from 'better-call';
 import '../../shared/better-auth.9XhOL8gb.cjs';
 import 'zod';
@@ -282,7 +282,8 @@ declare const jwt: (options?: JwtOptions) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };

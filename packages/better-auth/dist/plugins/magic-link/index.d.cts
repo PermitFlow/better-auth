@@ -159,7 +159,7 @@ declare const magicLink: (options: MagicLinkopts) => {
                         id: string;
                         email: string;
                         emailVerified: boolean;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         createdAt: Date;
                         updatedAt: Date;
@@ -171,7 +171,7 @@ declare const magicLink: (options: MagicLinkopts) => {
                     id: string;
                     email: string;
                     emailVerified: boolean;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     createdAt: Date;
                     updatedAt: Date;

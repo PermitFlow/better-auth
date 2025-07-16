@@ -1,5 +1,5 @@
 import * as better_call from 'better-call';
-import { p as AuthContext, U as User, H as HookEndpointContext } from '../../shared/better-auth.Nl2UAmQc.mjs';
+import { p as AuthContext, U as User, H as HookEndpointContext } from '../../shared/better-auth.DLEmqOEu.mjs';
 import { z } from 'zod';
 import '../../shared/better-auth.9XhOL8gb.mjs';
 import '../../shared/better-auth.uZ__EClU.mjs';
@@ -386,7 +386,7 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                         id: string;
                         email: string;
                         emailVerified: boolean;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         createdAt: Date;
                         updatedAt: Date;
@@ -398,7 +398,7 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                     id: string;
                     email: string;
                     emailVerified: boolean;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     createdAt: Date;
                     updatedAt: Date;

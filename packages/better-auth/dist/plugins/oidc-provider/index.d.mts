@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, G as GenericEndpointContext } from '../../shared/better-auth.Nl2UAmQc.mjs';
+import { U as User, G as GenericEndpointContext } from '../../shared/better-auth.DLEmqOEu.mjs';
 import '../../shared/better-auth.9XhOL8gb.mjs';
 import '../../shared/better-auth.uZ__EClU.mjs';
 import 'kysely';
@@ -693,7 +693,8 @@ declare const oidcProvider: (options: OIDCOptions) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -816,35 +817,35 @@ declare const oidcProvider: (options: OIDCOptions) => {
                 response: {
                     sub: string;
                     email: string | undefined;
-                    name: string | undefined;
+                    name: any;
                     picture: string | null | undefined;
-                    given_name: string | undefined;
-                    family_name: string | undefined;
+                    given_name: any;
+                    family_name: any;
                     email_verified: boolean | undefined;
                 } | {
                     sub: string;
                     email: string | undefined;
-                    name: string | undefined;
+                    name: any;
                     picture: string | null | undefined;
-                    given_name: string | undefined;
-                    family_name: string | undefined;
+                    given_name: any;
+                    family_name: any;
                     email_verified: boolean | undefined;
                 };
             } : {
                 sub: string;
                 email: string | undefined;
-                name: string | undefined;
+                name: any;
                 picture: string | null | undefined;
-                given_name: string | undefined;
-                family_name: string | undefined;
+                given_name: any;
+                family_name: any;
                 email_verified: boolean | undefined;
             } | {
                 sub: string;
                 email: string | undefined;
-                name: string | undefined;
+                name: any;
                 picture: string | null | undefined;
-                given_name: string | undefined;
-                family_name: string | undefined;
+                given_name: any;
+                family_name: any;
                 email_verified: boolean | undefined;
             }>;
             options: {
@@ -918,7 +919,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     scope?: string | undefined;
                     metadata?: Record<string, any> | undefined;
                     jwks?: Record<string, any> | undefined;
-                    token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
+                    token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
                     response_types?: ("code" | "token")[] | undefined;
                     client_name?: string | undefined;
@@ -958,7 +959,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     client_id_issued_at: number;
                     client_secret_expires_at: number;
                     redirect_uris: string[];
-                    token_endpoint_auth_method: "none" | "client_secret_post" | "client_secret_basic";
+                    token_endpoint_auth_method: "none" | "client_secret_basic" | "client_secret_post";
                     grant_types: string[];
                     response_types: string[];
                     client_name: string | undefined;
@@ -981,7 +982,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
                 client_id_issued_at: number;
                 client_secret_expires_at: number;
                 redirect_uris: string[];
-                token_endpoint_auth_method: "none" | "client_secret_post" | "client_secret_basic";
+                token_endpoint_auth_method: "none" | "client_secret_basic" | "client_secret_post";
                 grant_types: string[];
                 response_types: string[];
                 client_name: string | undefined;
@@ -1023,7 +1024,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     scope?: string | undefined;
                     metadata?: Record<string, any> | undefined;
                     jwks?: Record<string, any> | undefined;
-                    token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
+                    token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
                     response_types?: ("code" | "token")[] | undefined;
                     client_name?: string | undefined;
@@ -1041,7 +1042,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     scope?: string | undefined;
                     metadata?: Record<string, any> | undefined;
                     jwks?: Record<string, any> | undefined;
-                    token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
+                    token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
                     response_types?: ("code" | "token")[] | undefined;
                     client_name?: string | undefined;
@@ -1196,7 +1197,8 @@ declare const oidcProvider: (options: OIDCOptions) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };

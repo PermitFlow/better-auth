@@ -1,8 +1,8 @@
 import * as nanostores from 'nanostores';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { SuccessContext } from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, d as InferRoute, c as InferErrorCodes } from '../shared/better-auth.Ctce78z0.cjs';
-import { B as BetterAuthOptions, U as User, t as InferAPI, a as Adapter, u as AdditionalSessionFieldsOutput, n as Auth, v as AdditionalUserFieldsOutput, w as InferFieldsFromPlugins, x as InferFieldsFromOptions, y as AdditionalUserFieldsInput, h as BetterAuthPlugin, p as AuthContext, z as InferPluginTypes, i as InferPluginErrorCodes, F as FilterActions, S as Session, D as setCookieToHeader } from '../shared/better-auth.CcnpUspC.cjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, d as InferRoute, c as InferErrorCodes } from '../shared/better-auth.DpaxLcpz.cjs';
+import { B as BetterAuthOptions, U as User, t as InferAPI, a as Adapter, u as AdditionalSessionFieldsOutput, n as Auth, v as AdditionalUserFieldsOutput, w as InferFieldsFromPlugins, x as InferFieldsFromOptions, y as AdditionalUserFieldsInput, h as BetterAuthPlugin, p as AuthContext, z as InferPluginTypes, i as InferPluginErrorCodes, F as FilterActions, S as Session, D as setCookieToHeader } from '../shared/better-auth.DuZhOx-a.cjs';
 import { U as UnionToIntersection, S as StripEmptyObjects, a as Prettify } from '../shared/better-auth.9XhOL8gb.cjs';
 import * as zod from 'zod';
 import * as better_call from 'better-call';
@@ -179,7 +179,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -196,7 +196,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -589,7 +589,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         } & ((O extends undefined ? {
                             socialProviders: {
@@ -834,7 +835,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         emailVerified: boolean;
                         createdAt: Date;
                         updatedAt: Date;
-                        name: string;
+                        firstName: string;
+                        lastName: string;
                         image?: string | null | undefined;
                     } & ((O extends undefined ? {
                         socialProviders: {
@@ -1999,7 +2001,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -2010,7 +2012,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -2022,7 +2024,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -2033,7 +2035,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -2300,7 +2302,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -2314,7 +2316,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -2886,7 +2888,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -2957,7 +2960,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -2969,7 +2972,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -3009,7 +3012,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3144,7 +3148,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3176,7 +3181,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3308,7 +3314,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3517,7 +3524,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3734,7 +3742,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3903,7 +3912,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4448,7 +4458,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4537,7 +4548,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4637,7 +4649,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4722,7 +4735,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4873,7 +4887,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4973,7 +4988,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5172,7 +5188,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5461,7 +5478,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -17630,7 +17648,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -17750,7 +17769,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -17870,7 +17890,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -17990,7 +18011,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18110,7 +18132,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18230,7 +18253,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18350,7 +18374,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18470,7 +18495,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18590,7 +18616,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18710,7 +18737,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18830,7 +18858,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18950,7 +18979,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19070,7 +19100,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19190,7 +19221,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19310,7 +19342,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19430,7 +19463,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19550,7 +19584,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19670,7 +19705,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19790,7 +19826,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19910,7 +19947,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20030,7 +20068,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20150,7 +20189,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20270,7 +20310,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20390,7 +20431,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20510,7 +20552,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20630,7 +20673,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20750,7 +20794,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20870,7 +20915,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20990,7 +21036,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21110,7 +21157,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21230,7 +21278,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21350,7 +21399,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21470,7 +21520,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21590,7 +21641,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21710,7 +21762,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21830,7 +21883,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21950,7 +22004,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22070,7 +22125,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22190,7 +22246,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22310,7 +22367,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22430,7 +22488,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22550,7 +22609,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22670,7 +22730,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22790,7 +22851,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22910,7 +22972,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23030,7 +23093,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23150,7 +23214,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23270,7 +23335,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23390,7 +23456,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23510,7 +23577,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23630,7 +23698,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23750,7 +23819,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23870,7 +23940,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23990,7 +24061,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24110,7 +24182,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24230,7 +24303,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24350,7 +24424,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24470,7 +24545,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24590,7 +24666,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24710,7 +24787,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24830,7 +24908,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24950,7 +25029,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25070,7 +25150,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25190,7 +25271,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25310,7 +25392,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25430,7 +25513,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25550,7 +25634,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25670,7 +25755,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25790,7 +25876,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25910,7 +25997,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26030,7 +26118,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26150,7 +26239,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26270,7 +26360,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26390,7 +26481,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26510,7 +26602,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26630,7 +26723,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26750,7 +26844,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26870,7 +26965,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26990,7 +27086,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27110,7 +27207,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27230,7 +27328,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27350,7 +27449,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27470,7 +27570,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27590,7 +27691,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27710,7 +27812,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27830,7 +27933,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27950,7 +28054,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28070,7 +28175,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28190,7 +28296,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28310,7 +28417,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28430,7 +28538,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28550,7 +28659,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28670,7 +28780,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28790,7 +28901,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28910,7 +29022,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29030,7 +29143,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29150,7 +29264,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29270,7 +29385,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29390,7 +29506,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29815,7 +29932,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -29832,7 +29949,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -30113,7 +30230,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         emailVerified: boolean;
                         createdAt: Date;
                         updatedAt: Date;
-                        name: string;
+                        firstName: string;
+                        lastName: string;
                         image?: string | null | undefined;
                     };
                 } | null;
@@ -30134,7 +30252,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 };
             } | null>;
@@ -30275,7 +30394,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -30286,7 +30405,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -30298,7 +30417,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -30309,7 +30428,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -30464,7 +30583,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -30478,7 +30597,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -31050,7 +31169,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31121,7 +31241,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -31133,7 +31253,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -31173,7 +31293,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31308,7 +31429,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31371,7 +31493,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31484,7 +31607,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31805,7 +31929,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31894,7 +32019,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31994,7 +32120,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32079,7 +32206,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32230,7 +32358,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32330,7 +32459,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32529,7 +32659,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32818,7 +32949,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -33050,7 +33182,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -33067,7 +33199,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -33348,7 +33480,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         emailVerified: boolean;
                         createdAt: Date;
                         updatedAt: Date;
-                        name: string;
+                        firstName: string;
+                        lastName: string;
                         image?: string | null | undefined;
                     };
                 } | null;
@@ -33369,7 +33502,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     emailVerified: boolean;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
+                    firstName: string;
+                    lastName: string;
                     image?: string | null | undefined;
                 };
             } | null>;
@@ -33510,7 +33644,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -33521,7 +33655,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -33533,7 +33667,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -33544,7 +33678,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -33699,7 +33833,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -33713,7 +33847,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -34285,7 +34419,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -34356,7 +34491,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     user: {
                         id: string;
                         email: string;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         emailVerified: boolean;
                         createdAt: Date;
@@ -34368,7 +34503,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 user: {
                     id: string;
                     email: string;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     emailVerified: boolean;
                     createdAt: Date;
@@ -34408,7 +34543,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -34543,7 +34679,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -34606,7 +34743,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -34719,7 +34857,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35040,7 +35179,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35129,7 +35269,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35229,7 +35370,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35314,7 +35456,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35465,7 +35608,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35565,7 +35709,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35764,7 +35909,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -36053,7 +36199,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -36307,7 +36454,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -36324,7 +36471,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -36605,7 +36752,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         } | null;
@@ -36626,7 +36774,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     } | null>;
@@ -36767,7 +36916,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -36778,7 +36927,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -36790,7 +36939,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -36801,7 +36950,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -36956,7 +37105,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -36970,7 +37119,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -37542,7 +37691,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -37613,7 +37763,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -37625,7 +37775,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -37665,7 +37815,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -37800,7 +37951,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -37863,7 +38015,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -37976,7 +38129,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38297,7 +38451,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38386,7 +38541,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38486,7 +38642,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38571,7 +38728,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38722,7 +38880,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38822,7 +38981,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -39021,7 +39181,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -39310,7 +39471,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -39542,7 +39704,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -39559,7 +39721,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -39840,7 +40002,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         } | null;
@@ -39861,7 +40024,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     } | null>;
@@ -40002,7 +40166,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -40013,7 +40177,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -40025,7 +40189,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -40036,7 +40200,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -40191,7 +40355,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -40205,7 +40369,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -40777,7 +40941,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -40848,7 +41013,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -40860,7 +41025,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -40900,7 +41065,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41035,7 +41201,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41098,7 +41265,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41211,7 +41379,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41532,7 +41701,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41621,7 +41791,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41721,7 +41892,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41806,7 +41978,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41957,7 +42130,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -42057,7 +42231,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -42256,7 +42431,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -42545,7 +42721,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -42860,7 +43037,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -42877,7 +43054,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -43158,7 +43335,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         } | null;
@@ -43179,7 +43357,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     } | null>;
@@ -43320,7 +43499,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -43331,7 +43510,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -43343,7 +43522,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -43354,7 +43533,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -43509,7 +43688,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -43523,7 +43702,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -44095,7 +44274,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44166,7 +44346,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -44178,7 +44358,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -44218,7 +44398,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44353,7 +44534,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44416,7 +44598,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44529,7 +44712,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44850,7 +45034,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44939,7 +45124,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45039,7 +45225,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45124,7 +45311,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45275,7 +45463,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45375,7 +45564,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45574,7 +45764,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45863,7 +46054,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -46095,7 +46287,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -46112,7 +46304,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -46393,7 +46585,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 emailVerified: boolean;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
+                                firstName: string;
+                                lastName: string;
                                 image?: string | null | undefined;
                             };
                         } | null;
@@ -46414,7 +46607,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     } | null>;
@@ -46555,7 +46749,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -46566,7 +46760,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -46578,7 +46772,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -46589,7 +46783,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -46744,7 +46938,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -46758,7 +46952,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -47330,7 +47524,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -47401,7 +47596,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             user: {
                                 id: string;
                                 email: string;
-                                name: string;
+                                name: any;
                                 image: string | null | undefined;
                                 emailVerified: boolean;
                                 createdAt: Date;
@@ -47413,7 +47608,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         user: {
                             id: string;
                             email: string;
-                            name: string;
+                            name: any;
                             image: string | null | undefined;
                             emailVerified: boolean;
                             createdAt: Date;
@@ -47453,7 +47648,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -47588,7 +47784,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -47651,7 +47848,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -47764,7 +47962,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48085,7 +48284,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48174,7 +48374,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48274,7 +48475,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48359,7 +48561,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48510,7 +48713,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48610,7 +48814,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48809,7 +49014,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -49098,7 +49304,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     emailVerified: boolean;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
+                                    firstName: string;
+                                    lastName: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -52159,9 +52366,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
         emailVerified?: boolean | undefined;
         createdAt?: Date | undefined;
         updatedAt?: Date | undefined;
-        name: string;
+        firstName?: string | undefined;
+        lastName?: string | undefined;
         image?: string | null | undefined;
         password: string;
+        name: string;
     };
     signInWithTestUser: () => Promise<{
         session: Session;

@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.Nl2UAmQc.mjs';
+import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.DLEmqOEu.mjs';
 import { L as LiteralString } from '../../shared/better-auth.9XhOL8gb.mjs';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import '../../shared/better-auth.uZ__EClU.mjs';
@@ -297,7 +297,8 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -396,7 +397,8 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -462,7 +464,7 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                         id: string;
                         email: string;
                         emailVerified: boolean;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         createdAt: Date;
                         updatedAt: Date;
@@ -474,7 +476,7 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                     id: string;
                     email: string;
                     emailVerified: boolean;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     createdAt: Date;
                     updatedAt: Date;
@@ -652,7 +654,8 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -1067,7 +1070,8 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -1139,7 +1143,7 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                         id: string;
                         email: string;
                         emailVerified: boolean;
-                        name: string;
+                        name: any;
                         image: string | null | undefined;
                         createdAt: Date;
                         updatedAt: Date;
@@ -1151,7 +1155,7 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                     id: string;
                     email: string;
                     emailVerified: boolean;
-                    name: string;
+                    name: any;
                     image: string | null | undefined;
                     createdAt: Date;
                     updatedAt: Date;

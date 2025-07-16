@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { OpenAPIParameter, OpenAPISchemaType } from 'better-call';
-import { p as AuthContext, B as BetterAuthOptions } from '../../shared/better-auth.CcnpUspC.cjs';
+import { p as AuthContext, B as BetterAuthOptions } from '../../shared/better-auth.DuZhOx-a.cjs';
 import { L as LiteralString } from '../../shared/better-auth.9XhOL8gb.cjs';
 import 'zod';
 import '../../shared/better-auth.48LtINOO.cjs';
