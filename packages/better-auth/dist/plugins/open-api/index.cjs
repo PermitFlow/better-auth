@@ -2,7 +2,7 @@
 
 const zod = require('zod');
 const api_index = require('../../api/index.cjs');
-require('../../shared/better-auth.DcWKCjjf.cjs');
+require('../../shared/better-auth.BwjvqGUo.cjs');
 require('../../shared/better-auth.DiSjtgs9.cjs');
 require('@better-auth/utils/random');
 const betterCall = require('better-call');
@@ -20,7 +20,7 @@ require('../../shared/better-auth.CYeOI8C-.cjs');
 require('../../shared/better-auth.CXhVNgXP.cjs');
 const getTables = require('../../shared/better-auth.BEphVDyL.cjs');
 require('kysely');
-const socialProviders_index = require('../../shared/better-auth.Di4b3h9T.cjs');
+const socialProviders_index = require('../../shared/better-auth.DKtenllA.cjs');
 require('@better-auth/utils/hmac');
 require('@better-auth/utils/binary');
 require('defu');

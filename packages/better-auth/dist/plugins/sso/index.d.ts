@@ -1,7 +1,7 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
 import { O as OAuth2Tokens } from '../../shared/better-auth.R7C454Vo.js';
-import { U as User } from '../../shared/better-auth.D-Rw6yxi.js';
+import { U as User } from '../../shared/better-auth.CFI1-f79.js';
 import '../../shared/better-auth.9XhOL8gb.js';
 import 'kysely';
 import 'better-sqlite3';
@@ -81,7 +81,7 @@ declare const sso: (options?: SSOOptions) => {
                     authorizationEndpoint?: string | undefined;
                     tokenEndpoint?: string | undefined;
                     userInfoEndpoint?: string | undefined;
-                    tokenEndpointAuthentication?: "client_secret_post" | "client_secret_basic" | undefined;
+                    tokenEndpointAuthentication?: "client_secret_basic" | "client_secret_post" | undefined;
                     jwksEndpoint?: string | undefined;
                     discoveryEndpoint?: string | undefined;
                     mapping?: {
@@ -174,7 +174,7 @@ declare const sso: (options?: SSOOptions) => {
                     authorizationEndpoint?: string | undefined;
                     tokenEndpoint?: string | undefined;
                     userInfoEndpoint?: string | undefined;
-                    tokenEndpointAuthentication?: "client_secret_post" | "client_secret_basic" | undefined;
+                    tokenEndpointAuthentication?: "client_secret_basic" | "client_secret_post" | undefined;
                     jwksEndpoint?: string | undefined;
                     discoveryEndpoint?: string | undefined;
                     mapping?: {
@@ -198,7 +198,7 @@ declare const sso: (options?: SSOOptions) => {
                     authorizationEndpoint?: string | undefined;
                     tokenEndpoint?: string | undefined;
                     userInfoEndpoint?: string | undefined;
-                    tokenEndpointAuthentication?: "client_secret_post" | "client_secret_basic" | undefined;
+                    tokenEndpointAuthentication?: "client_secret_basic" | "client_secret_post" | undefined;
                     jwksEndpoint?: string | undefined;
                     discoveryEndpoint?: string | undefined;
                     mapping?: {
@@ -230,7 +230,8 @@ declare const sso: (options?: SSOOptions) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };

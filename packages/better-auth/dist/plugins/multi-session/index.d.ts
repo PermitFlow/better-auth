@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { S as Session, U as User, H as HookEndpointContext } from '../../shared/better-auth.D-Rw6yxi.js';
+import { S as Session, U as User, H as HookEndpointContext } from '../../shared/better-auth.CFI1-f79.js';
 import '../../shared/better-auth.9XhOL8gb.js';
 import '../../shared/better-auth.R7C454Vo.js';
 import 'kysely';
@@ -118,7 +118,8 @@ declare const multiSession: (options?: MultiSessionConfig) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -209,7 +210,8 @@ declare const multiSession: (options?: MultiSessionConfig) => {
                             emailVerified: boolean;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
+                            firstName: string;
+                            lastName: string;
                             image?: string | null | undefined;
                         };
                     };

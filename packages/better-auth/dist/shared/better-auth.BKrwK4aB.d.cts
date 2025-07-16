@@ -1,0 +1,23 @@
+import { G as GenericEndpointContext } from './better-auth.DuZhOx-a.cjs';
+
+declare function generateState(c: GenericEndpointContext, link?: {
+    email: string;
+    userId: string;
+}): Promise<{
+    state: string;
+    codeVerifier: string;
+}>;
+declare function parseState(c: GenericEndpointContext): Promise<{
+    expiresAt: number;
+    codeVerifier: string;
+    callbackURL: string;
+    errorURL?: string | undefined;
+    newUserURL?: string | undefined;
+    link?: {
+        userId: string;
+        email: string;
+    } | undefined;
+    requestSignUp?: boolean | undefined;
+}>;
+
+export { generateState as g, parseState as p };

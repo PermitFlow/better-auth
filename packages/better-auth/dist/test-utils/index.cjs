@@ -1,9 +1,9 @@
 'use strict';
 
 const vitest = require('vitest');
-const auth = require('../shared/better-auth.B7DsbyxZ.cjs');
+const auth = require('../shared/better-auth.Bu26MR-2.cjs');
 const vanilla = require('../shared/better-auth.Cr25WPaS.cjs');
-const getMigration = require('../shared/better-auth.CTYN90cw.cjs');
+const getMigration = require('../shared/better-auth.Dv5EYtCr.cjs');
 require('../shared/better-auth.DiSjtgs9.cjs');
 require('@better-auth/utils/base64');
 require('@better-auth/utils/hmac');
@@ -30,9 +30,9 @@ const require$$0$9 = require('zlib');
 const require$$0$a = require('url');
 require('better-call');
 require('zod');
-require('../shared/better-auth.Di4b3h9T.cjs');
-require('../shared/better-auth.DcWKCjjf.cjs');
-require('../shared/better-auth.DZsWPP6n.cjs');
+require('../shared/better-auth.DKtenllA.cjs');
+require('../shared/better-auth.BwjvqGUo.cjs');
+require('../shared/better-auth.6mKxxkJW.cjs');
 require('../plugins/organization/access/index.cjs');
 require('../shared/better-auth.CYeOI8C-.cjs');
 require('../shared/better-auth.CXhVNgXP.cjs');
