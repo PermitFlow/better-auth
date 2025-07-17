@@ -941,6 +941,9 @@ const sso = (options) => {
             lastName: attributes[mapping.lastName || "surname"],
             attributes: parsedResponse.extract.attributes
           };
+          if (!userInfo.email || !userInfo.id) {
+            throw new Error("Missing email or id in userInfo from identify provider.");
+          }
           let user;
           const existingUser = await ctx.context.adapter.findOne({
             model: "user",
