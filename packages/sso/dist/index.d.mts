@@ -982,10 +982,28 @@ declare const sso: (options?: SSOOptions) => {
                 response: {
                     redirect: boolean;
                     url: string;
+                    user: {
+                        id: string;
+                        createdAt: Date;
+                        updatedAt: Date;
+                        email: string;
+                        emailVerified: boolean;
+                        name: string;
+                        image?: string | null | undefined;
+                    };
                 };
             } : {
                 redirect: boolean;
                 url: string;
+                user: {
+                    id: string;
+                    createdAt: Date;
+                    updatedAt: Date;
+                    email: string;
+                    emailVerified: boolean;
+                    name: string;
+                    image?: string | null | undefined;
+                };
             }>;
             options: {
                 method: "POST";

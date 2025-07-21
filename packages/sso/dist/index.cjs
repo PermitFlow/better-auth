@@ -1026,7 +1026,8 @@ const sso = (options) => {
           await cookies.setSessionCookie(ctx, { session, user });
           return ctx.json({
             redirect: true,
-            url: RelayState || `${parsedSamlConfig.issuer}/dashboard`
+            url: RelayState || `${parsedSamlConfig.issuer}`,
+            user
           });
         }
       )
