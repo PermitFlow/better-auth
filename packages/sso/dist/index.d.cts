@@ -1,4 +1,4 @@
-import * as better_auth from 'better-auth';
+import * as better_call from 'better-call';
 import { User, OAuth2Tokens } from 'better-auth';
 import { z } from 'zod';
 
@@ -119,7 +119,7 @@ declare const sso: (options?: SSOOptions) => {
             } & {
                 asResponse?: boolean;
                 returnHeaders?: boolean;
-                use?: better_auth.Middleware[];
+                use?: better_call.Middleware[];
                 path?: string;
             } & {
                 asResponse?: AsResponse | undefined;
@@ -229,7 +229,7 @@ declare const sso: (options?: SSOOptions) => {
             } & {
                 asResponse?: boolean;
                 returnHeaders?: boolean;
-                use?: better_auth.Middleware[];
+                use?: better_call.Middleware[];
                 path?: string;
             } & {
                 asResponse?: AsResponse | undefined;
@@ -554,7 +554,7 @@ declare const sso: (options?: SSOOptions) => {
                     organizationId?: string | undefined;
                     overrideUserInfo?: boolean | undefined;
                 }>;
-                use: ((inputContext: better_auth.MiddlewareInputContext<better_auth.MiddlewareOptions>) => Promise<{
+                use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<{
                     session: {
                         session: Record<string, any> & {
                             id: string;
@@ -761,7 +761,7 @@ declare const sso: (options?: SSOOptions) => {
             } & {
                 asResponse?: boolean;
                 returnHeaders?: boolean;
-                use?: better_auth.Middleware[];
+                use?: better_call.Middleware[];
                 path?: string;
             } & {
                 asResponse?: AsResponse | undefined;
@@ -907,7 +907,7 @@ declare const sso: (options?: SSOOptions) => {
             } & {
                 asResponse?: boolean;
                 returnHeaders?: boolean;
-                use?: better_auth.Middleware[];
+                use?: better_call.Middleware[];
                 path?: string;
             } & {
                 asResponse?: AsResponse | undefined;
@@ -972,7 +972,7 @@ declare const sso: (options?: SSOOptions) => {
             } & {
                 asResponse?: boolean;
                 returnHeaders?: boolean;
-                use?: better_auth.Middleware[];
+                use?: better_call.Middleware[];
                 path?: string;
             } & {
                 asResponse?: AsResponse | undefined;

@@ -1,4 +1,5 @@
 import { sso } from './index.mjs';
+import 'better-call';
 import 'better-auth';
 import 'zod';
 
