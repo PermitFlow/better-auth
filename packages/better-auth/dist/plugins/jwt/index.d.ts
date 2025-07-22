@@ -1,4 +1,4 @@
-import { U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext, G as GenericEndpointContext } from '../../shared/better-auth.BvuXHWqT.js';
+import { U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext, G as GenericEndpointContext } from '../../shared/better-auth.tRjLk99E.js';
 import * as better_call from 'better-call';
 import '../../shared/better-auth.9XhOL8gb.js';
 import 'zod';
@@ -267,12 +267,12 @@ declare const jwt: (options?: JwtOptions) => {
                 use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<{
                     session: {
                         session: Record<string, any> & {
-                            token: string;
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -280,9 +280,9 @@ declare const jwt: (options?: JwtOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };
