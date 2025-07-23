@@ -1203,10 +1203,12 @@ export const sso = (options?: SSOOptions) => {
 					console.warn('IM IN THE CALLBACK')
 					const { SAMLResponse, RelayState } = ctx.body;
 					const { providerId } = ctx.params;
+					console.warn(ctx.params)
 					const provider = await ctx.context.adapter.findOne<SSOProvider>({
 						model: "ssoProvider",
 						where: [{ field: "providerId", value: providerId }],
 					});
+					console.warn('PROVIDER FOUND')
 
 					if (!provider) {
 						throw new APIError("NOT_FOUND", {
@@ -1217,12 +1219,15 @@ export const sso = (options?: SSOOptions) => {
 					const parsedSamlConfig = JSON.parse(
 						provider.samlConfig as unknown as string,
 					);
+					console.warn('parsedSamlConfig')
 					const idp = saml.IdentityProvider({
 						metadata: parsedSamlConfig.idpMetadata.metadata,
 					});
+					console.warn('idp')
 					const sp = saml.ServiceProvider({
 						metadata: parsedSamlConfig.spMetadata.metadata,
 					});
+					console.warn('sp')
 					let parsedResponse: FlowResult;
 					try {
 						parsedResponse = await sp.parseLoginResponse(idp, "post", {

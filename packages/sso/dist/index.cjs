@@ -909,10 +909,12 @@ const sso = (options) => {
           console.warn("IM IN THE CALLBACK");
           const { SAMLResponse, RelayState } = ctx.body;
           const { providerId } = ctx.params;
+          console.warn(ctx.params);
           const provider = await ctx.context.adapter.findOne({
             model: "ssoProvider",
             where: [{ field: "providerId", value: providerId }]
           });
+          console.warn("PROVIDER FOUND");
           if (!provider) {
             throw new api.APIError("NOT_FOUND", {
               message: "No provider found for the given providerId"
@@ -921,12 +923,15 @@ const sso = (options) => {
           const parsedSamlConfig = JSON.parse(
             provider.samlConfig
           );
+          console.warn("parsedSamlConfig");
           const idp = saml__namespace.IdentityProvider({
             metadata: parsedSamlConfig.idpMetadata.metadata
           });
+          console.warn("idp");
           const sp = saml__namespace.ServiceProvider({
             metadata: parsedSamlConfig.spMetadata.metadata
           });
+          console.warn("sp");
           let parsedResponse;
           try {
             parsedResponse = await sp.parseLoginResponse(idp, "post", {
