@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, G as GenericEndpointContext } from '../../shared/better-auth.BCiOEoWo.cjs';
+import { U as User, G as GenericEndpointContext } from '../../shared/better-auth.FEr6nfN6.cjs';
 import '../../shared/better-auth.9XhOL8gb.cjs';
 import '../../shared/better-auth.48LtINOO.cjs';
 import 'kysely';
@@ -678,12 +678,12 @@ declare const oidcProvider: (options: OIDCOptions) => {
                 use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<{
                     session: {
                         session: Record<string, any> & {
-                            id: string;
                             token: string;
-                            expiresAt: Date;
+                            id: string;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -691,9 +691,9 @@ declare const oidcProvider: (options: OIDCOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -915,12 +915,12 @@ declare const oidcProvider: (options: OIDCOptions) => {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     redirect_uris: string[];
-                    scope?: string | undefined;
                     metadata?: Record<string, any> | undefined;
+                    scope?: string | undefined;
                     jwks?: Record<string, any> | undefined;
-                    token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
+                    token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
-                    response_types?: ("code" | "token")[] | undefined;
+                    response_types?: ("token" | "code")[] | undefined;
                     client_name?: string | undefined;
                     client_uri?: string | undefined;
                     logo_uri?: string | undefined;
@@ -958,7 +958,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     client_id_issued_at: number;
                     client_secret_expires_at: number;
                     redirect_uris: string[];
-                    token_endpoint_auth_method: "none" | "client_secret_basic" | "client_secret_post";
+                    token_endpoint_auth_method: "none" | "client_secret_post" | "client_secret_basic";
                     grant_types: string[];
                     response_types: string[];
                     client_name: string | undefined;
@@ -981,7 +981,7 @@ declare const oidcProvider: (options: OIDCOptions) => {
                 client_id_issued_at: number;
                 client_secret_expires_at: number;
                 redirect_uris: string[];
-                token_endpoint_auth_method: "none" | "client_secret_basic" | "client_secret_post";
+                token_endpoint_auth_method: "none" | "client_secret_post" | "client_secret_basic";
                 grant_types: string[];
                 response_types: string[];
                 client_name: string | undefined;
@@ -1020,12 +1020,12 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     software_statement: z.ZodOptional<z.ZodString>;
                 }, "strip", z.ZodTypeAny, {
                     redirect_uris: string[];
-                    scope?: string | undefined;
                     metadata?: Record<string, any> | undefined;
+                    scope?: string | undefined;
                     jwks?: Record<string, any> | undefined;
-                    token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
+                    token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
-                    response_types?: ("code" | "token")[] | undefined;
+                    response_types?: ("token" | "code")[] | undefined;
                     client_name?: string | undefined;
                     client_uri?: string | undefined;
                     logo_uri?: string | undefined;
@@ -1038,12 +1038,12 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     software_statement?: string | undefined;
                 }, {
                     redirect_uris: string[];
-                    scope?: string | undefined;
                     metadata?: Record<string, any> | undefined;
+                    scope?: string | undefined;
                     jwks?: Record<string, any> | undefined;
-                    token_endpoint_auth_method?: "none" | "client_secret_basic" | "client_secret_post" | undefined;
+                    token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
-                    response_types?: ("code" | "token")[] | undefined;
+                    response_types?: ("token" | "code")[] | undefined;
                     client_name?: string | undefined;
                     client_uri?: string | undefined;
                     logo_uri?: string | undefined;
@@ -1181,12 +1181,12 @@ declare const oidcProvider: (options: OIDCOptions) => {
                 use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<{
                     session: {
                         session: Record<string, any> & {
-                            id: string;
                             token: string;
-                            expiresAt: Date;
+                            id: string;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -1194,9 +1194,9 @@ declare const oidcProvider: (options: OIDCOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };

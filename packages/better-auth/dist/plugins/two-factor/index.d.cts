@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.BCiOEoWo.cjs';
+import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.FEr6nfN6.cjs';
 import { L as LiteralString } from '../../shared/better-auth.9XhOL8gb.cjs';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import '../../shared/better-auth.48LtINOO.cjs';
@@ -282,12 +282,12 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                 use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<{
                     session: {
                         session: Record<string, any> & {
-                            id: string;
                             token: string;
-                            expiresAt: Date;
+                            id: string;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -295,9 +295,9 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -381,12 +381,12 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                 use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<{
                     session: {
                         session: Record<string, any> & {
-                            id: string;
                             token: string;
-                            expiresAt: Date;
+                            id: string;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -394,9 +394,9 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -433,8 +433,8 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     code: string;
-                    disableSession?: boolean | undefined;
                     trustDevice?: boolean | undefined;
+                    disableSession?: boolean | undefined;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -488,12 +488,12 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                     trustDevice: z.ZodOptional<z.ZodBoolean>;
                 }, "strip", z.ZodTypeAny, {
                     code: string;
-                    disableSession?: boolean | undefined;
                     trustDevice?: boolean | undefined;
+                    disableSession?: boolean | undefined;
                 }, {
                     code: string;
-                    disableSession?: boolean | undefined;
                     trustDevice?: boolean | undefined;
+                    disableSession?: boolean | undefined;
                 }>;
                 metadata: {
                     openapi: {
@@ -637,12 +637,12 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                 use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<{
                     session: {
                         session: Record<string, any> & {
-                            id: string;
                             token: string;
-                            expiresAt: Date;
+                            id: string;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -650,9 +650,9 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -1052,12 +1052,12 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                 use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<{
                     session: {
                         session: Record<string, any> & {
-                            id: string;
                             token: string;
-                            expiresAt: Date;
+                            id: string;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -1065,9 +1065,9 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
