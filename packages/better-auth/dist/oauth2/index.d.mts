@@ -1,8 +1,8 @@
 import { P as ProviderOptions, O as OAuth2Tokens } from '../shared/better-auth.uZ__EClU.mjs';
 export { a as OAuthProvider } from '../shared/better-auth.uZ__EClU.mjs';
 import * as jose from 'jose';
-export { g as generateState, p as parseState } from '../shared/better-auth.J7r3DuZu.mjs';
-import { G as GenericEndpointContext, U as User, L as Account } from '../shared/better-auth.mwe3ASzn.mjs';
+export { g as generateState, p as parseState } from '../shared/better-auth.BgjyqBte.mjs';
+import { G as GenericEndpointContext, U as User, L as Account } from '../shared/better-auth.DbMF1USy.mjs';
 import '../shared/better-auth.9XhOL8gb.mjs';
 import 'zod';
 import 'kysely';
@@ -74,21 +74,21 @@ declare function handleOAuthUserInfo(c: GenericEndpointContext, { userInfo, acco
     data: {
         session: {
             id: string;
+            token: string;
             userId: string;
             expiresAt: Date;
             createdAt: Date;
             updatedAt: Date;
-            token: string;
             ipAddress?: string | null | undefined;
             userAgent?: string | null | undefined;
         };
         user: {
             id: string;
+            name: string;
+            emailVerified: boolean;
+            email: string;
             createdAt: Date;
             updatedAt: Date;
-            email: string;
-            emailVerified: boolean;
-            name: string;
             image?: string | null | undefined;
         };
     };

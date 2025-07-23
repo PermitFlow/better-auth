@@ -503,6 +503,8 @@ function toAuthEndpoints(endpoints, ctx) {
   const api = {};
   for (const [key, endpoint] of Object.entries(endpoints)) {
     api[key] = async (context) => {
+      console.warn(endpoint);
+      console.warn(context);
       const authContext = await ctx;
       let internalContext = {
         ...context,
