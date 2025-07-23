@@ -890,6 +890,8 @@ const sso = (options) => {
           }
         },
         async (ctx) => {
+          console.warn("IM IN THE CALLBACK");
+          console.warn(ctx);
           const { SAMLResponse, RelayState } = ctx.body;
           const { providerId } = ctx.params;
           const provider = await ctx.context.adapter.findOne({
@@ -1008,12 +1010,14 @@ const sso = (options) => {
           }
           let session = await ctx.context.internalAdapter.createSession(user.id, ctx);
           await setSessionCookie(ctx, { session, user });
-          console.info(`I SET THE SESSION FOR ${user.email}`);
-          return ctx.json({
+          console.warn(`I SET THE SESSION FOR ${user.email}`);
+          const result = ctx.json({
             redirect: true,
             url: RelayState || `${parsedSamlConfig.issuer}`,
             user
           });
+          console.warn(result);
+          return result;
         }
       )
     },
