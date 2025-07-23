@@ -1024,6 +1024,7 @@ const sso = (options) => {
           }
           let session = await ctx.context.internalAdapter.createSession(user.id, ctx);
           await cookies.setSessionCookie(ctx, { session, user });
+          console.log(`I SET THE SESSION FOR ${user.email}`);
           return ctx.json({
             redirect: true,
             url: RelayState || `${parsedSamlConfig.issuer}`,
