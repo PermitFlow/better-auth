@@ -891,7 +891,6 @@ const sso = (options) => {
         },
         async (ctx) => {
           console.warn("IM IN THE CALLBACK");
-          console.warn(ctx);
           const { SAMLResponse, RelayState } = ctx.body;
           const { providerId } = ctx.params;
           const provider = await ctx.context.adapter.findOne({
@@ -927,6 +926,8 @@ const sso = (options) => {
               details: error instanceof Error ? error.message : String(error)
             });
           }
+          console.warn("IDP RESPONSE");
+          console.warn(parsedResponse);
           const { extract } = parsedResponse;
           const attributes = parsedResponse.extract.attributes;
           const mapping = parsedSamlConfig?.mapping ?? {};
@@ -956,6 +957,8 @@ const sso = (options) => {
               }
             ]
           });
+          console.warn(`existingUser = ${!!existingUser}`);
+          console.warn(existingUser);
           if (existingUser) {
             user = existingUser;
           } else {
@@ -977,6 +980,7 @@ const sso = (options) => {
               provider
             });
           }
+          console.warn(`provisionUser`);
           if (provider.organizationId && !options?.organizationProvisioning?.disabled) {
             const isOrgPluginEnabled = ctx.context.options.plugins?.find(
               (plugin) => plugin.id === "organization"
@@ -1009,6 +1013,7 @@ const sso = (options) => {
             }
           }
           let session = await ctx.context.internalAdapter.createSession(user.id, ctx);
+          console.warn(`createSession`);
           await setSessionCookie(ctx, { session, user });
           console.warn(`I SET THE SESSION FOR ${user.email}`);
           const result = ctx.json({

@@ -1201,7 +1201,6 @@ export const sso = (options?: SSOOptions) => {
 				},
 				async (ctx) => {
 					console.warn('IM IN THE CALLBACK')
-					console.warn(ctx)
 					const { SAMLResponse, RelayState } = ctx.body;
 					const { providerId } = ctx.params;
 					const provider = await ctx.context.adapter.findOne<SSOProvider>({
@@ -1240,6 +1239,8 @@ export const sso = (options?: SSOOptions) => {
 							details: error instanceof Error ? error.message : String(error),
 						});
 					}
+					console.warn('IDP RESPONSE')
+					console.warn(parsedResponse)
 					const { extract } = parsedResponse;
 					const attributes = parsedResponse.extract.attributes;
 					const mapping = parsedSamlConfig?.mapping ?? {};
@@ -1271,6 +1272,8 @@ export const sso = (options?: SSOOptions) => {
 							},
 						],
 					});
+					console.warn(`existingUser = ${!!existingUser}`)
+					console.warn(existingUser)
 
 					if (existingUser) {
 						user = existingUser;
@@ -1294,6 +1297,7 @@ export const sso = (options?: SSOOptions) => {
 							provider,
 						});
 					}
+					console.warn(`provisionUser`)
 
 					if (
 						provider.organizationId &&
@@ -1334,6 +1338,7 @@ export const sso = (options?: SSOOptions) => {
 
 					let session: Session =
 						await ctx.context.internalAdapter.createSession(user.id, ctx);
+					console.warn(`createSession`)
 					await setSessionCookie(ctx, { session, user });
 					console.warn(`I SET THE SESSION FOR ${user.email}`)
 					const result = ctx.json({
