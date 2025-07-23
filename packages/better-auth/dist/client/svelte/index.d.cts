@@ -4,9 +4,9 @@ export * from 'nanostores';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { BetterFetchError } from '@better-fetch/fetch';
 export * from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.BY_74rgY.cjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.BV3u2nZs.cjs';
 import { U as UnionToIntersection, P as PrettifyDeep } from '../../shared/better-auth.9XhOL8gb.cjs';
-import { f as BASE_ERROR_CODES } from '../../shared/better-auth.BCiOEoWo.cjs';
+import { f as BASE_ERROR_CODES } from '../../shared/better-auth.FEr6nfN6.cjs';
 import 'better-call';
 import 'zod';
 import '../../shared/better-auth.48LtINOO.cjs';
@@ -22,15 +22,15 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
         data: InferClientAPI<Option> extends {
             getSession: () => Promise<infer Res>;
         } ? Res extends {
+            data: infer S;
+            error: null;
+        } | {
             data: null;
             error: {
                 message?: string | undefined;
                 status: number;
                 statusText: string;
             };
-        } | {
-            data: infer S;
-            error: null;
         } ? S : Res extends Record<string, any> ? Res : never : never;
         error: BetterFetchError | null;
         isPending: boolean;
@@ -44,13 +44,13 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
                 onSuccess(context: _better_fetch_fetch.SuccessContext<any>): void;
             };
         })[];
+        redirect?: RequestRedirect;
         method: string;
         headers?: (HeadersInit & (HeadersInit | {
             accept: "application/json" | "text/plain" | "application/octet-stream";
             "content-type": "application/json" | "text/plain" | "application/x-www-form-urlencoded" | "multipart/form-data" | "application/octet-stream";
             authorization: "Bearer" | "Basic";
         })) | undefined;
-        redirect?: RequestRedirect;
         cache?: RequestCache;
         credentials?: RequestCredentials;
         integrity?: string;
@@ -105,15 +105,15 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
         Session: NonNullable<InferClientAPI<Option> extends {
             getSession: () => Promise<infer Res>;
         } ? Res extends {
+            data: infer S;
+            error: null;
+        } | {
             data: null;
             error: {
                 message?: string | undefined;
                 status: number;
                 statusText: string;
             };
-        } | {
-            data: infer S;
-            error: null;
         } ? S : Res extends Record<string, any> ? Res : never : never>;
     };
     $ERROR_CODES: PrettifyDeep<InferErrorCodes<Option> & typeof BASE_ERROR_CODES>;
