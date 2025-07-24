@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.Cp3fyACN.cjs';
+import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.C9zzfpIg.cjs';
 import { L as LiteralString } from '../../shared/better-auth.9XhOL8gb.cjs';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import '../../shared/better-auth.48LtINOO.cjs';
@@ -283,11 +283,11 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -295,9 +295,9 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -382,11 +382,11 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -394,9 +394,9 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -638,11 +638,11 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -650,9 +650,9 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -1053,11 +1053,11 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -1065,9 +1065,9 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };

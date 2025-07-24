@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, I as InferOptionSchema } from '../../shared/better-auth.BQC-NzgW.mjs';
+import { U as User, I as InferOptionSchema } from '../../shared/better-auth.C4pT__Zc.mjs';
 import '../../shared/better-auth.9XhOL8gb.mjs';
 import '../../shared/better-auth.uZ__EClU.mjs';
 import 'kysely';
@@ -584,9 +584,9 @@ declare const phoneNumber: (options?: PhoneNumberOptions) => {
         resetPasswordPhoneNumber: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
+                    newPassword: string;
                     phoneNumber: string;
                     otp: string;
-                    newPassword: string;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -621,13 +621,13 @@ declare const phoneNumber: (options?: PhoneNumberOptions) => {
                     phoneNumber: z.ZodString;
                     newPassword: z.ZodString;
                 }, "strip", z.ZodTypeAny, {
+                    newPassword: string;
                     phoneNumber: string;
                     otp: string;
-                    newPassword: string;
                 }, {
+                    newPassword: string;
                     phoneNumber: string;
                     otp: string;
-                    newPassword: string;
                 }>;
                 metadata: {
                     openapi: {

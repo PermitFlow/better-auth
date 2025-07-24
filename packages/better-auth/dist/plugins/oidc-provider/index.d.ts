@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, G as GenericEndpointContext } from '../../shared/better-auth.DKkfBZeo.js';
+import { U as User, G as GenericEndpointContext } from '../../shared/better-auth.CGNlS50T.js';
 import '../../shared/better-auth.9XhOL8gb.js';
 import '../../shared/better-auth.R7C454Vo.js';
 import 'kysely';
@@ -679,11 +679,11 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -691,9 +691,9 @@ declare const oidcProvider: (options: OIDCOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -915,8 +915,8 @@ declare const oidcProvider: (options: OIDCOptions) => {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     redirect_uris: string[];
-                    metadata?: Record<string, any> | undefined;
                     scope?: string | undefined;
+                    metadata?: Record<string, any> | undefined;
                     jwks?: Record<string, any> | undefined;
                     token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
@@ -1020,8 +1020,8 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     software_statement: z.ZodOptional<z.ZodString>;
                 }, "strip", z.ZodTypeAny, {
                     redirect_uris: string[];
-                    metadata?: Record<string, any> | undefined;
                     scope?: string | undefined;
+                    metadata?: Record<string, any> | undefined;
                     jwks?: Record<string, any> | undefined;
                     token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
@@ -1038,8 +1038,8 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     software_statement?: string | undefined;
                 }, {
                     redirect_uris: string[];
-                    metadata?: Record<string, any> | undefined;
                     scope?: string | undefined;
+                    metadata?: Record<string, any> | undefined;
                     jwks?: Record<string, any> | undefined;
                     token_endpoint_auth_method?: "none" | "client_secret_post" | "client_secret_basic" | undefined;
                     grant_types?: ("password" | "refresh_token" | "authorization_code" | "implicit" | "client_credentials" | "urn:ietf:params:oauth:grant-type:jwt-bearer" | "urn:ietf:params:oauth:grant-type:saml2-bearer")[] | undefined;
@@ -1182,11 +1182,11 @@ declare const oidcProvider: (options: OIDCOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -1194,9 +1194,9 @@ declare const oidcProvider: (options: OIDCOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };
