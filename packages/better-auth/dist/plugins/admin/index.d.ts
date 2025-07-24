@@ -1,7 +1,7 @@
 import { AccessControl, Role, Statements } from '../access/index.js';
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { I as InferOptionSchema, G as GenericEndpointContext, H as HookEndpointContext, S as Session, U as User } from '../../shared/better-auth.tRjLk99E.js';
+import { I as InferOptionSchema, G as GenericEndpointContext, H as HookEndpointContext, S as Session, U as User } from '../../shared/better-auth.DKkfBZeo.js';
 import '../../shared/better-auth.9XhOL8gb.js';
 import '../../shared/better-auth.R7C454Vo.js';
 import 'kysely';
@@ -333,7 +333,7 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     sortDirection?: "asc" | "desc" | undefined;
                     filterField?: string | undefined;
                     filterValue?: string | number | boolean | undefined;
-                    filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
+                    filterOperator?: "lt" | "eq" | "ne" | "lte" | "gt" | "gte" | "contains" | undefined;
                 };
             } & {
                 params?: Record<string, any>;
@@ -398,7 +398,7 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     sortDirection?: "asc" | "desc" | undefined;
                     filterField?: string | undefined;
                     filterValue?: string | number | boolean | undefined;
-                    filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
+                    filterOperator?: "lt" | "eq" | "ne" | "lte" | "gt" | "gte" | "contains" | undefined;
                 }, {
                     sortBy?: string | undefined;
                     limit?: string | number | undefined;
@@ -409,7 +409,7 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     sortDirection?: "asc" | "desc" | undefined;
                     filterField?: string | undefined;
                     filterValue?: string | number | boolean | undefined;
-                    filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
+                    filterOperator?: "lt" | "eq" | "ne" | "lte" | "gt" | "gte" | "contains" | undefined;
                 }>;
                 metadata: {
                     openapi: {

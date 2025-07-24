@@ -906,15 +906,12 @@ const sso = (options) => {
           }
         },
         async (ctx) => {
-          console.warn("IM IN THE CALLBACK");
           const { SAMLResponse, RelayState } = ctx.body;
           const { providerId } = ctx.params;
-          console.warn(ctx.params);
           const provider = await ctx.context.adapter.findOne({
             model: "ssoProvider",
             where: [{ field: "providerId", value: providerId }]
           });
-          console.warn("PROVIDER FOUND");
           if (!provider) {
             throw new api.APIError("NOT_FOUND", {
               message: "No provider found for the given providerId"
@@ -923,15 +920,12 @@ const sso = (options) => {
           const parsedSamlConfig = JSON.parse(
             provider.samlConfig
           );
-          console.warn("parsedSamlConfig");
           const idp = saml__namespace.IdentityProvider({
             metadata: parsedSamlConfig.idpMetadata.metadata
           });
-          console.warn("idp");
           const sp = saml__namespace.ServiceProvider({
             metadata: parsedSamlConfig.spMetadata.metadata
           });
-          console.warn("sp");
           let parsedResponse;
           try {
             parsedResponse = await sp.parseLoginResponse(idp, "post", {
@@ -947,8 +941,6 @@ const sso = (options) => {
               details: error instanceof Error ? error.message : String(error)
             });
           }
-          console.warn("IDP RESPONSE");
-          console.warn(parsedResponse);
           const { extract } = parsedResponse;
           const attributes = parsedResponse.extract.attributes;
           const mapping = parsedSamlConfig?.mapping ?? {};
@@ -978,8 +970,6 @@ const sso = (options) => {
               }
             ]
           });
-          console.warn(`existingUser = ${!!existingUser}`);
-          console.warn(existingUser);
           if (existingUser) {
             user = existingUser;
           } else {
@@ -1001,7 +991,6 @@ const sso = (options) => {
               provider
             });
           }
-          console.warn(`provisionUser`);
           if (provider.organizationId && !options?.organizationProvisioning?.disabled) {
             const isOrgPluginEnabled = ctx.context.options.plugins?.find(
               (plugin) => plugin.id === "organization"
@@ -1034,16 +1023,12 @@ const sso = (options) => {
             }
           }
           let session = await ctx.context.internalAdapter.createSession(user.id, ctx);
-          console.warn(`createSession`);
           await cookies.setSessionCookie(ctx, { session, user });
-          console.warn(`I SET THE SESSION FOR ${user.email}`);
-          const result = ctx.json({
+          return ctx.json({
             redirect: true,
             url: RelayState || `${parsedSamlConfig.issuer}`,
             user
           });
-          console.warn(result);
-          return result;
         }
       )
     },
