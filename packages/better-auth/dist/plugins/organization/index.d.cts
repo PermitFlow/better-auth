@@ -1,7 +1,7 @@
 import { Role, AccessControl, Statements } from '../access/index.cjs';
 import { z, ZodLiteral } from 'zod';
 import * as better_call from 'better-call';
-import { G as GenericEndpointContext, S as Session, U as User, p as AuthContext } from '../../shared/better-auth.Cp3fyACN.cjs';
+import { G as GenericEndpointContext, S as Session, U as User, p as AuthContext } from '../../shared/better-auth.C9zzfpIg.cjs';
 import { defaultRoles } from './access/index.cjs';
 export { adminAc, defaultAc, defaultStatements, memberAc, ownerAc } from './access/index.cjs';
 import '../../shared/better-auth.9XhOL8gb.cjs';
@@ -45,13 +45,13 @@ declare const memberSchema: z.ZodObject<{
     id: string;
     userId: string;
     createdAt: Date;
-    organizationId: string;
     role: string;
+    organizationId: string;
     teamId?: string | undefined;
 }, {
     userId: string;
-    organizationId: string;
     role: string;
+    organizationId: string;
     id?: string | undefined;
     createdAt?: Date | undefined;
     teamId?: string | undefined;
@@ -70,15 +70,15 @@ declare const invitationSchema: z.ZodObject<{
     email: string;
     status: "accepted" | "canceled" | "rejected" | "pending";
     expiresAt: Date;
-    organizationId: string;
     role: string;
+    organizationId: string;
     inviterId: string;
     teamId?: string | undefined;
 }, {
     email: string;
     expiresAt: Date;
-    organizationId: string;
     role: string;
+    organizationId: string;
     inviterId: string;
     id?: string | undefined;
     status?: "accepted" | "canceled" | "rejected" | "pending" | undefined;
@@ -1167,8 +1167,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         id: string;
                         userId: string;
                         createdAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         teamId?: string | undefined;
                     }[];
                     id: string;
@@ -1183,8 +1183,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 }[];
                 id: string;
@@ -2305,8 +2305,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 };
@@ -2315,8 +2315,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             }>;
@@ -2474,8 +2474,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 } | null;
@@ -2484,8 +2484,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             } | null>;
@@ -2597,8 +2597,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         email: string;
                         status: "accepted" | "canceled" | "rejected" | "pending";
                         expiresAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         inviterId: string;
                         teamId?: string | undefined;
                     };
@@ -2606,8 +2606,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         id: string;
                         userId: string;
                         createdAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         teamId?: string | undefined;
                     };
                 } | null;
@@ -2617,8 +2617,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 };
@@ -2626,8 +2626,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 };
             } | null>;
@@ -2746,8 +2746,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 };
@@ -2759,8 +2759,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             }>;
@@ -2872,8 +2872,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         email: string;
                         status: "accepted" | "canceled" | "rejected" | "pending";
                         expiresAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         inviterId: string;
                         teamId?: string | undefined;
                     } | null;
@@ -2885,8 +2885,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 } | null;
@@ -3004,8 +3004,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 }[];
@@ -3014,8 +3014,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             }[]>;
@@ -3322,16 +3322,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 } | null;
             } : {
                 id: string;
                 userId: string;
                 createdAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 teamId?: string | undefined;
             } | null>;
             options: {
@@ -3413,8 +3413,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         id: string;
                         userId: string;
                         createdAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         teamId?: string | undefined;
                     };
                 } | null;
@@ -3423,8 +3423,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 };
             } | null>;
@@ -3557,16 +3557,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 };
             } : {
                 id: string;
                 userId: string;
                 createdAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 teamId?: string | undefined;
             }>;
             options: {
@@ -3710,8 +3710,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 } | null;
             } : {
@@ -3724,8 +3724,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 id: string;
                 userId: string;
                 createdAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 teamId?: string | undefined;
             } | null>;
             options: {
@@ -3845,8 +3845,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 };
             } : {
@@ -3859,8 +3859,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 id: string;
                 userId: string;
                 createdAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 teamId?: string | undefined;
             }>;
             options: {
@@ -3941,8 +3941,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 }[];
@@ -3951,8 +3951,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             }[]>;
@@ -4050,8 +4050,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         id: string;
                         userId: string;
                         createdAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         teamId?: string | undefined;
                     }[];
                     id: string;
@@ -4066,8 +4066,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 }[];
                 id: string;
@@ -5188,8 +5188,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 };
@@ -5198,8 +5198,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             }>;
@@ -5357,8 +5357,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 } | null;
@@ -5367,8 +5367,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             } | null>;
@@ -5480,8 +5480,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         email: string;
                         status: "accepted" | "canceled" | "rejected" | "pending";
                         expiresAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         inviterId: string;
                         teamId?: string | undefined;
                     };
@@ -5489,8 +5489,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         id: string;
                         userId: string;
                         createdAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         teamId?: string | undefined;
                     };
                 } | null;
@@ -5500,8 +5500,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 };
@@ -5509,8 +5509,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 };
             } | null>;
@@ -5629,8 +5629,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 };
@@ -5642,8 +5642,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             }>;
@@ -5755,8 +5755,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         email: string;
                         status: "accepted" | "canceled" | "rejected" | "pending";
                         expiresAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         inviterId: string;
                         teamId?: string | undefined;
                     } | null;
@@ -5768,8 +5768,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 } | null;
@@ -5887,8 +5887,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 }[];
@@ -5897,8 +5897,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             }[]>;
@@ -6205,16 +6205,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 } | null;
             } : {
                 id: string;
                 userId: string;
                 createdAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 teamId?: string | undefined;
             } | null>;
             options: {
@@ -6296,8 +6296,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         id: string;
                         userId: string;
                         createdAt: Date;
-                        organizationId: string;
                         role: string;
+                        organizationId: string;
                         teamId?: string | undefined;
                     };
                 } | null;
@@ -6306,8 +6306,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 };
             } | null>;
@@ -6440,16 +6440,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 };
             } : {
                 id: string;
                 userId: string;
                 createdAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 teamId?: string | undefined;
             }>;
             options: {
@@ -6593,8 +6593,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 } | null;
             } : {
@@ -6607,8 +6607,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 id: string;
                 userId: string;
                 createdAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 teamId?: string | undefined;
             } | null>;
             options: {
@@ -6728,8 +6728,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     id: string;
                     userId: string;
                     createdAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     teamId?: string | undefined;
                 };
             } : {
@@ -6742,8 +6742,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 id: string;
                 userId: string;
                 createdAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 teamId?: string | undefined;
             }>;
             options: {
@@ -6824,8 +6824,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     email: string;
                     status: "accepted" | "canceled" | "rejected" | "pending";
                     expiresAt: Date;
-                    organizationId: string;
                     role: string;
+                    organizationId: string;
                     inviterId: string;
                     teamId?: string | undefined;
                 }[];
@@ -6834,8 +6834,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 email: string;
                 status: "accepted" | "canceled" | "rejected" | "pending";
                 expiresAt: Date;
-                organizationId: string;
                 role: string;
+                organizationId: string;
                 inviterId: string;
                 teamId?: string | undefined;
             }[]>;

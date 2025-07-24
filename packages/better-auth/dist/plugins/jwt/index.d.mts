@@ -1,4 +1,4 @@
-import { U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext, G as GenericEndpointContext } from '../../shared/better-auth.BQC-NzgW.mjs';
+import { U as User, S as Session, I as InferOptionSchema, H as HookEndpointContext, G as GenericEndpointContext } from '../../shared/better-auth.C4pT__Zc.mjs';
 import * as better_call from 'better-call';
 import '../../shared/better-auth.9XhOL8gb.mjs';
 import 'zod';
@@ -268,11 +268,11 @@ declare const jwt: (options?: JwtOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -280,9 +280,9 @@ declare const jwt: (options?: JwtOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };
