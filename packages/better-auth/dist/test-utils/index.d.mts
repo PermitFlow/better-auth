@@ -1,8 +1,8 @@
 import * as nanostores from 'nanostores';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { SuccessContext } from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, d as InferRoute, c as InferErrorCodes } from '../shared/better-auth.CJThD2xj.mjs';
-import { B as BetterAuthOptions, U as User, t as InferAPI, a as Adapter, u as AdditionalSessionFieldsOutput, n as Auth, v as AdditionalUserFieldsOutput, w as InferFieldsFromPlugins, x as InferFieldsFromOptions, y as AdditionalUserFieldsInput, h as BetterAuthPlugin, p as AuthContext, z as InferPluginTypes, i as InferPluginErrorCodes, F as FilterActions, S as Session, D as setCookieToHeader } from '../shared/better-auth.DbMF1USy.mjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, d as InferRoute, c as InferErrorCodes } from '../shared/better-auth.DhuUcxoV.mjs';
+import { B as BetterAuthOptions, U as User, t as InferAPI, a as Adapter, u as AdditionalSessionFieldsOutput, n as Auth, v as AdditionalUserFieldsOutput, w as InferFieldsFromPlugins, x as InferFieldsFromOptions, y as AdditionalUserFieldsInput, h as BetterAuthPlugin, p as AuthContext, z as InferPluginTypes, i as InferPluginErrorCodes, F as FilterActions, S as Session, D as setCookieToHeader } from '../shared/better-auth.BQC-NzgW.mjs';
 import { U as UnionToIntersection, S as StripEmptyObjects, a as Prettify } from '../shared/better-auth.9XhOL8gb.mjs';
 import * as zod from 'zod';
 import * as better_call from 'better-call';
@@ -137,17 +137,17 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                     body: {
                         provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                        idToken?: {
+                            token: string;
+                            accessToken?: string | undefined;
+                            refreshToken?: string | undefined;
+                            expiresAt?: number | undefined;
+                            nonce?: string | undefined;
+                        } | undefined;
                         callbackURL?: string | undefined;
                         newUserCallbackURL?: string | undefined;
                         errorCallbackURL?: string | undefined;
                         disableRedirect?: boolean | undefined;
-                        idToken?: {
-                            token: string;
-                            nonce?: string | undefined;
-                            accessToken?: string | undefined;
-                            refreshToken?: string | undefined;
-                            expiresAt?: number | undefined;
-                        } | undefined;
                         scopes?: string[] | undefined;
                         requestSignUp?: boolean | undefined;
                         loginHint?: string | undefined;
@@ -222,49 +222,49 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             expiresAt: zod.ZodOptional<zod.ZodNumber>;
                         }, "strip", zod.ZodTypeAny, {
                             token: string;
-                            nonce?: string | undefined;
                             accessToken?: string | undefined;
                             refreshToken?: string | undefined;
                             expiresAt?: number | undefined;
+                            nonce?: string | undefined;
                         }, {
                             token: string;
-                            nonce?: string | undefined;
                             accessToken?: string | undefined;
                             refreshToken?: string | undefined;
                             expiresAt?: number | undefined;
+                            nonce?: string | undefined;
                         }>>;
                         scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                         requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
                         loginHint: zod.ZodOptional<zod.ZodString>;
                     }, "strip", zod.ZodTypeAny, {
                         provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                        idToken?: {
+                            token: string;
+                            accessToken?: string | undefined;
+                            refreshToken?: string | undefined;
+                            expiresAt?: number | undefined;
+                            nonce?: string | undefined;
+                        } | undefined;
                         callbackURL?: string | undefined;
                         newUserCallbackURL?: string | undefined;
                         errorCallbackURL?: string | undefined;
                         disableRedirect?: boolean | undefined;
-                        idToken?: {
-                            token: string;
-                            nonce?: string | undefined;
-                            accessToken?: string | undefined;
-                            refreshToken?: string | undefined;
-                            expiresAt?: number | undefined;
-                        } | undefined;
                         scopes?: string[] | undefined;
                         requestSignUp?: boolean | undefined;
                         loginHint?: string | undefined;
                     }, {
                         provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                        idToken?: {
+                            token: string;
+                            accessToken?: string | undefined;
+                            refreshToken?: string | undefined;
+                            expiresAt?: number | undefined;
+                            nonce?: string | undefined;
+                        } | undefined;
                         callbackURL?: string | undefined;
                         newUserCallbackURL?: string | undefined;
                         errorCallbackURL?: string | undefined;
                         disableRedirect?: boolean | undefined;
-                        idToken?: {
-                            token: string;
-                            nonce?: string | undefined;
-                            accessToken?: string | undefined;
-                            refreshToken?: string | undefined;
-                            expiresAt?: number | undefined;
-                        } | undefined;
                         scopes?: string[] | undefined;
                         requestSignUp?: boolean | undefined;
                         loginHint?: string | undefined;
@@ -342,9 +342,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
             callbackOAuth: {
                 <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                     body?: {
-                        error?: string | undefined;
-                        user?: string | undefined;
                         code?: string | undefined;
+                        user?: string | undefined;
+                        error?: string | undefined;
                         device_id?: string | undefined;
                         error_description?: string | undefined;
                         state?: string | undefined;
@@ -353,9 +353,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     method: "GET" | "POST";
                 } & {
                     query?: {
-                        error?: string | undefined;
-                        user?: string | undefined;
                         code?: string | undefined;
+                        user?: string | undefined;
+                        error?: string | undefined;
                         device_id?: string | undefined;
                         error_description?: string | undefined;
                         state?: string | undefined;
@@ -390,16 +390,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         state: zod.ZodOptional<zod.ZodString>;
                         user: zod.ZodOptional<zod.ZodString>;
                     }, "strip", zod.ZodTypeAny, {
-                        error?: string | undefined;
-                        user?: string | undefined;
                         code?: string | undefined;
+                        user?: string | undefined;
+                        error?: string | undefined;
                         device_id?: string | undefined;
                         error_description?: string | undefined;
                         state?: string | undefined;
                     }, {
-                        error?: string | undefined;
-                        user?: string | undefined;
                         code?: string | undefined;
+                        user?: string | undefined;
+                        error?: string | undefined;
                         device_id?: string | undefined;
                         error_description?: string | undefined;
                         state?: string | undefined;
@@ -412,16 +412,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         state: zod.ZodOptional<zod.ZodString>;
                         user: zod.ZodOptional<zod.ZodString>;
                     }, "strip", zod.ZodTypeAny, {
-                        error?: string | undefined;
-                        user?: string | undefined;
                         code?: string | undefined;
+                        user?: string | undefined;
+                        error?: string | undefined;
                         device_id?: string | undefined;
                         error_description?: string | undefined;
                         state?: string | undefined;
                     }, {
-                        error?: string | undefined;
-                        user?: string | undefined;
                         code?: string | undefined;
+                        user?: string | undefined;
+                        error?: string | undefined;
                         device_id?: string | undefined;
                         error_description?: string | undefined;
                         state?: string | undefined;
@@ -463,11 +463,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     response: {
                         session: UnionToIntersection<StripEmptyObjects<{
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         } & ((O extends undefined ? {
@@ -587,9 +587,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         } & ((O extends undefined ? {
                             socialProviders: {
@@ -708,11 +708,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 } : {
                     session: UnionToIntersection<StripEmptyObjects<{
                         id: string;
-                        token: string;
-                        expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
                         userId: string;
+                        expiresAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     } & ((O extends undefined ? {
@@ -832,9 +832,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         id: string;
                         email: string;
                         emailVerified: boolean;
+                        name: string;
                         createdAt: Date;
                         updatedAt: Date;
-                        name: string;
                         image?: string | null | undefined;
                     } & ((O extends undefined ? {
                         socialProviders: {
@@ -2270,8 +2270,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     body: {
                         password: string;
                         email: string;
-                        callbackURL?: string | undefined;
                         rememberMe?: boolean | undefined;
+                        callbackURL?: string | undefined;
                     };
                 } & {
                     method?: "POST" | undefined;
@@ -2331,13 +2331,13 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     }, "strip", zod.ZodTypeAny, {
                         password: string;
                         email: string;
-                        callbackURL?: string | undefined;
                         rememberMe?: boolean | undefined;
+                        callbackURL?: string | undefined;
                     }, {
                         password: string;
                         email: string;
-                        callbackURL?: string | undefined;
                         rememberMe?: boolean | undefined;
+                        callbackURL?: string | undefined;
                     }>;
                     metadata: {
                         openapi: {
@@ -2872,11 +2872,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -2884,9 +2884,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -2995,11 +2995,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -3007,9 +3007,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3130,11 +3130,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -3142,9 +3142,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3162,11 +3162,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -3174,9 +3174,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3294,11 +3294,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -3306,9 +3306,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3503,11 +3503,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -3515,9 +3515,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3720,11 +3720,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -3732,9 +3732,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3852,8 +3852,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                     body: {
                         password?: string | undefined;
-                        callbackURL?: string | undefined;
                         token?: string | undefined;
+                        callbackURL?: string | undefined;
                     };
                 } & {
                     method?: "POST" | undefined;
@@ -3889,11 +3889,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -3901,9 +3901,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3914,12 +3914,12 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         token: zod.ZodOptional<zod.ZodString>;
                     }, "strip", zod.ZodTypeAny, {
                         password?: string | undefined;
-                        callbackURL?: string | undefined;
                         token?: string | undefined;
+                        callbackURL?: string | undefined;
                     }, {
                         password?: string | undefined;
-                        callbackURL?: string | undefined;
                         token?: string | undefined;
+                        callbackURL?: string | undefined;
                     }>;
                     metadata: {
                         openapi: {
@@ -4186,11 +4186,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     headers: Headers;
                     response: Prettify<UnionToIntersection<StripEmptyObjects<{
                         id: string;
-                        token: string;
-                        expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
                         userId: string;
+                        expiresAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     } & ((O extends undefined ? {
@@ -4308,11 +4308,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     }) ? T extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T> : T extends Auth ? AdditionalSessionFieldsOutput<T["options"]> : {} : never : never)>>>[];
                 } : Prettify<UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -4434,11 +4434,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -4446,9 +4446,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4523,11 +4523,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -4535,9 +4535,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4623,11 +4623,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -4635,9 +4635,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4708,11 +4708,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -4720,9 +4720,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4760,15 +4760,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                     body: {
                         provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                        callbackURL?: string | undefined;
-                        errorCallbackURL?: string | undefined;
                         idToken?: {
                             token: string;
-                            nonce?: string | undefined;
                             accessToken?: string | undefined;
                             refreshToken?: string | undefined;
+                            nonce?: string | undefined;
                             scopes?: string[] | undefined;
                         } | undefined;
+                        callbackURL?: string | undefined;
+                        errorCallbackURL?: string | undefined;
                         scopes?: string[] | undefined;
                         requestSignUp?: boolean | undefined;
                     };
@@ -4814,15 +4814,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                         }, "strip", zod.ZodTypeAny, {
                             token: string;
-                            nonce?: string | undefined;
                             accessToken?: string | undefined;
                             refreshToken?: string | undefined;
+                            nonce?: string | undefined;
                             scopes?: string[] | undefined;
                         }, {
                             token: string;
-                            nonce?: string | undefined;
                             accessToken?: string | undefined;
                             refreshToken?: string | undefined;
+                            nonce?: string | undefined;
                             scopes?: string[] | undefined;
                         }>>;
                         requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
@@ -4830,28 +4830,28 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         errorCallbackURL: zod.ZodOptional<zod.ZodString>;
                     }, "strip", zod.ZodTypeAny, {
                         provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                        callbackURL?: string | undefined;
-                        errorCallbackURL?: string | undefined;
                         idToken?: {
                             token: string;
-                            nonce?: string | undefined;
                             accessToken?: string | undefined;
                             refreshToken?: string | undefined;
+                            nonce?: string | undefined;
                             scopes?: string[] | undefined;
                         } | undefined;
+                        callbackURL?: string | undefined;
+                        errorCallbackURL?: string | undefined;
                         scopes?: string[] | undefined;
                         requestSignUp?: boolean | undefined;
                     }, {
                         provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                        callbackURL?: string | undefined;
-                        errorCallbackURL?: string | undefined;
                         idToken?: {
                             token: string;
-                            nonce?: string | undefined;
                             accessToken?: string | undefined;
                             refreshToken?: string | undefined;
+                            nonce?: string | undefined;
                             scopes?: string[] | undefined;
                         } | undefined;
+                        callbackURL?: string | undefined;
+                        errorCallbackURL?: string | undefined;
                         scopes?: string[] | undefined;
                         requestSignUp?: boolean | undefined;
                     }>;
@@ -4859,11 +4859,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -4871,9 +4871,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4959,11 +4959,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -4971,9 +4971,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5158,11 +5158,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -5170,9 +5170,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5447,11 +5447,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         session: {
                             session: Record<string, any> & {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -5459,9 +5459,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5646,11 +5646,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
             Session: {
                 session: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -5767,11 +5767,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_110 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_110> : T_110 extends Auth ? AdditionalSessionFieldsOutput<T_110["options"]> : {} : never : never)>> extends infer T_1 ? { [K in keyof T_1]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -5888,11 +5888,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_2 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_2> : T_2 extends Auth ? AdditionalSessionFieldsOutput<T_2["options"]> : {} : never : never)>>[K] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -6009,11 +6009,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_3 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_3> : T_3 extends Auth ? AdditionalSessionFieldsOutput<T_3["options"]> : {} : never : never)>>[K] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -6130,11 +6130,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_4 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_4> : T_4 extends Auth ? AdditionalSessionFieldsOutput<T_4["options"]> : {} : never : never)>>[K] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -6251,11 +6251,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_5 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_5> : T_5 extends Auth ? AdditionalSessionFieldsOutput<T_5["options"]> : {} : never : never)>>[K] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -6372,11 +6372,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_6 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_6> : T_6 extends Auth ? AdditionalSessionFieldsOutput<T_6["options"]> : {} : never : never)>>[K] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -6493,11 +6493,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_7 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_7> : T_7 extends Auth ? AdditionalSessionFieldsOutput<T_7["options"]> : {} : never : never)>>[K] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -6614,11 +6614,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_8 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_8> : T_8 extends Auth ? AdditionalSessionFieldsOutput<T_8["options"]> : {} : never : never)>>[K] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -6735,11 +6735,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_108 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_108> : T_108 extends Auth ? AdditionalSessionFieldsOutput<T_108["options"]> : {} : never : never)>>[K] extends infer T_9 ? { [K_1 in keyof T_9]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -6856,11 +6856,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_10 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_10> : T_10 extends Auth ? AdditionalSessionFieldsOutput<T_10["options"]> : {} : never : never)>>[K][K_1] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -6977,11 +6977,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_11 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_11> : T_11 extends Auth ? AdditionalSessionFieldsOutput<T_11["options"]> : {} : never : never)>>[K][K_1] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -7098,11 +7098,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_12 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_12> : T_12 extends Auth ? AdditionalSessionFieldsOutput<T_12["options"]> : {} : never : never)>>[K][K_1] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -7219,11 +7219,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_13 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_13> : T_13 extends Auth ? AdditionalSessionFieldsOutput<T_13["options"]> : {} : never : never)>>[K][K_1] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -7340,11 +7340,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_14 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_14> : T_14 extends Auth ? AdditionalSessionFieldsOutput<T_14["options"]> : {} : never : never)>>[K][K_1] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -7461,11 +7461,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_15 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_15> : T_15 extends Auth ? AdditionalSessionFieldsOutput<T_15["options"]> : {} : never : never)>>[K][K_1] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -7582,11 +7582,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_16 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_16> : T_16 extends Auth ? AdditionalSessionFieldsOutput<T_16["options"]> : {} : never : never)>>[K][K_1] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -7703,11 +7703,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_106 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_106> : T_106 extends Auth ? AdditionalSessionFieldsOutput<T_106["options"]> : {} : never : never)>>[K][K_1] extends infer T_17 ? { [K_2 in keyof T_17]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -7824,11 +7824,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_18 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_18> : T_18 extends Auth ? AdditionalSessionFieldsOutput<T_18["options"]> : {} : never : never)>>[K][K_1][K_2] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -7945,11 +7945,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_19 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_19> : T_19 extends Auth ? AdditionalSessionFieldsOutput<T_19["options"]> : {} : never : never)>>[K][K_1][K_2] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -8066,11 +8066,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_20 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_20> : T_20 extends Auth ? AdditionalSessionFieldsOutput<T_20["options"]> : {} : never : never)>>[K][K_1][K_2] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -8187,11 +8187,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_21 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_21> : T_21 extends Auth ? AdditionalSessionFieldsOutput<T_21["options"]> : {} : never : never)>>[K][K_1][K_2] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -8308,11 +8308,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_22 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_22> : T_22 extends Auth ? AdditionalSessionFieldsOutput<T_22["options"]> : {} : never : never)>>[K][K_1][K_2] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -8429,11 +8429,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_23 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_23> : T_23 extends Auth ? AdditionalSessionFieldsOutput<T_23["options"]> : {} : never : never)>>[K][K_1][K_2] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -8550,11 +8550,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_24 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_24> : T_24 extends Auth ? AdditionalSessionFieldsOutput<T_24["options"]> : {} : never : never)>>[K][K_1][K_2] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -8671,11 +8671,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_104 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_104> : T_104 extends Auth ? AdditionalSessionFieldsOutput<T_104["options"]> : {} : never : never)>>[K][K_1][K_2] extends infer T_25 ? { [K_3 in keyof T_25]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -8792,11 +8792,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_26 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_26> : T_26 extends Auth ? AdditionalSessionFieldsOutput<T_26["options"]> : {} : never : never)>>[K][K_1][K_2][K_3] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -8913,11 +8913,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_27 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_27> : T_27 extends Auth ? AdditionalSessionFieldsOutput<T_27["options"]> : {} : never : never)>>[K][K_1][K_2][K_3] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -9034,11 +9034,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_28 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_28> : T_28 extends Auth ? AdditionalSessionFieldsOutput<T_28["options"]> : {} : never : never)>>[K][K_1][K_2][K_3] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -9155,11 +9155,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_29 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_29> : T_29 extends Auth ? AdditionalSessionFieldsOutput<T_29["options"]> : {} : never : never)>>[K][K_1][K_2][K_3] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -9276,11 +9276,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_30 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_30> : T_30 extends Auth ? AdditionalSessionFieldsOutput<T_30["options"]> : {} : never : never)>>[K][K_1][K_2][K_3] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -9397,11 +9397,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_31 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_31> : T_31 extends Auth ? AdditionalSessionFieldsOutput<T_31["options"]> : {} : never : never)>>[K][K_1][K_2][K_3] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -9518,11 +9518,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_32 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_32> : T_32 extends Auth ? AdditionalSessionFieldsOutput<T_32["options"]> : {} : never : never)>>[K][K_1][K_2][K_3] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -9639,11 +9639,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_102 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_102> : T_102 extends Auth ? AdditionalSessionFieldsOutput<T_102["options"]> : {} : never : never)>>[K][K_1][K_2][K_3] extends infer T_33 ? { [K_4 in keyof T_33]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -9760,11 +9760,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_34 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_34> : T_34 extends Auth ? AdditionalSessionFieldsOutput<T_34["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -9881,11 +9881,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_35 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_35> : T_35 extends Auth ? AdditionalSessionFieldsOutput<T_35["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -10002,11 +10002,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_36 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_36> : T_36 extends Auth ? AdditionalSessionFieldsOutput<T_36["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -10123,11 +10123,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_37 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_37> : T_37 extends Auth ? AdditionalSessionFieldsOutput<T_37["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -10244,11 +10244,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_38 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_38> : T_38 extends Auth ? AdditionalSessionFieldsOutput<T_38["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -10365,11 +10365,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_39 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_39> : T_39 extends Auth ? AdditionalSessionFieldsOutput<T_39["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -10486,11 +10486,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_40 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_40> : T_40 extends Auth ? AdditionalSessionFieldsOutput<T_40["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -10607,11 +10607,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_100 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_100> : T_100 extends Auth ? AdditionalSessionFieldsOutput<T_100["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4] extends infer T_41 ? { [K_5 in keyof T_41]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -10728,11 +10728,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_42 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_42> : T_42 extends Auth ? AdditionalSessionFieldsOutput<T_42["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -10849,11 +10849,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_43 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_43> : T_43 extends Auth ? AdditionalSessionFieldsOutput<T_43["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -10970,11 +10970,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_44 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_44> : T_44 extends Auth ? AdditionalSessionFieldsOutput<T_44["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -11091,11 +11091,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_45 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_45> : T_45 extends Auth ? AdditionalSessionFieldsOutput<T_45["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -11212,11 +11212,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_46 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_46> : T_46 extends Auth ? AdditionalSessionFieldsOutput<T_46["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -11333,11 +11333,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_47 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_47> : T_47 extends Auth ? AdditionalSessionFieldsOutput<T_47["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -11454,11 +11454,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_48 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_48> : T_48 extends Auth ? AdditionalSessionFieldsOutput<T_48["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -11575,11 +11575,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_98 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_98> : T_98 extends Auth ? AdditionalSessionFieldsOutput<T_98["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5] extends infer T_49 ? { [K_6 in keyof T_49]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -11696,11 +11696,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_50 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_50> : T_50 extends Auth ? AdditionalSessionFieldsOutput<T_50["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -11817,11 +11817,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_51 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_51> : T_51 extends Auth ? AdditionalSessionFieldsOutput<T_51["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -11938,11 +11938,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_52 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_52> : T_52 extends Auth ? AdditionalSessionFieldsOutput<T_52["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -12059,11 +12059,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_53 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_53> : T_53 extends Auth ? AdditionalSessionFieldsOutput<T_53["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -12180,11 +12180,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_54 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_54> : T_54 extends Auth ? AdditionalSessionFieldsOutput<T_54["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -12301,11 +12301,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_55 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_55> : T_55 extends Auth ? AdditionalSessionFieldsOutput<T_55["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -12422,11 +12422,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_56 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_56> : T_56 extends Auth ? AdditionalSessionFieldsOutput<T_56["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -12543,11 +12543,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_96 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_96> : T_96 extends Auth ? AdditionalSessionFieldsOutput<T_96["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6] extends infer T_57 ? { [K_7 in keyof T_57]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -12664,11 +12664,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_58 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_58> : T_58 extends Auth ? AdditionalSessionFieldsOutput<T_58["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -12785,11 +12785,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_59 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_59> : T_59 extends Auth ? AdditionalSessionFieldsOutput<T_59["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -12906,11 +12906,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_60 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_60> : T_60 extends Auth ? AdditionalSessionFieldsOutput<T_60["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -13027,11 +13027,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_61 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_61> : T_61 extends Auth ? AdditionalSessionFieldsOutput<T_61["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -13148,11 +13148,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_62 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_62> : T_62 extends Auth ? AdditionalSessionFieldsOutput<T_62["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -13269,11 +13269,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_63 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_63> : T_63 extends Auth ? AdditionalSessionFieldsOutput<T_63["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -13390,11 +13390,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_64 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_64> : T_64 extends Auth ? AdditionalSessionFieldsOutput<T_64["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -13511,11 +13511,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_94 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_94> : T_94 extends Auth ? AdditionalSessionFieldsOutput<T_94["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7] extends infer T_65 ? { [K_8 in keyof T_65]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -13632,11 +13632,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_66 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_66> : T_66 extends Auth ? AdditionalSessionFieldsOutput<T_66["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -13753,11 +13753,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_67 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_67> : T_67 extends Auth ? AdditionalSessionFieldsOutput<T_67["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -13874,11 +13874,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_68 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_68> : T_68 extends Auth ? AdditionalSessionFieldsOutput<T_68["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -13995,11 +13995,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_69 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_69> : T_69 extends Auth ? AdditionalSessionFieldsOutput<T_69["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -14116,11 +14116,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_70 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_70> : T_70 extends Auth ? AdditionalSessionFieldsOutput<T_70["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -14237,11 +14237,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_71 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_71> : T_71 extends Auth ? AdditionalSessionFieldsOutput<T_71["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -14358,11 +14358,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_72 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_72> : T_72 extends Auth ? AdditionalSessionFieldsOutput<T_72["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -14479,11 +14479,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_92 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_92> : T_92 extends Auth ? AdditionalSessionFieldsOutput<T_92["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8] extends infer T_73 ? { [K_9 in keyof T_73]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -14600,11 +14600,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_74 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_74> : T_74 extends Auth ? AdditionalSessionFieldsOutput<T_74["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -14721,11 +14721,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_75 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_75> : T_75 extends Auth ? AdditionalSessionFieldsOutput<T_75["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -14842,11 +14842,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_76 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_76> : T_76 extends Auth ? AdditionalSessionFieldsOutput<T_76["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -14963,11 +14963,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_77 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_77> : T_77 extends Auth ? AdditionalSessionFieldsOutput<T_77["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -15084,11 +15084,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_78 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_78> : T_78 extends Auth ? AdditionalSessionFieldsOutput<T_78["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -15205,11 +15205,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_79 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_79> : T_79 extends Auth ? AdditionalSessionFieldsOutput<T_79["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -15326,11 +15326,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_80 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_80> : T_80 extends Auth ? AdditionalSessionFieldsOutput<T_80["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -15447,11 +15447,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_90 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_90> : T_90 extends Auth ? AdditionalSessionFieldsOutput<T_90["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9] extends infer T_81 ? { [K_10 in keyof T_81]: UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -15568,11 +15568,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_82 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_82> : T_82 extends Auth ? AdditionalSessionFieldsOutput<T_82["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9][K_10] extends (...args: any[]) => any ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -15689,11 +15689,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_83 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_83> : T_83 extends Auth ? AdditionalSessionFieldsOutput<T_83["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9][K_10] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -15810,11 +15810,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_84 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_84> : T_84 extends Auth ? AdditionalSessionFieldsOutput<T_84["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9][K_10] extends object ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -15931,11 +15931,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_85 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_85> : T_85 extends Auth ? AdditionalSessionFieldsOutput<T_85["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9][K_10] extends any[] ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -16052,11 +16052,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_86 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_86> : T_86 extends Auth ? AdditionalSessionFieldsOutput<T_86["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9][K_10] : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -16173,11 +16173,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_87 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_87> : T_87 extends Auth ? AdditionalSessionFieldsOutput<T_87["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9][K_10] extends Date ? UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -16294,11 +16294,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_88 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_88> : T_88 extends Auth ? AdditionalSessionFieldsOutput<T_88["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9][K_10] : /*elided*/ any : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -16415,11 +16415,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_89 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_89> : T_89 extends Auth ? AdditionalSessionFieldsOutput<T_89["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9][K_10]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -16536,11 +16536,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_91 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_91> : T_91 extends Auth ? AdditionalSessionFieldsOutput<T_91["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8][K_9]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -16657,11 +16657,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_93 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_93> : T_93 extends Auth ? AdditionalSessionFieldsOutput<T_93["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7][K_8]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -16778,11 +16778,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_95 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_95> : T_95 extends Auth ? AdditionalSessionFieldsOutput<T_95["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6][K_7]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -16899,11 +16899,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_97 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_97> : T_97 extends Auth ? AdditionalSessionFieldsOutput<T_97["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5][K_6]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -17020,11 +17020,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_99 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_99> : T_99 extends Auth ? AdditionalSessionFieldsOutput<T_99["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4][K_5]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -17141,11 +17141,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_101 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_101> : T_101 extends Auth ? AdditionalSessionFieldsOutput<T_101["options"]> : {} : never : never)>>[K][K_1][K_2][K_3][K_4]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -17262,11 +17262,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_103 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_103> : T_103 extends Auth ? AdditionalSessionFieldsOutput<T_103["options"]> : {} : never : never)>>[K][K_1][K_2][K_3]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -17383,11 +17383,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_105 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_105> : T_105 extends Auth ? AdditionalSessionFieldsOutput<T_105["options"]> : {} : never : never)>>[K][K_1][K_2]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -17504,11 +17504,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     };
                 }) ? T_107 extends BetterAuthOptions ? AdditionalSessionFieldsOutput<T_107> : T_107 extends Auth ? AdditionalSessionFieldsOutput<T_107["options"]> : {} : never : never)>>[K][K_1]; } : never : UnionToIntersection<StripEmptyObjects<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 } & ((O extends undefined ? {
@@ -17628,9 +17628,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -17748,9 +17748,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -17868,9 +17868,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -17988,9 +17988,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18108,9 +18108,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18228,9 +18228,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18348,9 +18348,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18468,9 +18468,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18588,9 +18588,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18708,9 +18708,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18828,9 +18828,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -18948,9 +18948,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19068,9 +19068,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19188,9 +19188,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19308,9 +19308,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19428,9 +19428,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19548,9 +19548,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19668,9 +19668,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19788,9 +19788,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -19908,9 +19908,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20028,9 +20028,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20148,9 +20148,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20268,9 +20268,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20388,9 +20388,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20508,9 +20508,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20628,9 +20628,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20748,9 +20748,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20868,9 +20868,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -20988,9 +20988,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21108,9 +21108,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21228,9 +21228,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21348,9 +21348,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21468,9 +21468,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21588,9 +21588,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21708,9 +21708,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21828,9 +21828,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -21948,9 +21948,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22068,9 +22068,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22188,9 +22188,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22308,9 +22308,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22428,9 +22428,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22548,9 +22548,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22668,9 +22668,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22788,9 +22788,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -22908,9 +22908,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23028,9 +23028,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23148,9 +23148,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23268,9 +23268,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23388,9 +23388,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23508,9 +23508,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23628,9 +23628,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23748,9 +23748,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23868,9 +23868,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -23988,9 +23988,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24108,9 +24108,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24228,9 +24228,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24348,9 +24348,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24468,9 +24468,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24588,9 +24588,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24708,9 +24708,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24828,9 +24828,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -24948,9 +24948,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25068,9 +25068,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25188,9 +25188,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25308,9 +25308,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25428,9 +25428,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25548,9 +25548,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25668,9 +25668,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25788,9 +25788,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -25908,9 +25908,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26028,9 +26028,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26148,9 +26148,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26268,9 +26268,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26388,9 +26388,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26508,9 +26508,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26628,9 +26628,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26748,9 +26748,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26868,9 +26868,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -26988,9 +26988,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27108,9 +27108,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27228,9 +27228,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27348,9 +27348,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27468,9 +27468,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27588,9 +27588,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27708,9 +27708,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27828,9 +27828,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -27948,9 +27948,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28068,9 +28068,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28188,9 +28188,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28308,9 +28308,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28428,9 +28428,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28548,9 +28548,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28668,9 +28668,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28788,9 +28788,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -28908,9 +28908,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29028,9 +29028,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29148,9 +29148,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29268,9 +29268,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29388,9 +29388,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 } & ((O extends undefined ? {
                     socialProviders: {
@@ -29773,17 +29773,17 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                    idToken?: {
+                        token: string;
+                        accessToken?: string | undefined;
+                        refreshToken?: string | undefined;
+                        expiresAt?: number | undefined;
+                        nonce?: string | undefined;
+                    } | undefined;
                     callbackURL?: string | undefined;
                     newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
                     disableRedirect?: boolean | undefined;
-                    idToken?: {
-                        token: string;
-                        nonce?: string | undefined;
-                        accessToken?: string | undefined;
-                        refreshToken?: string | undefined;
-                        expiresAt?: number | undefined;
-                    } | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                     loginHint?: string | undefined;
@@ -29858,49 +29858,49 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         expiresAt: zod.ZodOptional<zod.ZodNumber>;
                     }, "strip", zod.ZodTypeAny, {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
                         expiresAt?: number | undefined;
+                        nonce?: string | undefined;
                     }, {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
                         expiresAt?: number | undefined;
+                        nonce?: string | undefined;
                     }>>;
                     scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                     requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
                     loginHint: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                    idToken?: {
+                        token: string;
+                        accessToken?: string | undefined;
+                        refreshToken?: string | undefined;
+                        expiresAt?: number | undefined;
+                        nonce?: string | undefined;
+                    } | undefined;
                     callbackURL?: string | undefined;
                     newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
                     disableRedirect?: boolean | undefined;
-                    idToken?: {
-                        token: string;
-                        nonce?: string | undefined;
-                        accessToken?: string | undefined;
-                        refreshToken?: string | undefined;
-                        expiresAt?: number | undefined;
-                    } | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                     loginHint?: string | undefined;
                 }, {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                    idToken?: {
+                        token: string;
+                        accessToken?: string | undefined;
+                        refreshToken?: string | undefined;
+                        expiresAt?: number | undefined;
+                        nonce?: string | undefined;
+                    } | undefined;
                     callbackURL?: string | undefined;
                     newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
                     disableRedirect?: boolean | undefined;
-                    idToken?: {
-                        token: string;
-                        nonce?: string | undefined;
-                        accessToken?: string | undefined;
-                        refreshToken?: string | undefined;
-                        expiresAt?: number | undefined;
-                    } | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                     loginHint?: string | undefined;
@@ -29978,9 +29978,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
         callbackOAuth: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body?: {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
@@ -29989,9 +29989,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 method: "GET" | "POST";
             } & {
                 query?: {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
@@ -30026,16 +30026,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     state: zod.ZodOptional<zod.ZodString>;
                     user: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
                 }, {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
@@ -30048,16 +30048,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     state: zod.ZodOptional<zod.ZodString>;
                     user: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
                 }, {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
@@ -30099,11 +30099,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 response: {
                     session: {
                         id: string;
-                        token: string;
-                        expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
                         userId: string;
+                        expiresAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     };
@@ -30111,20 +30111,20 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         id: string;
                         email: string;
                         emailVerified: boolean;
+                        name: string;
                         createdAt: Date;
                         updatedAt: Date;
-                        name: string;
                         image?: string | null | undefined;
                     };
                 } | null;
             } : {
                 session: {
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 };
@@ -30132,9 +30132,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 };
             } | null>;
@@ -30434,8 +30434,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 body: {
                     password: string;
                     email: string;
-                    callbackURL?: string | undefined;
                     rememberMe?: boolean | undefined;
+                    callbackURL?: string | undefined;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -30495,13 +30495,13 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 }, "strip", zod.ZodTypeAny, {
                     password: string;
                     email: string;
-                    callbackURL?: string | undefined;
                     rememberMe?: boolean | undefined;
+                    callbackURL?: string | undefined;
                 }, {
                     password: string;
                     email: string;
-                    callbackURL?: string | undefined;
                     rememberMe?: boolean | undefined;
+                    callbackURL?: string | undefined;
                 }>;
                 metadata: {
                     openapi: {
@@ -31036,11 +31036,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -31048,9 +31048,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31159,11 +31159,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -31171,9 +31171,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31294,11 +31294,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -31306,9 +31306,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31357,11 +31357,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -31369,9 +31369,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31433,8 +31433,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     password?: string | undefined;
-                    callbackURL?: string | undefined;
                     token?: string | undefined;
+                    callbackURL?: string | undefined;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -31470,11 +31470,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -31482,9 +31482,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31495,12 +31495,12 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     token: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
                     password?: string | undefined;
-                    callbackURL?: string | undefined;
                     token?: string | undefined;
+                    callbackURL?: string | undefined;
                 }, {
                     password?: string | undefined;
-                    callbackURL?: string | undefined;
                     token?: string | undefined;
+                    callbackURL?: string | undefined;
                 }>;
                 metadata: {
                     openapi: {
@@ -31767,21 +31767,21 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 headers: Headers;
                 response: Prettify<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 }>[];
             } : Prettify<{
                 id: string;
-                token: string;
-                expiresAt: Date;
                 createdAt: Date;
                 updatedAt: Date;
                 userId: string;
+                expiresAt: Date;
+                token: string;
                 ipAddress?: string | null | undefined;
                 userAgent?: string | null | undefined;
             }>[]>;
@@ -31791,11 +31791,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -31803,9 +31803,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31880,11 +31880,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -31892,9 +31892,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -31980,11 +31980,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -31992,9 +31992,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32065,11 +32065,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -32077,9 +32077,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32117,15 +32117,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                    callbackURL?: string | undefined;
-                    errorCallbackURL?: string | undefined;
                     idToken?: {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     } | undefined;
+                    callbackURL?: string | undefined;
+                    errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                 };
@@ -32171,15 +32171,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                     }, "strip", zod.ZodTypeAny, {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     }, {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     }>>;
                     requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
@@ -32187,28 +32187,28 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     errorCallbackURL: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                    callbackURL?: string | undefined;
-                    errorCallbackURL?: string | undefined;
                     idToken?: {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     } | undefined;
+                    callbackURL?: string | undefined;
+                    errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                 }, {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                    callbackURL?: string | undefined;
-                    errorCallbackURL?: string | undefined;
                     idToken?: {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     } | undefined;
+                    callbackURL?: string | undefined;
+                    errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                 }>;
@@ -32216,11 +32216,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -32228,9 +32228,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32316,11 +32316,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -32328,9 +32328,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32515,11 +32515,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -32527,9 +32527,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -32804,11 +32804,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -32816,9 +32816,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -33008,17 +33008,17 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                    idToken?: {
+                        token: string;
+                        accessToken?: string | undefined;
+                        refreshToken?: string | undefined;
+                        expiresAt?: number | undefined;
+                        nonce?: string | undefined;
+                    } | undefined;
                     callbackURL?: string | undefined;
                     newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
                     disableRedirect?: boolean | undefined;
-                    idToken?: {
-                        token: string;
-                        nonce?: string | undefined;
-                        accessToken?: string | undefined;
-                        refreshToken?: string | undefined;
-                        expiresAt?: number | undefined;
-                    } | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                     loginHint?: string | undefined;
@@ -33093,49 +33093,49 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         expiresAt: zod.ZodOptional<zod.ZodNumber>;
                     }, "strip", zod.ZodTypeAny, {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
                         expiresAt?: number | undefined;
+                        nonce?: string | undefined;
                     }, {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
                         expiresAt?: number | undefined;
+                        nonce?: string | undefined;
                     }>>;
                     scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                     requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
                     loginHint: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                    idToken?: {
+                        token: string;
+                        accessToken?: string | undefined;
+                        refreshToken?: string | undefined;
+                        expiresAt?: number | undefined;
+                        nonce?: string | undefined;
+                    } | undefined;
                     callbackURL?: string | undefined;
                     newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
                     disableRedirect?: boolean | undefined;
-                    idToken?: {
-                        token: string;
-                        nonce?: string | undefined;
-                        accessToken?: string | undefined;
-                        refreshToken?: string | undefined;
-                        expiresAt?: number | undefined;
-                    } | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                     loginHint?: string | undefined;
                 }, {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                    idToken?: {
+                        token: string;
+                        accessToken?: string | undefined;
+                        refreshToken?: string | undefined;
+                        expiresAt?: number | undefined;
+                        nonce?: string | undefined;
+                    } | undefined;
                     callbackURL?: string | undefined;
                     newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
                     disableRedirect?: boolean | undefined;
-                    idToken?: {
-                        token: string;
-                        nonce?: string | undefined;
-                        accessToken?: string | undefined;
-                        refreshToken?: string | undefined;
-                        expiresAt?: number | undefined;
-                    } | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                     loginHint?: string | undefined;
@@ -33213,9 +33213,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
         callbackOAuth: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body?: {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
@@ -33224,9 +33224,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 method: "GET" | "POST";
             } & {
                 query?: {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
@@ -33261,16 +33261,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     state: zod.ZodOptional<zod.ZodString>;
                     user: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
                 }, {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
@@ -33283,16 +33283,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     state: zod.ZodOptional<zod.ZodString>;
                     user: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
                 }, {
-                    error?: string | undefined;
-                    user?: string | undefined;
                     code?: string | undefined;
+                    user?: string | undefined;
+                    error?: string | undefined;
                     device_id?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
@@ -33334,11 +33334,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 response: {
                     session: {
                         id: string;
-                        token: string;
-                        expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
                         userId: string;
+                        expiresAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     };
@@ -33346,20 +33346,20 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         id: string;
                         email: string;
                         emailVerified: boolean;
+                        name: string;
                         createdAt: Date;
                         updatedAt: Date;
-                        name: string;
                         image?: string | null | undefined;
                     };
                 } | null;
             } : {
                 session: {
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 };
@@ -33367,9 +33367,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     id: string;
                     email: string;
                     emailVerified: boolean;
+                    name: string;
                     createdAt: Date;
                     updatedAt: Date;
-                    name: string;
                     image?: string | null | undefined;
                 };
             } | null>;
@@ -33669,8 +33669,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 body: {
                     password: string;
                     email: string;
-                    callbackURL?: string | undefined;
                     rememberMe?: boolean | undefined;
+                    callbackURL?: string | undefined;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -33730,13 +33730,13 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 }, "strip", zod.ZodTypeAny, {
                     password: string;
                     email: string;
-                    callbackURL?: string | undefined;
                     rememberMe?: boolean | undefined;
+                    callbackURL?: string | undefined;
                 }, {
                     password: string;
                     email: string;
-                    callbackURL?: string | undefined;
                     rememberMe?: boolean | undefined;
+                    callbackURL?: string | undefined;
                 }>;
                 metadata: {
                     openapi: {
@@ -34271,11 +34271,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -34283,9 +34283,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -34394,11 +34394,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -34406,9 +34406,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -34529,11 +34529,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -34541,9 +34541,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -34592,11 +34592,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -34604,9 +34604,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -34668,8 +34668,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     password?: string | undefined;
-                    callbackURL?: string | undefined;
                     token?: string | undefined;
+                    callbackURL?: string | undefined;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -34705,11 +34705,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -34717,9 +34717,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -34730,12 +34730,12 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     token: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
                     password?: string | undefined;
-                    callbackURL?: string | undefined;
                     token?: string | undefined;
+                    callbackURL?: string | undefined;
                 }, {
                     password?: string | undefined;
-                    callbackURL?: string | undefined;
                     token?: string | undefined;
+                    callbackURL?: string | undefined;
                 }>;
                 metadata: {
                     openapi: {
@@ -35002,21 +35002,21 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 headers: Headers;
                 response: Prettify<{
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 }>[];
             } : Prettify<{
                 id: string;
-                token: string;
-                expiresAt: Date;
                 createdAt: Date;
                 updatedAt: Date;
                 userId: string;
+                expiresAt: Date;
+                token: string;
                 ipAddress?: string | null | undefined;
                 userAgent?: string | null | undefined;
             }>[]>;
@@ -35026,11 +35026,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -35038,9 +35038,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35115,11 +35115,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -35127,9 +35127,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35215,11 +35215,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -35227,9 +35227,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35300,11 +35300,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -35312,9 +35312,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35352,15 +35352,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                    callbackURL?: string | undefined;
-                    errorCallbackURL?: string | undefined;
                     idToken?: {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     } | undefined;
+                    callbackURL?: string | undefined;
+                    errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                 };
@@ -35406,15 +35406,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                     }, "strip", zod.ZodTypeAny, {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     }, {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     }>>;
                     requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
@@ -35422,28 +35422,28 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     errorCallbackURL: zod.ZodOptional<zod.ZodString>;
                 }, "strip", zod.ZodTypeAny, {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                    callbackURL?: string | undefined;
-                    errorCallbackURL?: string | undefined;
                     idToken?: {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     } | undefined;
+                    callbackURL?: string | undefined;
+                    errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                 }, {
                     provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                    callbackURL?: string | undefined;
-                    errorCallbackURL?: string | undefined;
                     idToken?: {
                         token: string;
-                        nonce?: string | undefined;
                         accessToken?: string | undefined;
                         refreshToken?: string | undefined;
+                        nonce?: string | undefined;
                         scopes?: string[] | undefined;
                     } | undefined;
+                    callbackURL?: string | undefined;
+                    errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                 }>;
@@ -35451,11 +35451,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -35463,9 +35463,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35551,11 +35551,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -35563,9 +35563,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -35750,11 +35750,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -35762,9 +35762,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -36039,11 +36039,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -36051,9 +36051,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -36265,17 +36265,17 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
@@ -36350,49 +36350,49 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 expiresAt: zod.ZodOptional<zod.ZodNumber>;
                             }, "strip", zod.ZodTypeAny, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
                                 expiresAt?: number | undefined;
+                                nonce?: string | undefined;
                             }, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
                                 expiresAt?: number | undefined;
+                                nonce?: string | undefined;
                             }>>;
                             scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                             requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
                             loginHint: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
                         }, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
@@ -36470,9 +36470,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 callbackOAuth: {
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body?: {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -36481,9 +36481,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         method: "GET" | "POST";
                     } & {
                         query?: {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -36518,16 +36518,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             state: zod.ZodOptional<zod.ZodString>;
                             user: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
                         }, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -36540,16 +36540,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             state: zod.ZodOptional<zod.ZodString>;
                             user: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
                         }, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -36591,11 +36591,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         response: {
                             session: {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -36603,20 +36603,20 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         } | null;
                     } : {
                         session: {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -36624,9 +36624,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     } | null>;
@@ -36926,8 +36926,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         body: {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         };
                     } & {
                         method?: "POST" | undefined;
@@ -36987,13 +36987,13 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         }, "strip", zod.ZodTypeAny, {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         }, {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         }>;
                         metadata: {
                             openapi: {
@@ -37528,11 +37528,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -37540,9 +37540,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -37651,11 +37651,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -37663,9 +37663,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -37786,11 +37786,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -37798,9 +37798,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -37849,11 +37849,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -37861,9 +37861,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -37925,8 +37925,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         };
                     } & {
                         method?: "POST" | undefined;
@@ -37962,11 +37962,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -37974,9 +37974,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -37987,12 +37987,12 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             token: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         }, {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         }>;
                         metadata: {
                             openapi: {
@@ -38259,21 +38259,21 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         headers: Headers;
                         response: Prettify<{
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         }>[];
                     } : Prettify<{
                         id: string;
-                        token: string;
-                        expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
                         userId: string;
+                        expiresAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     }>[]>;
@@ -38283,11 +38283,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -38295,9 +38295,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38372,11 +38372,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -38384,9 +38384,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38472,11 +38472,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -38484,9 +38484,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38557,11 +38557,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -38569,9 +38569,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38609,15 +38609,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         };
@@ -38663,15 +38663,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                             }, "strip", zod.ZodTypeAny, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             }, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             }>>;
                             requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
@@ -38679,28 +38679,28 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             errorCallbackURL: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         }, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         }>;
@@ -38708,11 +38708,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -38720,9 +38720,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -38808,11 +38808,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -38820,9 +38820,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -39007,11 +39007,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -39019,9 +39019,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -39296,11 +39296,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -39308,9 +39308,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -39500,17 +39500,17 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
@@ -39585,49 +39585,49 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 expiresAt: zod.ZodOptional<zod.ZodNumber>;
                             }, "strip", zod.ZodTypeAny, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
                                 expiresAt?: number | undefined;
+                                nonce?: string | undefined;
                             }, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
                                 expiresAt?: number | undefined;
+                                nonce?: string | undefined;
                             }>>;
                             scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                             requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
                             loginHint: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
                         }, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
@@ -39705,9 +39705,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 callbackOAuth: {
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body?: {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -39716,9 +39716,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         method: "GET" | "POST";
                     } & {
                         query?: {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -39753,16 +39753,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             state: zod.ZodOptional<zod.ZodString>;
                             user: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
                         }, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -39775,16 +39775,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             state: zod.ZodOptional<zod.ZodString>;
                             user: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
                         }, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -39826,11 +39826,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         response: {
                             session: {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -39838,20 +39838,20 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         } | null;
                     } : {
                         session: {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -39859,9 +39859,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     } | null>;
@@ -40161,8 +40161,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         body: {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         };
                     } & {
                         method?: "POST" | undefined;
@@ -40222,13 +40222,13 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         }, "strip", zod.ZodTypeAny, {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         }, {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         }>;
                         metadata: {
                             openapi: {
@@ -40763,11 +40763,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -40775,9 +40775,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -40886,11 +40886,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -40898,9 +40898,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41021,11 +41021,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -41033,9 +41033,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41084,11 +41084,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -41096,9 +41096,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41160,8 +41160,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         };
                     } & {
                         method?: "POST" | undefined;
@@ -41197,11 +41197,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -41209,9 +41209,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41222,12 +41222,12 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             token: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         }, {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         }>;
                         metadata: {
                             openapi: {
@@ -41494,21 +41494,21 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         headers: Headers;
                         response: Prettify<{
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         }>[];
                     } : Prettify<{
                         id: string;
-                        token: string;
-                        expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
                         userId: string;
+                        expiresAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     }>[]>;
@@ -41518,11 +41518,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -41530,9 +41530,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41607,11 +41607,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -41619,9 +41619,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41707,11 +41707,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -41719,9 +41719,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41792,11 +41792,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -41804,9 +41804,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -41844,15 +41844,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         };
@@ -41898,15 +41898,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                             }, "strip", zod.ZodTypeAny, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             }, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             }>>;
                             requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
@@ -41914,28 +41914,28 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             errorCallbackURL: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         }, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         }>;
@@ -41943,11 +41943,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -41955,9 +41955,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -42043,11 +42043,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -42055,9 +42055,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -42242,11 +42242,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -42254,9 +42254,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -42531,11 +42531,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -42543,9 +42543,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -42818,17 +42818,17 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
@@ -42903,49 +42903,49 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 expiresAt: zod.ZodOptional<zod.ZodNumber>;
                             }, "strip", zod.ZodTypeAny, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
                                 expiresAt?: number | undefined;
+                                nonce?: string | undefined;
                             }, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
                                 expiresAt?: number | undefined;
+                                nonce?: string | undefined;
                             }>>;
                             scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                             requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
                             loginHint: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
                         }, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
@@ -43023,9 +43023,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 callbackOAuth: {
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body?: {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -43034,9 +43034,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         method: "GET" | "POST";
                     } & {
                         query?: {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -43071,16 +43071,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             state: zod.ZodOptional<zod.ZodString>;
                             user: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
                         }, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -43093,16 +43093,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             state: zod.ZodOptional<zod.ZodString>;
                             user: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
                         }, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -43144,11 +43144,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         response: {
                             session: {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -43156,20 +43156,20 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         } | null;
                     } : {
                         session: {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -43177,9 +43177,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     } | null>;
@@ -43479,8 +43479,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         body: {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         };
                     } & {
                         method?: "POST" | undefined;
@@ -43540,13 +43540,13 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         }, "strip", zod.ZodTypeAny, {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         }, {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         }>;
                         metadata: {
                             openapi: {
@@ -44081,11 +44081,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -44093,9 +44093,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44204,11 +44204,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -44216,9 +44216,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44339,11 +44339,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -44351,9 +44351,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44402,11 +44402,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -44414,9 +44414,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44478,8 +44478,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         };
                     } & {
                         method?: "POST" | undefined;
@@ -44515,11 +44515,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -44527,9 +44527,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44540,12 +44540,12 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             token: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         }, {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         }>;
                         metadata: {
                             openapi: {
@@ -44812,21 +44812,21 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         headers: Headers;
                         response: Prettify<{
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         }>[];
                     } : Prettify<{
                         id: string;
-                        token: string;
-                        expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
                         userId: string;
+                        expiresAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     }>[]>;
@@ -44836,11 +44836,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -44848,9 +44848,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -44925,11 +44925,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -44937,9 +44937,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45025,11 +45025,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -45037,9 +45037,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45110,11 +45110,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -45122,9 +45122,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45162,15 +45162,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         };
@@ -45216,15 +45216,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                             }, "strip", zod.ZodTypeAny, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             }, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             }>>;
                             requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
@@ -45232,28 +45232,28 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             errorCallbackURL: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         }, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         }>;
@@ -45261,11 +45261,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -45273,9 +45273,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45361,11 +45361,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -45373,9 +45373,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45560,11 +45560,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -45572,9 +45572,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -45849,11 +45849,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -45861,9 +45861,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -46053,17 +46053,17 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
@@ -46138,49 +46138,49 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 expiresAt: zod.ZodOptional<zod.ZodNumber>;
                             }, "strip", zod.ZodTypeAny, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
                                 expiresAt?: number | undefined;
+                                nonce?: string | undefined;
                             }, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
                                 expiresAt?: number | undefined;
+                                nonce?: string | undefined;
                             }>>;
                             scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                             requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
                             loginHint: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
                         }, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
+                            idToken?: {
+                                token: string;
+                                accessToken?: string | undefined;
+                                refreshToken?: string | undefined;
+                                expiresAt?: number | undefined;
+                                nonce?: string | undefined;
+                            } | undefined;
                             callbackURL?: string | undefined;
                             newUserCallbackURL?: string | undefined;
                             errorCallbackURL?: string | undefined;
                             disableRedirect?: boolean | undefined;
-                            idToken?: {
-                                token: string;
-                                nonce?: string | undefined;
-                                accessToken?: string | undefined;
-                                refreshToken?: string | undefined;
-                                expiresAt?: number | undefined;
-                            } | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                             loginHint?: string | undefined;
@@ -46258,9 +46258,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                 callbackOAuth: {
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body?: {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -46269,9 +46269,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         method: "GET" | "POST";
                     } & {
                         query?: {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -46306,16 +46306,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             state: zod.ZodOptional<zod.ZodString>;
                             user: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
                         }, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -46328,16 +46328,16 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             state: zod.ZodOptional<zod.ZodString>;
                             user: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
                         }, {
-                            error?: string | undefined;
-                            user?: string | undefined;
                             code?: string | undefined;
+                            user?: string | undefined;
+                            error?: string | undefined;
                             device_id?: string | undefined;
                             error_description?: string | undefined;
                             state?: string | undefined;
@@ -46379,11 +46379,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         response: {
                             session: {
                                 id: string;
-                                token: string;
-                                expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
                                 userId: string;
+                                expiresAt: Date;
+                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
@@ -46391,20 +46391,20 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 id: string;
                                 email: string;
                                 emailVerified: boolean;
+                                name: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         } | null;
                     } : {
                         session: {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -46412,9 +46412,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     } | null>;
@@ -46714,8 +46714,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         body: {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         };
                     } & {
                         method?: "POST" | undefined;
@@ -46775,13 +46775,13 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         }, "strip", zod.ZodTypeAny, {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         }, {
                             password: string;
                             email: string;
-                            callbackURL?: string | undefined;
                             rememberMe?: boolean | undefined;
+                            callbackURL?: string | undefined;
                         }>;
                         metadata: {
                             openapi: {
@@ -47316,11 +47316,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -47328,9 +47328,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -47439,11 +47439,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -47451,9 +47451,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -47574,11 +47574,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -47586,9 +47586,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -47637,11 +47637,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -47649,9 +47649,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -47713,8 +47713,8 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         };
                     } & {
                         method?: "POST" | undefined;
@@ -47750,11 +47750,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -47762,9 +47762,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -47775,12 +47775,12 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             token: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         }, {
                             password?: string | undefined;
-                            callbackURL?: string | undefined;
                             token?: string | undefined;
+                            callbackURL?: string | undefined;
                         }>;
                         metadata: {
                             openapi: {
@@ -48047,21 +48047,21 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                         headers: Headers;
                         response: Prettify<{
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         }>[];
                     } : Prettify<{
                         id: string;
-                        token: string;
-                        expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
                         userId: string;
+                        expiresAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     }>[]>;
@@ -48071,11 +48071,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -48083,9 +48083,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48160,11 +48160,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -48172,9 +48172,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48260,11 +48260,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -48272,9 +48272,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48345,11 +48345,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -48357,9 +48357,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48397,15 +48397,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                         body: {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         };
@@ -48451,15 +48451,15 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                 scopes: zod.ZodOptional<zod.ZodArray<zod.ZodString, "many">>;
                             }, "strip", zod.ZodTypeAny, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             }, {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             }>>;
                             requestSignUp: zod.ZodOptional<zod.ZodBoolean>;
@@ -48467,28 +48467,28 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             errorCallbackURL: zod.ZodOptional<zod.ZodString>;
                         }, "strip", zod.ZodTypeAny, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         }, {
                             provider: "github" | "apple" | "discord" | "facebook" | "microsoft" | "google" | "huggingface" | "slack" | "spotify" | "twitch" | "twitter" | "dropbox" | "kick" | "linear" | "linkedin" | "gitlab" | "tiktok" | "reddit" | "roblox" | "vk" | "zoom" | "notion" | (string & {});
-                            callbackURL?: string | undefined;
-                            errorCallbackURL?: string | undefined;
                             idToken?: {
                                 token: string;
-                                nonce?: string | undefined;
                                 accessToken?: string | undefined;
                                 refreshToken?: string | undefined;
+                                nonce?: string | undefined;
                                 scopes?: string[] | undefined;
                             } | undefined;
+                            callbackURL?: string | undefined;
+                            errorCallbackURL?: string | undefined;
                             scopes?: string[] | undefined;
                             requestSignUp?: boolean | undefined;
                         }>;
@@ -48496,11 +48496,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -48508,9 +48508,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48596,11 +48596,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -48608,9 +48608,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -48795,11 +48795,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -48807,9 +48807,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -49084,11 +49084,11 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                             session: {
                                 session: Record<string, any> & {
                                     id: string;
-                                    token: string;
-                                    expiresAt: Date;
                                     createdAt: Date;
                                     updatedAt: Date;
                                     userId: string;
+                                    expiresAt: Date;
+                                    token: string;
                                     ipAddress?: string | null | undefined;
                                     userAgent?: string | null | undefined;
                                 };
@@ -49096,9 +49096,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                                     id: string;
                                     email: string;
                                     emailVerified: boolean;
+                                    name: string;
                                     createdAt: Date;
                                     updatedAt: Date;
-                                    name: string;
                                     image?: string | null | undefined;
                                 };
                             };
@@ -52157,9 +52157,9 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
         id?: string | undefined;
         email: string;
         emailVerified?: boolean | undefined;
+        name: string;
         createdAt?: Date | undefined;
         updatedAt?: Date | undefined;
-        name: string;
         image?: string | null | undefined;
         password: string;
     };

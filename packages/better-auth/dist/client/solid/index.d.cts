@@ -1,10 +1,10 @@
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { BetterFetchError } from '@better-fetch/fetch';
 export * from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.BY_74rgY.cjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.CNd-169d.cjs';
 import { Accessor } from 'solid-js';
 import { U as UnionToIntersection, P as PrettifyDeep } from '../../shared/better-auth.9XhOL8gb.cjs';
-import { f as BASE_ERROR_CODES } from '../../shared/better-auth.BCiOEoWo.cjs';
+import { f as BASE_ERROR_CODES } from '../../shared/better-auth.Cp3fyACN.cjs';
 export * from 'nanostores';
 import 'better-call';
 import 'zod';
@@ -21,15 +21,15 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
         data: InferClientAPI<Option> extends {
             getSession: () => Promise<infer Res>;
         } ? Res extends {
+            data: infer S;
+            error: null;
+        } | {
             data: null;
             error: {
                 message?: string | undefined;
                 status: number;
                 statusText: string;
             };
-        } | {
-            data: infer S;
-            error: null;
         } ? S : Res extends Record<string, any> ? Res : never : never;
         isPending: boolean;
         isRefetching: boolean;
@@ -39,15 +39,15 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
         Session: NonNullable<InferClientAPI<Option> extends {
             getSession: () => Promise<infer Res>;
         } ? Res extends {
+            data: infer S;
+            error: null;
+        } | {
             data: null;
             error: {
                 message?: string | undefined;
                 status: number;
                 statusText: string;
             };
-        } | {
-            data: infer S;
-            error: null;
         } ? S : Res extends Record<string, any> ? Res : never : never>;
     };
     $fetch: _better_fetch_fetch.BetterFetch<{
@@ -58,13 +58,13 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
                 onSuccess(context: _better_fetch_fetch.SuccessContext<any>): void;
             };
         })[];
+        redirect?: RequestRedirect;
         method: string;
         headers?: (HeadersInit & (HeadersInit | {
             accept: "application/json" | "text/plain" | "application/octet-stream";
             "content-type": "application/json" | "text/plain" | "application/x-www-form-urlencoded" | "multipart/form-data" | "application/octet-stream";
             authorization: "Bearer" | "Basic";
         })) | undefined;
-        redirect?: RequestRedirect;
         cache?: RequestCache;
         credentials?: RequestCredentials;
         integrity?: string;

@@ -1,5 +1,5 @@
 import * as better_call from 'better-call';
-import { p as AuthContext, U as User, H as HookEndpointContext } from '../../shared/better-auth.tRjLk99E.js';
+import { p as AuthContext, U as User, H as HookEndpointContext } from '../../shared/better-auth.DKkfBZeo.js';
 import { z } from 'zod';
 import '../../shared/better-auth.9XhOL8gb.js';
 import '../../shared/better-auth.R7C454Vo.js';
@@ -89,8 +89,8 @@ declare const emailOTP: (options: EmailOTPOptions) => {
         createVerificationOTP: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
-                    type: "sign-in" | "forget-password" | "email-verification";
                     email: string;
+                    type: "sign-in" | "forget-password" | "email-verification";
                 };
             } & {
                 method?: "POST" | undefined;
@@ -120,11 +120,11 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                     email: z.ZodString;
                     type: z.ZodEnum<["email-verification", "sign-in", "forget-password"]>;
                 }, "strip", z.ZodTypeAny, {
-                    type: "sign-in" | "forget-password" | "email-verification";
                     email: string;
+                    type: "sign-in" | "forget-password" | "email-verification";
                 }, {
-                    type: "sign-in" | "forget-password" | "email-verification";
                     email: string;
+                    type: "sign-in" | "forget-password" | "email-verification";
                 }>;
                 metadata: {
                     SERVER_ONLY: true;
@@ -156,8 +156,8 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                 method?: "GET" | undefined;
             } & {
                 query: {
-                    type: "sign-in" | "forget-password" | "email-verification";
                     email: string;
+                    type: "sign-in" | "forget-password" | "email-verification";
                 };
             } & {
                 params?: Record<string, any>;
@@ -191,11 +191,11 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                     email: z.ZodString;
                     type: z.ZodEnum<["email-verification", "sign-in", "forget-password"]>;
                 }, "strip", z.ZodTypeAny, {
-                    type: "sign-in" | "forget-password" | "email-verification";
                     email: string;
+                    type: "sign-in" | "forget-password" | "email-verification";
                 }, {
-                    type: "sign-in" | "forget-password" | "email-verification";
                     email: string;
+                    type: "sign-in" | "forget-password" | "email-verification";
                 }>;
                 metadata: {
                     SERVER_ONLY: true;
@@ -594,8 +594,8 @@ declare const emailOTP: (options: EmailOTPOptions) => {
         sendVerificationOTP: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
-                    type: "sign-in" | "forget-password" | "email-verification";
                     email: string;
+                    type: "sign-in" | "forget-password" | "email-verification";
                 };
             } & {
                 method?: "POST" | undefined;
@@ -629,11 +629,11 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                     email: z.ZodString;
                     type: z.ZodEnum<["email-verification", "sign-in", "forget-password"]>;
                 }, "strip", z.ZodTypeAny, {
-                    type: "sign-in" | "forget-password" | "email-verification";
                     email: string;
+                    type: "sign-in" | "forget-password" | "email-verification";
                 }, {
-                    type: "sign-in" | "forget-password" | "email-verification";
                     email: string;
+                    type: "sign-in" | "forget-password" | "email-verification";
                 }>;
                 metadata: {
                     openapi: {

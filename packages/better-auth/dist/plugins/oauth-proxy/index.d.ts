@@ -1,4 +1,4 @@
-import { H as HookEndpointContext, p as AuthContext } from '../../shared/better-auth.tRjLk99E.js';
+import { H as HookEndpointContext, p as AuthContext } from '../../shared/better-auth.DKkfBZeo.js';
 import * as better_call from 'better-call';
 import { z } from 'zod';
 import '../../shared/better-auth.9XhOL8gb.js';
@@ -39,8 +39,8 @@ declare const oAuthProxy: (opts?: OAuthProxyOptions) => {
                 method?: "GET" | undefined;
             } & {
                 query: {
-                    callbackURL: string;
                     cookies: string;
+                    callbackURL: string;
                 };
             } & {
                 params?: Record<string, any>;
@@ -66,11 +66,11 @@ declare const oAuthProxy: (opts?: OAuthProxyOptions) => {
                     callbackURL: z.ZodString;
                     cookies: z.ZodString;
                 }, "strip", z.ZodTypeAny, {
-                    callbackURL: string;
                     cookies: string;
+                    callbackURL: string;
                 }, {
-                    callbackURL: string;
                     cookies: string;
+                    callbackURL: string;
                 }>;
                 use: ((inputContext: better_call.MiddlewareInputContext<better_call.MiddlewareOptions>) => Promise<void>)[];
                 metadata: {

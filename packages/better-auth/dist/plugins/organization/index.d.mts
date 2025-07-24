@@ -1,7 +1,7 @@
 import { Role, AccessControl, Statements } from '../access/index.mjs';
 import { z, ZodLiteral } from 'zod';
 import * as better_call from 'better-call';
-import { G as GenericEndpointContext, S as Session, U as User, p as AuthContext } from '../../shared/better-auth.DbMF1USy.mjs';
+import { G as GenericEndpointContext, S as Session, U as User, p as AuthContext } from '../../shared/better-auth.BQC-NzgW.mjs';
 import { defaultRoles } from './access/index.mjs';
 export { adminAc, defaultAc, defaultStatements, memberAc, ownerAc } from './access/index.mjs';
 import '../../shared/better-auth.9XhOL8gb.mjs';

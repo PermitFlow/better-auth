@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, S as Session, G as GenericEndpointContext } from '../../shared/better-auth.DbMF1USy.mjs';
+import { U as User, S as Session, G as GenericEndpointContext } from '../../shared/better-auth.BQC-NzgW.mjs';
 import '../../shared/better-auth.9XhOL8gb.mjs';
 import '../../shared/better-auth.uZ__EClU.mjs';
 import 'kysely';
@@ -74,11 +74,11 @@ declare const oneTimeToken: (options?: OneTimeTokenopts) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -86,9 +86,9 @@ declare const oneTimeToken: (options?: OneTimeTokenopts) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };

@@ -1,4 +1,4 @@
-import { I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.DbMF1USy.mjs';
+import { I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.BQC-NzgW.mjs';
 import { z } from 'zod';
 import * as better_call from 'better-call';
 import '../../shared/better-auth.9XhOL8gb.mjs';
@@ -67,8 +67,8 @@ declare const username: (options?: UsernameOptions) => {
                 body: {
                     password: string;
                     username: string;
-                    callbackURL?: string | undefined;
                     rememberMe?: boolean | undefined;
+                    callbackURL?: string | undefined;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -126,13 +126,13 @@ declare const username: (options?: UsernameOptions) => {
                 }, "strip", z.ZodTypeAny, {
                     password: string;
                     username: string;
-                    callbackURL?: string | undefined;
                     rememberMe?: boolean | undefined;
+                    callbackURL?: string | undefined;
                 }, {
                     password: string;
                     username: string;
-                    callbackURL?: string | undefined;
                     rememberMe?: boolean | undefined;
+                    callbackURL?: string | undefined;
                 }>;
                 metadata: {
                     openapi: {
@@ -223,7 +223,7 @@ declare const username: (options?: UsernameOptions) => {
                     unique: true;
                     returned: true;
                     transform: {
-                        input(value: string | number | boolean | string[] | number[] | Date | null | undefined): string | undefined;
+                        input(value: string | number | boolean | Date | string[] | number[] | null | undefined): string | undefined;
                     };
                 };
                 displayUsername: {
