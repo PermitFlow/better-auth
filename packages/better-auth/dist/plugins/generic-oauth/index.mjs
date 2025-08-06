@@ -2,7 +2,7 @@ import { betterFetch } from '@better-fetch/fetch';
 import { APIError } from 'better-call';
 import { decodeJwt } from 'jose';
 import { z } from 'zod';
-import { i as createAuthEndpoint, s as sessionMiddleware, B as BASE_ERROR_CODES, g as generateState, c as createAuthorizationURL, p as parseState, v as validateAuthorizationCode, h as handleOAuthUserInfo, r as refreshAccessToken } from '../../shared/better-auth.dm850UlW.mjs';
+import { i as createAuthEndpoint, s as sessionMiddleware, B as BASE_ERROR_CODES, g as generateState, c as createAuthorizationURL, p as parseState, v as validateAuthorizationCode, h as handleOAuthUserInfo, r as refreshAccessToken } from '../../shared/better-auth.DecCtJIQ.mjs';
 import { setSessionCookie } from '../../cookies/index.mjs';
 import '../../shared/better-auth.Cc72UxUH.mjs';
 import '../../shared/better-auth.8zoxzg-F.mjs';
@@ -427,7 +427,7 @@ const genericOAuth = (options) => {
             throw redirectOnError("email_is_missing");
           }
           if (link) {
-            if (ctx.context.options.account?.accountLinking?.allowDifferentEmails !== true && link.email !== mapUser.email.toLowerCase()) {
+            if (ctx.context.options.account?.accountLinking?.allowDifferentEmails !== true && link.email.toLowerCase() !== mapUser.email.toLowerCase()) {
               return redirectOnError("email_doesn't_match");
             }
             const existingAccount = await ctx.context.internalAdapter.findAccountByProviderId(

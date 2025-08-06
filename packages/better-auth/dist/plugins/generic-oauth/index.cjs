@@ -4,7 +4,7 @@ const fetch = require('@better-fetch/fetch');
 const betterCall = require('better-call');
 const jose = require('jose');
 const zod = require('zod');
-const socialProviders_index = require('../../shared/better-auth.Di4b3h9T.cjs');
+const socialProviders_index = require('../../shared/better-auth.NkaczwoG.cjs');
 const cookies_index = require('../../cookies/index.cjs');
 require('../../shared/better-auth.DcWKCjjf.cjs');
 require('../../shared/better-auth.DiSjtgs9.cjs');
@@ -429,7 +429,7 @@ const genericOAuth = (options) => {
             throw redirectOnError("email_is_missing");
           }
           if (link) {
-            if (ctx.context.options.account?.accountLinking?.allowDifferentEmails !== true && link.email !== mapUser.email.toLowerCase()) {
+            if (ctx.context.options.account?.accountLinking?.allowDifferentEmails !== true && link.email.toLowerCase() !== mapUser.email.toLowerCase()) {
               return redirectOnError("email_doesn't_match");
             }
             const existingAccount = await ctx.context.internalAdapter.findAccountByProviderId(

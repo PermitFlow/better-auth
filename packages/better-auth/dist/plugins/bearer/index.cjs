@@ -6,7 +6,7 @@ require('@better-auth/utils/base64');
 const hmac = require('@better-auth/utils/hmac');
 require('@better-auth/utils/binary');
 const cookies_index = require('../../cookies/index.cjs');
-const socialProviders_index = require('../../shared/better-auth.Di4b3h9T.cjs');
+const socialProviders_index = require('../../shared/better-auth.NkaczwoG.cjs');
 require('zod');
 require('../../shared/better-auth.DcWKCjjf.cjs');
 require('../../shared/better-auth.CXhVNgXP.cjs');

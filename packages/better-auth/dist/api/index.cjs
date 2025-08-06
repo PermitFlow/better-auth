@@ -1,7 +1,7 @@
 'use strict';
 
 const betterCall = require('better-call');
-const socialProviders_index = require('../shared/better-auth.Di4b3h9T.cjs');
+const socialProviders_index = require('../shared/better-auth.NkaczwoG.cjs');
 const zod = require('zod');
 const cookies_index = require('../cookies/index.cjs');
 const schema = require('../shared/better-auth.DcWKCjjf.cjs');
@@ -200,7 +200,7 @@ const signUpEmail = () => socialProviders_index.createAuthEndpoint(
     try {
       createdUser = await ctx.context.internalAdapter.createUser(
         {
-          email: email.toLowerCase(),
+          email,
           name,
           image,
           ...additionalData,

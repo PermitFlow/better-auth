@@ -1,5 +1,5 @@
 import 'better-call';
-import { f as createAuthMiddleware } from '../shared/better-auth.dm850UlW.mjs';
+import { f as createAuthMiddleware } from '../shared/better-auth.DecCtJIQ.mjs';
 import 'zod';
 import '../shared/better-auth.8zoxzg-F.mjs';
 import '@better-auth/utils/base64';

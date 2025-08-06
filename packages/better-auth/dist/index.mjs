@@ -1,7 +1,7 @@
-export { b as betterAuth } from './shared/better-auth.CeC_YPBC.mjs';
+export { b as betterAuth } from './shared/better-auth.DLvazvMv.mjs';
 export { B as BetterAuthError, M as MissingDependencyError } from './shared/better-auth.DdzSJf-n.mjs';
 export { c as capitalizeFirstLetter } from './shared/better-auth.D-2CmEwz.mjs';
-export { H as HIDE_METADATA, g as generateState, p as parseState } from './shared/better-auth.dm850UlW.mjs';
+export { H as HIDE_METADATA, g as generateState, p as parseState } from './shared/better-auth.DecCtJIQ.mjs';
 export { c as createLogger, g as generateId, l as levels, a as logger, s as shouldPublishLog } from './shared/better-auth.DBGfIDnh.mjs';
 import './api/index.mjs';
 import 'better-call';
@@ -22,7 +22,7 @@ import '@noble/hashes/scrypt';
 import '@better-auth/utils';
 import '@better-auth/utils/hex';
 import '@noble/hashes/utils';
-import './shared/better-auth.J-FkYMpb.mjs';
+import './shared/better-auth.D9rv5lyu.mjs';
 import '@better-auth/utils/hash';
 import '@noble/ciphers/chacha';
 import '@noble/ciphers/utils';

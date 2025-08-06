@@ -1,6 +1,6 @@
 'use strict';
 
-const getMigration = require('../shared/better-auth.CTYN90cw.cjs');
+const getMigration = require('../shared/better-auth.Cfzb1fyM.cjs');
 const getTables = require('../shared/better-auth.BEphVDyL.cjs');
 const zod = require('zod');
 const schema = require('../shared/better-auth.DcWKCjjf.cjs');

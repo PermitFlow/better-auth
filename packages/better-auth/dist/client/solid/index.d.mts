@@ -1,10 +1,10 @@
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { BetterFetchError } from '@better-fetch/fetch';
 export * from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.C9Lz5NFE.mjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.DNlBsTcf.mjs';
 import { Accessor } from 'solid-js';
 import { U as UnionToIntersection, P as PrettifyDeep } from '../../shared/better-auth.9XhOL8gb.mjs';
-import { f as BASE_ERROR_CODES } from '../../shared/better-auth.C4pT__Zc.mjs';
+import { f as BASE_ERROR_CODES } from '../../shared/better-auth.BRhLZiQ4.mjs';
 export * from 'nanostores';
 import 'better-call';
 import 'zod';

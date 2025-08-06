@@ -1,7 +1,7 @@
 'use strict';
 
 require('zod');
-const socialProviders_index = require('../shared/better-auth.Di4b3h9T.cjs');
+const socialProviders_index = require('../shared/better-auth.NkaczwoG.cjs');
 require('better-call');
 require('@better-auth/utils/hash');
 require('@better-auth/utils/base64');

@@ -1,7 +1,7 @@
 'use strict';
 
 const betterCall = require('better-call');
-require('../../shared/better-auth.Di4b3h9T.cjs');
+require('../../shared/better-auth.NkaczwoG.cjs');
 require('zod');
 require('../../shared/better-auth.DiSjtgs9.cjs');
 require('@better-auth/utils/base64');

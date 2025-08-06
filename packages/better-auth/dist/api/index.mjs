@@ -1,7 +1,7 @@
 import { APIError, toResponse, createRouter } from 'better-call';
 export { APIError } from 'better-call';
-import { i as createAuthEndpoint, B as BASE_ERROR_CODES, t as createEmailVerificationToken, w as wildcardMatch, u as listSessions, x as updateUser, k as getSession, y as originCheckMiddleware, z as error, A as ok, C as accountInfo, D as getAccessToken, E as refreshToken, F as unlinkAccount, G as deleteUserCallback, I as listUserAccounts, J as linkSocialAccount, K as revokeOtherSessions, L as revokeSessions, M as revokeSession, N as requestPasswordResetCallback, O as requestPasswordReset, P as forgetPasswordCallback, Q as deleteUser, R as setPassword, S as changePassword, T as changeEmail, U as sendVerificationEmail, V as verifyEmail, W as resetPassword, X as forgetPassword, Y as signInEmail, Z as signOut, _ as callbackOAuth, $ as signInSocial } from '../shared/better-auth.dm850UlW.mjs';
-export { f as createAuthMiddleware, l as freshSessionMiddleware, j as getSessionFromCtx, m as optionsMiddleware, o as originCheck, a0 as requestOnlySessionMiddleware, q as sendVerificationEmailFn, s as sessionMiddleware } from '../shared/better-auth.dm850UlW.mjs';
+import { i as createAuthEndpoint, B as BASE_ERROR_CODES, t as createEmailVerificationToken, w as wildcardMatch, u as listSessions, x as updateUser, k as getSession, y as originCheckMiddleware, z as error, A as ok, C as accountInfo, D as getAccessToken, E as refreshToken, F as unlinkAccount, G as deleteUserCallback, I as listUserAccounts, J as linkSocialAccount, K as revokeOtherSessions, L as revokeSessions, M as revokeSession, N as requestPasswordResetCallback, O as requestPasswordReset, P as forgetPasswordCallback, Q as deleteUser, R as setPassword, S as changePassword, T as changeEmail, U as sendVerificationEmail, V as verifyEmail, W as resetPassword, X as forgetPassword, Y as signInEmail, Z as signOut, _ as callbackOAuth, $ as signInSocial } from '../shared/better-auth.DecCtJIQ.mjs';
+export { f as createAuthMiddleware, l as freshSessionMiddleware, j as getSessionFromCtx, m as optionsMiddleware, o as originCheck, a0 as requestOnlySessionMiddleware, q as sendVerificationEmailFn, s as sessionMiddleware } from '../shared/better-auth.DecCtJIQ.mjs';
 import { z } from 'zod';
 import { setSessionCookie } from '../cookies/index.mjs';
 import { f as parseUserInput } from '../shared/better-auth.Cc72UxUH.mjs';
@@ -196,7 +196,7 @@ const signUpEmail = () => createAuthEndpoint(
     try {
       createdUser = await ctx.context.internalAdapter.createUser(
         {
-          email: email.toLowerCase(),
+          email,
           name,
           image,
           ...additionalData,
