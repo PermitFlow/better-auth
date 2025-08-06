@@ -1,7 +1,7 @@
 {
     "name": "@better-auth/sso",
     "author": "Bereket Engida",
-    "version": "1.3.5",
+    "version": "1.3.6",
     "main": "dist/index.cjs",
     "license": "MIT",
     "keywords": [
@@ -48,7 +48,7 @@
     },
     "dependencies": {
         "@better-fetch/fetch": "^1.1.18",
-        "better-auth": "https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3.5",
+        "better-auth": "https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3.6",
         "fast-xml-parser": "^5.2.5",
         "jose": "^5.9.6",
         "oauth2-mock-server": "^7.2.0",
