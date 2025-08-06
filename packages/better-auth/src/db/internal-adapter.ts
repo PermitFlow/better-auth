@@ -566,8 +566,9 @@ export const createInternalAdapter = (
 						model: "user",
 						where: [
 							{
-								value: email.toLowerCase(),
+								value: email,
 								field: "email",
+								mode: "insensitive"
 							},
 						],
 					});
@@ -584,8 +585,9 @@ export const createInternalAdapter = (
 					model: "user",
 					where: [
 						{
-							value: email.toLowerCase(),
+							value: email,
 							field: "email",
+							mode: "insensitive"
 						},
 					],
 				});
@@ -616,8 +618,9 @@ export const createInternalAdapter = (
 				model: "user",
 				where: [
 					{
-						value: email.toLowerCase(),
+						value: email,
 						field: "email",
+						mode: "insensitive"
 					},
 				],
 			});
@@ -734,8 +737,9 @@ export const createInternalAdapter = (
 				data,
 				[
 					{
+						value: email,
 						field: "email",
-						value: email.toLowerCase(),
+						mode: "insensitive"
 					},
 				],
 				"user",

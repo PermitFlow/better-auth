@@ -22,7 +22,7 @@ export async function handleOAuthUserInfo(
 ) {
 	const dbUser = await c.context.internalAdapter
 		.findOAuthUser(
-			userInfo.email.toLowerCase(),
+			userInfo.email,
 			account.accountId,
 			account.providerId,
 		)
@@ -113,9 +113,9 @@ export async function handleOAuthUserInfo(
 			// update user info from the provider if overrideUserInfo is true
 			await c.context.internalAdapter.updateUser(dbUser.user.id, {
 				...restUserInfo,
-				email: userInfo.email.toLowerCase(),
+				email: userInfo.email,
 				emailVerified:
-					userInfo.email.toLowerCase() === dbUser.user.email
+					userInfo.email.toLowerCase() === dbUser.user.email.toLowerCase()
 						? dbUser.user.emailVerified || userInfo.emailVerified
 						: userInfo.emailVerified,
 			});
@@ -134,7 +134,7 @@ export async function handleOAuthUserInfo(
 				.createOAuthUser(
 					{
 						...restUserInfo,
-						email: userInfo.email.toLowerCase(),
+						email: userInfo.email,
 					},
 					{
 						accessToken: account.accessToken,

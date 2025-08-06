@@ -18,6 +18,7 @@ export type Where = {
 	value: string | number | boolean | string[] | number[] | Date | null;
 	field: string;
 	connector?: "AND" | "OR"; //AND by default
+	mode?: "insensitive"
 };
 
 /**
