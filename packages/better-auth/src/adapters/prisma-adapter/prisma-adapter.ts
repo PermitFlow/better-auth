@@ -76,6 +76,11 @@ export const prismaAdapter = (prisma: PrismaClient, config: PrismaConfig) =>
 						return operator;
 				}
 			}
+			function convertEqualsClause(where: Where) {
+				if (where.mode)
+					return { equals: where.value, mode: where.mode }
+				return where.value
+			}
 			const convertWhereClause = (model: string, where?: Where[]) => {
 				if (!where) return {};
 				if (where.length === 1) {
@@ -86,7 +91,7 @@ export const prismaAdapter = (prisma: PrismaClient, config: PrismaConfig) =>
 					return {
 						[getFieldName({ model, field: w.field })]:
 							w.operator === "eq" || !w.operator
-								? w.value
+								? convertEqualsClause(w)
 								: {
 										[operatorToPrismaOperator(w.operator)]: w.value,
 									},

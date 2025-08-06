@@ -273,7 +273,7 @@ export const createInvitation = <O extends OrganizationOptions | undefined>(
 			const invitation = await adapter.createInvitation({
 				invitation: {
 					role: roles,
-					email: ctx.body.email.toLowerCase(),
+					email: ctx.body.email,
 					organizationId: organizationId,
 					...("teamId" in ctx.body
 						? {
@@ -288,7 +288,7 @@ export const createInvitation = <O extends OrganizationOptions | undefined>(
 				{
 					id: invitation.id,
 					role: invitation.role as string,
-					email: invitation.email.toLowerCase(),
+					email: invitation.email,
 					organization: organization,
 					inviter: {
 						...member,

@@ -639,7 +639,7 @@ export const genericOAuth = (options: GenericOAuthOptions) => {
 						if (
 							ctx.context.options.account?.accountLinking
 								?.allowDifferentEmails !== true &&
-							link.email !== mapUser.email.toLowerCase()
+							link.email.toLowerCase() !== mapUser.email.toLowerCase()
 						) {
 							return redirectOnError("email_doesn't_match");
 						}
