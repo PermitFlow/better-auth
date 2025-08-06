@@ -1,7 +1,7 @@
 'use strict';
 
 const betterCall = require('better-call');
-const socialProviders_index = require('../../shared/better-auth.Di4b3h9T.cjs');
+const socialProviders_index = require('../../shared/better-auth.NkaczwoG.cjs');
 require('zod');
 const cookies_index = require('../../cookies/index.cjs');
 const schema$1 = require('../../shared/better-auth.DcWKCjjf.cjs');

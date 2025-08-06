@@ -51,6 +51,11 @@ const prismaAdapter = (prisma, config) => index.createAdapter({
           return operator;
       }
     }
+    function convertEqualsClause(where) {
+      if (where.mode)
+        return { equals: where.value, mode: where.mode };
+      return where.value;
+    }
     const convertWhereClause = (model, where) => {
       if (!where) return {};
       if (where.length === 1) {
@@ -59,7 +64,7 @@ const prismaAdapter = (prisma, config) => index.createAdapter({
           return;
         }
         return {
-          [getFieldName({ model, field: w.field })]: w.operator === "eq" || !w.operator ? w.value : {
+          [getFieldName({ model, field: w.field })]: w.operator === "eq" || !w.operator ? convertEqualsClause(w) : {
             [operatorToPrismaOperator(w.operator)]: w.value
           }
         };

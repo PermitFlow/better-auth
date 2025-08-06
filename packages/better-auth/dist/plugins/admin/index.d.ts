@@ -1,7 +1,7 @@
 import { AccessControl, Role, Statements } from '../access/index.js';
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { I as InferOptionSchema, G as GenericEndpointContext, H as HookEndpointContext, S as Session, U as User } from '../../shared/better-auth.CGNlS50T.js';
+import { I as InferOptionSchema, G as GenericEndpointContext, H as HookEndpointContext, S as Session, U as User } from '../../shared/better-auth.C-Wbul5J.js';
 import '../../shared/better-auth.9XhOL8gb.js';
 import '../../shared/better-auth.R7C454Vo.js';
 import 'kysely';
@@ -91,20 +91,20 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     create: {
                         before(user: {
                             id: string;
-                            name: string;
-                            emailVerified: boolean;
-                            email: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            email: string;
+                            emailVerified: boolean;
+                            name: string;
                             image?: string | null | undefined;
                         }): Promise<{
                             data: {
                                 id: string;
-                                name: string;
-                                emailVerified: boolean;
-                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
+                                email: string;
+                                emailVerified: boolean;
+                                name: string;
                                 image?: string | null | undefined;
                                 role: string;
                             };
@@ -115,11 +115,11 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     create: {
                         before(session: {
                             id: string;
-                            token: string;
                             userId: string;
                             expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         }, ctx: GenericEndpointContext | undefined): Promise<void>;
@@ -267,14 +267,14 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                      */
                     data: z.ZodOptional<z.ZodRecord<z.ZodString, z.ZodAny>>;
                 }, "strip", z.ZodTypeAny, {
-                    name: string;
                     email: string;
+                    name: string;
                     password: string;
                     data?: Record<string, any> | undefined;
                     role?: string | string[] | undefined;
                 }, {
-                    name: string;
                     email: string;
+                    name: string;
                     password: string;
                     data?: Record<string, any> | undefined;
                     role?: string | string[] | undefined;
@@ -324,16 +324,16 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                 method?: "GET" | undefined;
             } & {
                 query: {
-                    sortBy?: string | undefined;
+                    searchValue?: string | undefined;
+                    searchField?: "email" | "name" | undefined;
+                    searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
                     limit?: string | number | undefined;
                     offset?: string | number | undefined;
-                    searchValue?: string | undefined;
-                    searchField?: "name" | "email" | undefined;
-                    searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
+                    sortBy?: string | undefined;
                     sortDirection?: "asc" | "desc" | undefined;
                     filterField?: string | undefined;
                     filterValue?: string | number | boolean | undefined;
-                    filterOperator?: "lt" | "eq" | "ne" | "lte" | "gt" | "gte" | "contains" | undefined;
+                    filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
                 };
             } & {
                 params?: Record<string, any>;
@@ -389,27 +389,27 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                     filterValue: z.ZodOptional<z.ZodUnion<[z.ZodUnion<[z.ZodString, z.ZodNumber]>, z.ZodBoolean]>>;
                     filterOperator: z.ZodOptional<z.ZodEnum<["eq", "ne", "lt", "lte", "gt", "gte", "contains"]>>;
                 }, "strip", z.ZodTypeAny, {
-                    sortBy?: string | undefined;
+                    searchValue?: string | undefined;
+                    searchField?: "email" | "name" | undefined;
+                    searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
                     limit?: string | number | undefined;
                     offset?: string | number | undefined;
-                    searchValue?: string | undefined;
-                    searchField?: "name" | "email" | undefined;
-                    searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
+                    sortBy?: string | undefined;
                     sortDirection?: "asc" | "desc" | undefined;
                     filterField?: string | undefined;
                     filterValue?: string | number | boolean | undefined;
-                    filterOperator?: "lt" | "eq" | "ne" | "lte" | "gt" | "gte" | "contains" | undefined;
+                    filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
                 }, {
-                    sortBy?: string | undefined;
+                    searchValue?: string | undefined;
+                    searchField?: "email" | "name" | undefined;
+                    searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
                     limit?: string | number | undefined;
                     offset?: string | number | undefined;
-                    searchValue?: string | undefined;
-                    searchField?: "name" | "email" | undefined;
-                    searchOperator?: "contains" | "starts_with" | "ends_with" | undefined;
+                    sortBy?: string | undefined;
                     sortDirection?: "asc" | "desc" | undefined;
                     filterField?: string | undefined;
                     filterValue?: string | number | boolean | undefined;
-                    filterOperator?: "lt" | "eq" | "ne" | "lte" | "gt" | "gte" | "contains" | undefined;
+                    filterOperator?: "eq" | "ne" | "lt" | "lte" | "gt" | "gte" | "contains" | undefined;
                 }>;
                 metadata: {
                     openapi: {
@@ -481,11 +481,11 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                 response: {
                     sessions: {
                         id: string;
-                        token: string;
                         userId: string;
                         expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     }[];
@@ -493,11 +493,11 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
             } : {
                 sessions: {
                     id: string;
-                    token: string;
                     userId: string;
                     expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 }[];
@@ -741,42 +741,42 @@ declare const admin: <O extends AdminOptions>(options?: O) => {
                 response: {
                     session: {
                         id: string;
-                        token: string;
                         userId: string;
                         expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     };
                     user: {
                         id: string;
-                        name: string;
-                        emailVerified: boolean;
-                        email: string;
                         createdAt: Date;
                         updatedAt: Date;
+                        email: string;
+                        emailVerified: boolean;
+                        name: string;
                         image?: string | null | undefined;
                     };
                 };
             } : {
                 session: {
                     id: string;
-                    token: string;
                     userId: string;
                     expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 };
                 user: {
                     id: string;
-                    name: string;
-                    emailVerified: boolean;
-                    email: string;
                     createdAt: Date;
                     updatedAt: Date;
+                    email: string;
+                    emailVerified: boolean;
+                    name: string;
                     image?: string | null | undefined;
                 };
             }>;

@@ -1,7 +1,7 @@
 import { s as schema } from '../../shared/better-auth.fsvwNeUx.mjs';
 import { generateKeyPair, exportJWK, importJWK, SignJWT } from 'jose';
 import 'better-call';
-import { f as createAuthMiddleware, i as createAuthEndpoint, s as sessionMiddleware } from '../../shared/better-auth.dm850UlW.mjs';
+import { f as createAuthMiddleware, i as createAuthEndpoint, s as sessionMiddleware } from '../../shared/better-auth.DecCtJIQ.mjs';
 import 'zod';
 import { B as BetterAuthError } from '../../shared/better-auth.DdzSJf-n.mjs';
 import '../../shared/better-auth.8zoxzg-F.mjs';

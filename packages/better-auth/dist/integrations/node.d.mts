@@ -1,6 +1,6 @@
 import * as http from 'http';
 import { IncomingHttpHeaders } from 'http';
-import { n as Auth } from '../shared/better-auth.C4pT__Zc.mjs';
+import { n as Auth } from '../shared/better-auth.BRhLZiQ4.mjs';
 import '../shared/better-auth.9XhOL8gb.mjs';
 import 'zod';
 import '../shared/better-auth.uZ__EClU.mjs';

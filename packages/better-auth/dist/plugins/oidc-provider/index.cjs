@@ -3,7 +3,7 @@
 require('jose');
 require('zod');
 require('better-call');
-require('../../shared/better-auth.Di4b3h9T.cjs');
+require('../../shared/better-auth.NkaczwoG.cjs');
 require('../../shared/better-auth.DiSjtgs9.cjs');
 require('@better-auth/utils/base64');
 require('@better-auth/utils/hmac');
@@ -21,7 +21,7 @@ require('@better-auth/utils');
 require('@better-auth/utils/hex');
 require('@noble/hashes/utils');
 require('../../shared/better-auth.CYeOI8C-.cjs');
-const plugins_oidcProvider_index = require('../../shared/better-auth.C9r4-D4D.cjs');
+const plugins_oidcProvider_index = require('../../shared/better-auth.Dvh2wVRB.cjs');
 require('@better-fetch/fetch');
 require('../../shared/better-auth.C-R0J0n1.cjs');
 require('../../shared/better-auth.ANpbi45u.cjs');

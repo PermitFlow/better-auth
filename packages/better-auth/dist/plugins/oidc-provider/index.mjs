@@ -1,7 +1,7 @@
 import 'jose';
 import 'zod';
 import 'better-call';
-import '../../shared/better-auth.dm850UlW.mjs';
+import '../../shared/better-auth.DecCtJIQ.mjs';
 import '../../shared/better-auth.8zoxzg-F.mjs';
 import '@better-auth/utils/base64';
 import '@better-auth/utils/hmac';
@@ -19,7 +19,7 @@ import '@better-auth/utils';
 import '@better-auth/utils/hex';
 import '@noble/hashes/utils';
 import '../../shared/better-auth.B4Qoxdgc.mjs';
-export { g as getMetadata, o as oidcProvider } from '../../shared/better-auth.CxiUYpyi.mjs';
+export { g as getMetadata, o as oidcProvider } from '../../shared/better-auth.C4yajjCu.mjs';
 import '@better-fetch/fetch';
 import '../../shared/better-auth.VTXNLFMT.mjs';
 import '../../shared/better-auth.DdzSJf-n.mjs';

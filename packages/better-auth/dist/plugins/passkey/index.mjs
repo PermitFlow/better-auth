@@ -2,7 +2,7 @@ import { verifyAuthenticationResponse, verifyRegistrationResponse, generateAuthe
 import { APIError } from 'better-call';
 import { g as generateRandomString } from '../../shared/better-auth.B4Qoxdgc.mjs';
 import { z } from 'zod';
-import { i as createAuthEndpoint, s as sessionMiddleware, l as freshSessionMiddleware, j as getSessionFromCtx } from '../../shared/better-auth.dm850UlW.mjs';
+import { i as createAuthEndpoint, s as sessionMiddleware, l as freshSessionMiddleware, j as getSessionFromCtx } from '../../shared/better-auth.DecCtJIQ.mjs';
 import { setSessionCookie } from '../../cookies/index.mjs';
 import { m as mergeSchema } from '../../shared/better-auth.Cc72UxUH.mjs';
 import '../../shared/better-auth.8zoxzg-F.mjs';

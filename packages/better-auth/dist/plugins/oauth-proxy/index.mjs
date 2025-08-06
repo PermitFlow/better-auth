@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import 'better-call';
-import { f as createAuthMiddleware, i as createAuthEndpoint, o as originCheck } from '../../shared/better-auth.dm850UlW.mjs';
+import { f as createAuthMiddleware, i as createAuthEndpoint, o as originCheck } from '../../shared/better-auth.DecCtJIQ.mjs';
 import { e as env } from '../../shared/better-auth.8zoxzg-F.mjs';
 import '@better-auth/utils/base64';
 import '@better-auth/utils/hmac';

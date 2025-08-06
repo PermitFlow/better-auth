@@ -1,8 +1,8 @@
 import * as nanostores from 'nanostores';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { SuccessContext } from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, d as InferRoute, c as InferErrorCodes } from '../shared/better-auth.B7xV_kQg.cjs';
-import { B as BetterAuthOptions, U as User, t as InferAPI, a as Adapter, u as AdditionalSessionFieldsOutput, n as Auth, v as AdditionalUserFieldsOutput, w as InferFieldsFromPlugins, x as InferFieldsFromOptions, y as AdditionalUserFieldsInput, h as BetterAuthPlugin, p as AuthContext, z as InferPluginTypes, i as InferPluginErrorCodes, F as FilterActions, S as Session, D as setCookieToHeader } from '../shared/better-auth.C9zzfpIg.cjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, d as InferRoute, c as InferErrorCodes } from '../shared/better-auth.BiO-dqXd.cjs';
+import { B as BetterAuthOptions, U as User, t as InferAPI, a as Adapter, u as AdditionalSessionFieldsOutput, n as Auth, v as AdditionalUserFieldsOutput, w as InferFieldsFromPlugins, x as InferFieldsFromOptions, y as AdditionalUserFieldsInput, h as BetterAuthPlugin, p as AuthContext, z as InferPluginTypes, i as InferPluginErrorCodes, F as FilterActions, S as Session, D as setCookieToHeader } from '../shared/better-auth.C1FOcFBf.cjs';
 import { U as UnionToIntersection, S as StripEmptyObjects, a as Prettify } from '../shared/better-auth.9XhOL8gb.cjs';
 import * as zod from 'zod';
 import * as better_call from 'better-call';
@@ -42638,6 +42638,7 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
                     onSuccess(context: SuccessContext<any>): void;
                 };
             })[];
+            mode?: RequestMode;
             method: string;
             headers?: (HeadersInit & (HeadersInit | {
                 accept: "application/json" | "text/plain" | "application/octet-stream";
@@ -42649,7 +42650,6 @@ declare function getTestInstanceMemory<O extends Partial<BetterAuthOptions>, C e
             credentials?: RequestCredentials;
             integrity?: string;
             keepalive?: boolean;
-            mode?: RequestMode;
             priority?: RequestPriority;
             referrer?: string;
             referrerPolicy?: ReferrerPolicy;
