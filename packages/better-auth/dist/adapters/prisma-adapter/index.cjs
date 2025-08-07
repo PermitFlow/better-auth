@@ -1,7 +1,7 @@
 'use strict';
 
 const index$1 = require('../../shared/better-auth.ANpbi45u.cjs');
-const index = require('../../shared/better-auth.CGOCIshw.cjs');
+const index = require('../../shared/better-auth.C5klyjof.cjs');
 require('../../shared/better-auth.D3mtHEZg.cjs');
 require('../../shared/better-auth.BEphVDyL.cjs');
 require('../../shared/better-auth.CXhVNgXP.cjs');

@@ -1,4 +1,4 @@
-import { I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.C-Wbul5J.js';
+import { I as InferOptionSchema, H as HookEndpointContext } from '../../shared/better-auth.C1x5TJxN.js';
 import { z } from 'zod';
 import * as better_call from 'better-call';
 import '../../shared/better-auth.9XhOL8gb.js';

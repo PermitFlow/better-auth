@@ -1,9 +1,9 @@
 'use strict';
 
 const vitest = require('vitest');
-const auth = require('../shared/better-auth.DutCj80n.cjs');
+const auth = require('../shared/better-auth.BdZwPZK2.cjs');
 const vanilla = require('../shared/better-auth.Cr25WPaS.cjs');
-const getMigration = require('../shared/better-auth.Cfzb1fyM.cjs');
+const getMigration = require('../shared/better-auth.DjkNo09d.cjs');
 require('../shared/better-auth.DiSjtgs9.cjs');
 require('@better-auth/utils/base64');
 require('@better-auth/utils/hmac');
@@ -22,7 +22,7 @@ const require$$0$6 = require('path');
 const require$$0$5 = require('stream');
 const require$$1$2 = require('string_decoder');
 const mongodb = require('mongodb');
-const mongodbAdapter = require('../shared/better-auth.KCmQsDm-.cjs');
+const mongodbAdapter = require('../shared/better-auth.XhtlJVOy.cjs');
 const require$$0$8 = require('process');
 const require$$1$3 = require('timers');
 const require$$0$7 = require('buffer');
@@ -67,9 +67,9 @@ require('nanostores');
 require('../shared/better-auth.Ck3n8bMC.cjs');
 require('../shared/better-auth.DhsGZ30Q.cjs');
 require('../shared/better-auth.BLDOwz3i.cjs');
-require('../shared/better-auth._dAJf_oa.cjs');
-require('../shared/better-auth.CGOCIshw.cjs');
-require('../shared/better-auth.CkL-IpXS.cjs');
+require('../shared/better-auth.CKGb78E5.cjs');
+require('../shared/better-auth.C5klyjof.cjs');
+require('../shared/better-auth.CffUa_g9.cjs');
 require('../shared/better-auth.DSVbLSt7.cjs');
 require('../plugins/access/index.cjs');
 

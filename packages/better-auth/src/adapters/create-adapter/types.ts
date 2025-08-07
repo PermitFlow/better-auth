@@ -371,7 +371,7 @@ export interface CustomAdapter {
 	options?: Record<string, any> | undefined;
 }
 
-export type CleanedWhere = Prettify<Required<Where>>;
+export type CleanedWhere = Prettify<Required<Omit<Where, "mode">>> & Pick<Where, "mode">;
 
 export type AdapterTestDebugLogs = {
 	resetDebugLogs: () => void;

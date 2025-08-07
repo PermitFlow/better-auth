@@ -494,6 +494,7 @@ export const createAdapter =
 					value,
 					operator = "eq",
 					connector = "AND",
+					mode
 				} = w;
 				if (operator === "in") {
 					if (!Array.isArray(value)) {
@@ -524,6 +525,7 @@ export const createAdapter =
 							return {
 								operator,
 								connector,
+								mode,
 								field: fieldName,
 								value: value.map(Number),
 							} satisfies CleanedWhere;
@@ -531,6 +533,7 @@ export const createAdapter =
 						return {
 							operator,
 							connector,
+							mode,
 							field: fieldName,
 							value: Number(value),
 						} satisfies CleanedWhere;
@@ -540,6 +543,7 @@ export const createAdapter =
 				return {
 					operator,
 					connector,
+					mode,
 					field: fieldName,
 					value: value,
 				} satisfies CleanedWhere;

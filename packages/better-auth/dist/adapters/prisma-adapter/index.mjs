@@ -1,5 +1,5 @@
 import { B as BetterAuthError } from '../../shared/better-auth.DdzSJf-n.mjs';
-import { c as createAdapter } from '../../shared/better-auth.C3eCZf9N.mjs';
+import { c as createAdapter } from '../../shared/better-auth.BQ5ybEJO.mjs';
 import '../../shared/better-auth.tB5eU6EY.mjs';
 import '../../shared/better-auth.DORkW_Ge.mjs';
 import '../../shared/better-auth.DBGfIDnh.mjs';
