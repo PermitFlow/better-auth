@@ -1,6 +1,6 @@
 'use strict';
 
-const getMigration = require('../shared/better-auth.Cfzb1fyM.cjs');
+const getMigration = require('../shared/better-auth.DjkNo09d.cjs');
 const getTables = require('../shared/better-auth.BEphVDyL.cjs');
 const zod = require('zod');
 const schema = require('../shared/better-auth.DcWKCjjf.cjs');
@@ -23,10 +23,10 @@ require('@better-auth/utils/hex');
 require('@noble/hashes/utils');
 require('../shared/better-auth.CYeOI8C-.cjs');
 require('../shared/better-auth.ANpbi45u.cjs');
-require('../shared/better-auth._dAJf_oa.cjs');
+require('../shared/better-auth.CKGb78E5.cjs');
 require('kysely');
-require('../shared/better-auth.CGOCIshw.cjs');
-require('../shared/better-auth.CkL-IpXS.cjs');
+require('../shared/better-auth.C5klyjof.cjs');
+require('../shared/better-auth.CffUa_g9.cjs');
 
 const createFieldAttribute = (type, config) => {
   return {

@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.BRhLZiQ4.mjs';
+import { U as User, I as InferOptionSchema, l as AuthEndpoint, H as HookEndpointContext } from '../../shared/better-auth.DEvLVh7A.mjs';
 import { L as LiteralString } from '../../shared/better-auth.9XhOL8gb.mjs';
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import '../../shared/better-auth.uZ__EClU.mjs';
@@ -433,8 +433,8 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     code: string;
-                    trustDevice?: boolean | undefined;
                     disableSession?: boolean | undefined;
+                    trustDevice?: boolean | undefined;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -488,12 +488,12 @@ declare const twoFactor: (options?: TwoFactorOptions) => {
                     trustDevice: z.ZodOptional<z.ZodBoolean>;
                 }, "strip", z.ZodTypeAny, {
                     code: string;
-                    trustDevice?: boolean | undefined;
                     disableSession?: boolean | undefined;
+                    trustDevice?: boolean | undefined;
                 }, {
                     code: string;
-                    trustDevice?: boolean | undefined;
                     disableSession?: boolean | undefined;
+                    trustDevice?: boolean | undefined;
                 }>;
                 metadata: {
                     openapi: {
