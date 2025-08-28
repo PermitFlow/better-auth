@@ -2,7 +2,7 @@ import * as _simplewebauthn_server from '@simplewebauthn/server';
 import { CredentialDeviceType, PublicKeyCredentialCreationOptionsJSON, AuthenticationResponseJSON } from '@simplewebauthn/server';
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { I as InferOptionSchema } from '../../shared/better-auth.Bg2_d3lY.cjs';
+import { I as InferOptionSchema } from '../../shared/better-auth.CREt20_Z.cjs';
 import '../../shared/better-auth.9XhOL8gb.cjs';
 import '../../shared/better-auth.48LtINOO.cjs';
 import 'kysely';
@@ -97,11 +97,11 @@ declare const passkey: (options?: PasskeyOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -109,9 +109,9 @@ declare const passkey: (options?: PasskeyOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -416,11 +416,11 @@ declare const passkey: (options?: PasskeyOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -428,9 +428,9 @@ declare const passkey: (options?: PasskeyOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -488,11 +488,11 @@ declare const passkey: (options?: PasskeyOptions) => {
                 response: {
                     session: {
                         id: string;
-                        token: string;
-                        expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
                         userId: string;
+                        expiresAt: Date;
+                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     };
@@ -500,11 +500,11 @@ declare const passkey: (options?: PasskeyOptions) => {
             } : {
                 session: {
                     id: string;
-                    token: string;
-                    expiresAt: Date;
                     createdAt: Date;
                     updatedAt: Date;
                     userId: string;
+                    expiresAt: Date;
+                    token: string;
                     ipAddress?: string | null | undefined;
                     userAgent?: string | null | undefined;
                 };
@@ -584,11 +584,11 @@ declare const passkey: (options?: PasskeyOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -596,9 +596,9 @@ declare const passkey: (options?: PasskeyOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -670,11 +670,11 @@ declare const passkey: (options?: PasskeyOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -682,9 +682,9 @@ declare const passkey: (options?: PasskeyOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -766,11 +766,11 @@ declare const passkey: (options?: PasskeyOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -778,9 +778,9 @@ declare const passkey: (options?: PasskeyOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };

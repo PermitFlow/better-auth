@@ -1,7 +1,7 @@
 import { Role, AccessControl, Statements } from '../access/index.js';
 import { z, ZodLiteral } from 'zod';
 import * as better_call from 'better-call';
-import { G as GenericEndpointContext, S as Session, U as User, p as AuthContext } from '../../shared/better-auth.C1x5TJxN.js';
+import { G as GenericEndpointContext, S as Session, U as User, p as AuthContext } from '../../shared/better-auth.Cn_Jnzzl.js';
 import { defaultRoles } from './access/index.js';
 export { adminAc, defaultAc, defaultStatements, memberAc, ownerAc } from './access/index.js';
 import '../../shared/better-auth.9XhOL8gb.js';
@@ -21,14 +21,14 @@ declare const organizationSchema: z.ZodObject<{
     createdAt: z.ZodDate;
 }, "strip", z.ZodTypeAny, {
     id: string;
-    createdAt: Date;
     name: string;
+    createdAt: Date;
     slug: string;
     metadata?: any;
     logo?: string | null | undefined;
 }, {
-    createdAt: Date;
     name: string;
+    createdAt: Date;
     slug: string;
     id?: string | undefined;
     metadata?: string | Record<string, string> | undefined;
@@ -67,16 +67,16 @@ declare const invitationSchema: z.ZodObject<{
     expiresAt: z.ZodDate;
 }, "strip", z.ZodTypeAny, {
     id: string;
-    expiresAt: Date;
-    status: "accepted" | "canceled" | "rejected" | "pending";
     email: string;
+    status: "accepted" | "canceled" | "rejected" | "pending";
+    expiresAt: Date;
     organizationId: string;
     role: string;
     inviterId: string;
     teamId?: string | undefined;
 }, {
-    expiresAt: Date;
     email: string;
+    expiresAt: Date;
     organizationId: string;
     role: string;
     inviterId: string;
@@ -92,13 +92,13 @@ declare const teamSchema: z.ZodObject<{
     updatedAt: z.ZodOptional<z.ZodDate>;
 }, "strip", z.ZodTypeAny, {
     id: string;
-    createdAt: Date;
     name: string;
+    createdAt: Date;
     organizationId: string;
     updatedAt?: Date | undefined;
 }, {
-    createdAt: Date;
     name: string;
+    createdAt: Date;
     organizationId: string;
     id?: string | undefined;
     updatedAt?: Date | undefined;
@@ -201,8 +201,8 @@ declare const getFullOrganization: <O extends OrganizationOptions>() => {
             teams: Team[];
         } & {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             slug: string;
             metadata?: any;
             logo?: string | null | undefined;
@@ -211,8 +211,8 @@ declare const getFullOrganization: <O extends OrganizationOptions>() => {
             invitations: InferInvitation<O>[];
         } & {
             id: string;
-            createdAt: Date;
             name: string;
+            createdAt: Date;
             slug: string;
             metadata?: any;
             logo?: string | null | undefined;
@@ -225,8 +225,8 @@ declare const getFullOrganization: <O extends OrganizationOptions>() => {
         teams: Team[];
     } & {
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
         slug: string;
         metadata?: any;
         logo?: string | null | undefined;
@@ -235,8 +235,8 @@ declare const getFullOrganization: <O extends OrganizationOptions>() => {
         invitations: InferInvitation<O>[];
     } & {
         id: string;
-        createdAt: Date;
         name: string;
+        createdAt: Date;
         slug: string;
         metadata?: any;
         logo?: string | null | undefined;
@@ -270,21 +270,21 @@ declare const getFullOrganization: <O extends OrganizationOptions>() => {
                 session: {
                     session: Record<string, any> & {
                         id: string;
+                        token: string;
                         userId: string;
                         expiresAt: Date;
                         createdAt: Date;
                         updatedAt: Date;
-                        token: string;
                         ipAddress?: string | null | undefined;
                         userAgent?: string | null | undefined;
                     };
                     user: Record<string, any> & {
                         id: string;
+                        name: string;
+                        emailVerified: boolean;
+                        email: string;
                         createdAt: Date;
                         updatedAt: Date;
-                        email: string;
-                        emailVerified: boolean;
-                        name: string;
                         image?: string | null | undefined;
                     };
                 };
@@ -641,15 +641,15 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     organizationId: string;
                     updatedAt?: Date | undefined;
                 };
             } : {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 organizationId: string;
                 updatedAt?: Date | undefined;
             }>;
@@ -751,15 +751,15 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     organizationId: string;
                     updatedAt?: Date | undefined;
                 }[] | null;
             } : {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 organizationId: string;
                 updatedAt?: Date | undefined;
             }[] | null>;
@@ -834,21 +834,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -957,9 +957,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 body: {
                     data: {
                         id?: string | undefined;
+                        name?: string | undefined;
                         createdAt?: Date | undefined;
                         updatedAt?: Date | undefined;
-                        name?: string | undefined;
                         organizationId?: string | undefined;
                     };
                     teamId: string;
@@ -986,15 +986,15 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     organizationId: string;
                     updatedAt?: Date | undefined;
                 } | null;
             } : {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 organizationId: string;
                 updatedAt?: Date | undefined;
             } | null>;
@@ -1010,32 +1010,32 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         updatedAt: z.ZodOptional<z.ZodOptional<z.ZodDate>>;
                     }, "strip", z.ZodTypeAny, {
                         id?: string | undefined;
+                        name?: string | undefined;
                         createdAt?: Date | undefined;
                         updatedAt?: Date | undefined;
-                        name?: string | undefined;
                         organizationId?: string | undefined;
                     }, {
                         id?: string | undefined;
+                        name?: string | undefined;
                         createdAt?: Date | undefined;
                         updatedAt?: Date | undefined;
-                        name?: string | undefined;
                         organizationId?: string | undefined;
                     }>;
                 }, "strip", z.ZodTypeAny, {
                     data: {
                         id?: string | undefined;
+                        name?: string | undefined;
                         createdAt?: Date | undefined;
                         updatedAt?: Date | undefined;
-                        name?: string | undefined;
                         organizationId?: string | undefined;
                     };
                     teamId: string;
                 }, {
                     data: {
                         id?: string | undefined;
+                        name?: string | undefined;
                         createdAt?: Date | undefined;
                         updatedAt?: Date | undefined;
-                        name?: string | undefined;
                         organizationId?: string | undefined;
                     };
                     teamId: string;
@@ -1056,21 +1056,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -1172,8 +1172,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         teamId?: string | undefined;
                     }[];
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     logo?: string | null | undefined;
                 } | null;
@@ -1188,8 +1188,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     teamId?: string | undefined;
                 }[];
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 logo?: string | null | undefined;
             } | null>;
@@ -1287,16 +1287,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     metadata: Record<string, any> | undefined;
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     logo?: string | null | undefined;
                 } | null;
             } : {
                 metadata: Record<string, any> | undefined;
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 logo?: string | null | undefined;
             } | null>;
@@ -1401,16 +1401,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
                 } | null;
             } : {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -1494,8 +1494,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     teams: Team[];
                 } & {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
@@ -1504,8 +1504,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     invitations: InferInvitation<O>[];
                 } & {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
@@ -1518,8 +1518,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 teams: Team[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -1528,8 +1528,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 invitations: InferInvitation<O>[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -1562,21 +1562,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -1647,8 +1647,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     teams: Team[];
                 } & {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
@@ -1657,8 +1657,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     invitations: InferInvitation<O>[];
                 } & {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
@@ -1671,8 +1671,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 teams: Team[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -1681,8 +1681,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 invitations: InferInvitation<O>[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -1716,21 +1716,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -1792,16 +1792,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
                 }[];
             } : {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -1824,21 +1824,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -1895,21 +1895,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -2016,21 +2016,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -2166,21 +2166,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -2302,9 +2302,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -2312,9 +2312,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 };
             } : {
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -2338,21 +2338,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -2471,9 +2471,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -2481,9 +2481,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 } | null;
             } : {
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -2514,21 +2514,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -2594,9 +2594,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     invitation: {
                         id: string;
-                        expiresAt: Date;
-                        status: "accepted" | "canceled" | "rejected" | "pending";
                         email: string;
+                        status: "accepted" | "canceled" | "rejected" | "pending";
+                        expiresAt: Date;
                         organizationId: string;
                         role: string;
                         inviterId: string;
@@ -2614,9 +2614,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 invitation: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -2656,21 +2656,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -2743,9 +2743,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     organizationSlug: string;
                     inviterEmail: string;
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -2756,9 +2756,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 organizationSlug: string;
                 inviterEmail: string;
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -2869,9 +2869,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     invitation: {
                         id: string;
-                        expiresAt: Date;
-                        status: "accepted" | "canceled" | "rejected" | "pending";
                         email: string;
+                        status: "accepted" | "canceled" | "rejected" | "pending";
+                        expiresAt: Date;
                         organizationId: string;
                         role: string;
                         inviterId: string;
@@ -2882,9 +2882,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 invitation: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -2917,21 +2917,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3001,9 +3001,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -3011,9 +3011,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 }[];
             } : {
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -3100,21 +3100,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
                             userId: string;
                             expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
                         user: Record<string, any> & {
                             id: string;
+                            name: string;
+                            emailVerified: boolean;
+                            email: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            email: string;
-                            emailVerified: boolean;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     } | null;
@@ -3456,21 +3456,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3600,21 +3600,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3746,21 +3746,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -3876,21 +3876,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
                             userId: string;
                             expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
                         user: Record<string, any> & {
                             id: string;
+                            name: string;
+                            emailVerified: boolean;
+                            email: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            email: string;
-                            emailVerified: boolean;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -3938,9 +3938,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -3948,9 +3948,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 }[];
             } : {
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -3974,21 +3974,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4055,8 +4055,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         teamId?: string | undefined;
                     }[];
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     logo?: string | null | undefined;
                 } | null;
@@ -4071,8 +4071,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     teamId?: string | undefined;
                 }[];
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 logo?: string | null | undefined;
             } | null>;
@@ -4170,16 +4170,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     metadata: Record<string, any> | undefined;
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     logo?: string | null | undefined;
                 } | null;
             } : {
                 metadata: Record<string, any> | undefined;
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 logo?: string | null | undefined;
             } | null>;
@@ -4284,16 +4284,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
                 } | null;
             } : {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -4377,8 +4377,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     teams: Team[];
                 } & {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
@@ -4387,8 +4387,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     invitations: InferInvitation<O>[];
                 } & {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
@@ -4401,8 +4401,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 teams: Team[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -4411,8 +4411,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 invitations: InferInvitation<O>[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -4445,21 +4445,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4530,8 +4530,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     teams: Team[];
                 } & {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
@@ -4540,8 +4540,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     invitations: InferInvitation<O>[];
                 } & {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
@@ -4554,8 +4554,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 teams: Team[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -4564,8 +4564,8 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 invitations: InferInvitation<O>[];
             } & {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -4599,21 +4599,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4675,16 +4675,16 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    createdAt: Date;
                     name: string;
+                    createdAt: Date;
                     slug: string;
                     metadata?: any;
                     logo?: string | null | undefined;
                 }[];
             } : {
                 id: string;
-                createdAt: Date;
                 name: string;
+                createdAt: Date;
                 slug: string;
                 metadata?: any;
                 logo?: string | null | undefined;
@@ -4707,21 +4707,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4778,21 +4778,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -4899,21 +4899,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5049,21 +5049,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5185,9 +5185,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -5195,9 +5195,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 };
             } : {
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -5221,21 +5221,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5354,9 +5354,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -5364,9 +5364,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 } | null;
             } : {
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -5397,21 +5397,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5477,9 +5477,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     invitation: {
                         id: string;
-                        expiresAt: Date;
-                        status: "accepted" | "canceled" | "rejected" | "pending";
                         email: string;
+                        status: "accepted" | "canceled" | "rejected" | "pending";
+                        expiresAt: Date;
                         organizationId: string;
                         role: string;
                         inviterId: string;
@@ -5497,9 +5497,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 invitation: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -5539,21 +5539,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5626,9 +5626,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     organizationSlug: string;
                     inviterEmail: string;
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -5639,9 +5639,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 organizationSlug: string;
                 inviterEmail: string;
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -5752,9 +5752,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     invitation: {
                         id: string;
-                        expiresAt: Date;
-                        status: "accepted" | "canceled" | "rejected" | "pending";
                         email: string;
+                        status: "accepted" | "canceled" | "rejected" | "pending";
+                        expiresAt: Date;
                         organizationId: string;
                         role: string;
                         inviterId: string;
@@ -5765,9 +5765,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 invitation: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -5800,21 +5800,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -5884,9 +5884,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -5894,9 +5894,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 }[];
             } : {
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -5983,21 +5983,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
                             userId: string;
                             expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
                         user: Record<string, any> & {
                             id: string;
+                            name: string;
+                            emailVerified: boolean;
+                            email: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            email: string;
-                            emailVerified: boolean;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     } | null;
@@ -6339,21 +6339,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -6483,21 +6483,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -6629,21 +6629,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -6759,21 +6759,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
                             userId: string;
                             expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
                         user: Record<string, any> & {
                             id: string;
+                            name: string;
+                            emailVerified: boolean;
+                            email: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            email: string;
-                            emailVerified: boolean;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -6821,9 +6821,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 headers: Headers;
                 response: {
                     id: string;
-                    expiresAt: Date;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
                     email: string;
+                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    expiresAt: Date;
                     organizationId: string;
                     role: string;
                     inviterId: string;
@@ -6831,9 +6831,9 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 }[];
             } : {
                 id: string;
-                expiresAt: Date;
-                status: "accepted" | "canceled" | "rejected" | "pending";
                 email: string;
+                status: "accepted" | "canceled" | "rejected" | "pending";
+                expiresAt: Date;
                 organizationId: string;
                 role: string;
                 inviterId: string;
@@ -6857,21 +6857,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };
@@ -7002,21 +7002,21 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                         session: {
                             session: Record<string, any> & {
                                 id: string;
+                                token: string;
                                 userId: string;
                                 expiresAt: Date;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                token: string;
                                 ipAddress?: string | null | undefined;
                                 userAgent?: string | null | undefined;
                             };
                             user: Record<string, any> & {
                                 id: string;
+                                name: string;
+                                emailVerified: boolean;
+                                email: string;
                                 createdAt: Date;
                                 updatedAt: Date;
-                                email: string;
-                                emailVerified: boolean;
-                                name: string;
                                 image?: string | null | undefined;
                             };
                         };

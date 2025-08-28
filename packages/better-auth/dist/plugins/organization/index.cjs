@@ -1,6 +1,6 @@
 'use strict';
 
-const organization = require('../../shared/better-auth.CvwG4R7B.cjs');
+const organization = require('../../shared/better-auth.CviwiHFg.cjs');
 require('better-call');
 require('zod');
 require('../../shared/better-auth.NkaczwoG.cjs');

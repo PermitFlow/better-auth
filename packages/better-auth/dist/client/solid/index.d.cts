@@ -1,10 +1,10 @@
 import * as _better_fetch_fetch from '@better-fetch/fetch';
 import { BetterFetchError } from '@better-fetch/fetch';
 export * from '@better-fetch/fetch';
-import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.CQjfn2Lj.cjs';
+import { C as ClientOptions, B as BetterAuthClientPlugin, I as IsSignal, a as InferClientAPI, b as InferActions, c as InferErrorCodes } from '../../shared/better-auth.Cx4w_vaT.cjs';
 import { Accessor } from 'solid-js';
 import { U as UnionToIntersection, P as PrettifyDeep } from '../../shared/better-auth.9XhOL8gb.cjs';
-import { f as BASE_ERROR_CODES } from '../../shared/better-auth.Bg2_d3lY.cjs';
+import { f as BASE_ERROR_CODES } from '../../shared/better-auth.CREt20_Z.cjs';
 export * from 'nanostores';
 import 'better-call';
 import 'zod';
@@ -58,7 +58,6 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
                 onSuccess(context: _better_fetch_fetch.SuccessContext<any>): void;
             };
         })[];
-        redirect?: RequestRedirect;
         method: string;
         headers?: (HeadersInit & (HeadersInit | {
             accept: "application/json" | "text/plain" | "application/octet-stream";
@@ -71,6 +70,7 @@ declare function createAuthClient<Option extends ClientOptions>(options?: Option
         keepalive?: boolean;
         mode?: RequestMode;
         priority?: RequestPriority;
+        redirect?: RequestRedirect;
         referrer?: string;
         referrerPolicy?: ReferrerPolicy;
         signal?: AbortSignal | null;

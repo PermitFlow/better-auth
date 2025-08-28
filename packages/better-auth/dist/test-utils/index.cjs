@@ -32,7 +32,7 @@ require('better-call');
 require('zod');
 require('../shared/better-auth.NkaczwoG.cjs');
 require('../shared/better-auth.DcWKCjjf.cjs');
-require('../shared/better-auth.CvwG4R7B.cjs');
+require('../shared/better-auth.CviwiHFg.cjs');
 require('../plugins/organization/access/index.cjs');
 require('../shared/better-auth.CYeOI8C-.cjs');
 require('../shared/better-auth.CXhVNgXP.cjs');

@@ -1266,6 +1266,7 @@ export const sso = (options?: SSOOptions) => {
 							{
 								field: "email",
 								value: userInfo.email,
+								mode: "insensitive"
 							},
 						],
 					});

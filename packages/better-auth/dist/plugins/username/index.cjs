@@ -153,7 +153,8 @@ const username = (options) => {
             where: [
               {
                 field: "username",
-                value: ctx.body.username.toLowerCase()
+                value: ctx.body.username,
+                mode: "insensitive"
               }
             ]
           });
@@ -264,7 +265,8 @@ const username = (options) => {
             where: [
               {
                 field: "username",
-                value: username2.toLowerCase()
+                value: username2,
+                mode: "insensitive"
               }
             ]
           });
@@ -313,7 +315,8 @@ const username = (options) => {
                 where: [
                   {
                     field: "username",
-                    value: username2.toLowerCase()
+                    value: username2,
+                    mode: "insensitive"
                   }
                 ]
               });

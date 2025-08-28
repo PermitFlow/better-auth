@@ -1,5 +1,5 @@
 import * as better_call from 'better-call';
-import { U as User, p as AuthContext } from '../../shared/better-auth.C1x5TJxN.js';
+import { U as User, p as AuthContext } from '../../shared/better-auth.Cn_Jnzzl.js';
 import { z } from 'zod';
 import { O as OAuth2Tokens, a as OAuthProvider } from '../../shared/better-auth.R7C454Vo.js';
 import '../../shared/better-auth.9XhOL8gb.js';
@@ -157,8 +157,8 @@ declare const genericOAuth: (options: GenericOAuthOptions) => {
                 body: {
                     providerId: string;
                     callbackURL?: string | undefined;
-                    newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
+                    newUserCallbackURL?: string | undefined;
                     disableRedirect?: boolean | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
@@ -204,16 +204,16 @@ declare const genericOAuth: (options: GenericOAuthOptions) => {
                 }, "strip", z.ZodTypeAny, {
                     providerId: string;
                     callbackURL?: string | undefined;
-                    newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
+                    newUserCallbackURL?: string | undefined;
                     disableRedirect?: boolean | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
                 }, {
                     providerId: string;
                     callbackURL?: string | undefined;
-                    newUserCallbackURL?: string | undefined;
                     errorCallbackURL?: string | undefined;
+                    newUserCallbackURL?: string | undefined;
                     disableRedirect?: boolean | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
@@ -255,8 +255,8 @@ declare const genericOAuth: (options: GenericOAuthOptions) => {
                 method?: "GET" | undefined;
             } & {
                 query: {
-                    error?: string | undefined;
                     code?: string | undefined;
+                    error?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
                 };
@@ -288,13 +288,13 @@ declare const genericOAuth: (options: GenericOAuthOptions) => {
                     error_description: z.ZodOptional<z.ZodString>;
                     state: z.ZodOptional<z.ZodString>;
                 }, "strip", z.ZodTypeAny, {
-                    error?: string | undefined;
                     code?: string | undefined;
+                    error?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
                 }, {
-                    error?: string | undefined;
                     code?: string | undefined;
+                    error?: string | undefined;
                     error_description?: string | undefined;
                     state?: string | undefined;
                 }>;
@@ -328,8 +328,8 @@ declare const genericOAuth: (options: GenericOAuthOptions) => {
         oAuth2LinkAccount: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
-                    callbackURL: string;
                     providerId: string;
+                    callbackURL: string;
                     errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                 };
@@ -380,13 +380,13 @@ declare const genericOAuth: (options: GenericOAuthOptions) => {
                      */
                     errorCallbackURL: z.ZodOptional<z.ZodString>;
                 }, "strip", z.ZodTypeAny, {
-                    callbackURL: string;
                     providerId: string;
+                    callbackURL: string;
                     errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                 }, {
-                    callbackURL: string;
                     providerId: string;
+                    callbackURL: string;
                     errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                 }>;
@@ -394,11 +394,11 @@ declare const genericOAuth: (options: GenericOAuthOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
-                            token: string;
-                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
+                            expiresAt: Date;
+                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -406,9 +406,9 @@ declare const genericOAuth: (options: GenericOAuthOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
+                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
-                            name: string;
                             image?: string | null | undefined;
                         };
                     };
