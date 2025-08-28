@@ -66,6 +66,7 @@ export const getOrgAdapter = (
 					{
 						field: "email",
 						value: data.email,
+						mode: "insensitive",
 					},
 				],
 			});
