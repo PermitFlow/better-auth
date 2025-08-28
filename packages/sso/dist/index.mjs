@@ -950,7 +950,8 @@ const sso = (options) => {
             where: [
               {
                 field: "email",
-                value: userInfo.email
+                value: userInfo.email,
+                mode: "insensitive"
               }
             ]
           });
