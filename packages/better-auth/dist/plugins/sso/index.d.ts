@@ -1,7 +1,7 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
 import { O as OAuth2Tokens } from '../../shared/better-auth.R7C454Vo.js';
-import { U as User } from '../../shared/better-auth.Cn_Jnzzl.js';
+import { U as User } from '../../shared/better-auth.D8yupvwL.js';
 import '../../shared/better-auth.9XhOL8gb.js';
 import 'kysely';
 import 'better-sqlite3';
@@ -71,17 +71,17 @@ declare const sso: (options?: SSOOptions) => {
         createOIDCProvider: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
-                    providerId: string;
-                    domain: string;
                     clientId: string;
                     clientSecret: string;
                     issuer: string;
-                    authorizationEndpoint?: string | undefined;
-                    scopes?: string[] | undefined;
+                    providerId: string;
+                    domain: string;
                     pkce?: boolean | undefined;
+                    scopes?: string[] | undefined;
+                    authorizationEndpoint?: string | undefined;
                     tokenEndpoint?: string | undefined;
                     userInfoEndpoint?: string | undefined;
-                    tokenEndpointAuthentication?: "client_secret_post" | "client_secret_basic" | undefined;
+                    tokenEndpointAuthentication?: "client_secret_basic" | "client_secret_post" | undefined;
                     jwksEndpoint?: string | undefined;
                     discoveryEndpoint?: string | undefined;
                     mapping?: {
@@ -164,17 +164,17 @@ declare const sso: (options?: SSOOptions) => {
                     organizationId: z.ZodOptional<z.ZodString>;
                     overrideUserInfo: z.ZodOptional<z.ZodDefault<z.ZodBoolean>>;
                 }, "strip", z.ZodTypeAny, {
-                    providerId: string;
-                    domain: string;
                     clientId: string;
                     clientSecret: string;
                     issuer: string;
-                    authorizationEndpoint?: string | undefined;
-                    scopes?: string[] | undefined;
+                    providerId: string;
+                    domain: string;
                     pkce?: boolean | undefined;
+                    scopes?: string[] | undefined;
+                    authorizationEndpoint?: string | undefined;
                     tokenEndpoint?: string | undefined;
                     userInfoEndpoint?: string | undefined;
-                    tokenEndpointAuthentication?: "client_secret_post" | "client_secret_basic" | undefined;
+                    tokenEndpointAuthentication?: "client_secret_basic" | "client_secret_post" | undefined;
                     jwksEndpoint?: string | undefined;
                     discoveryEndpoint?: string | undefined;
                     mapping?: {
@@ -188,17 +188,17 @@ declare const sso: (options?: SSOOptions) => {
                     organizationId?: string | undefined;
                     overrideUserInfo?: boolean | undefined;
                 }, {
-                    providerId: string;
-                    domain: string;
                     clientId: string;
                     clientSecret: string;
                     issuer: string;
-                    authorizationEndpoint?: string | undefined;
-                    scopes?: string[] | undefined;
+                    providerId: string;
+                    domain: string;
                     pkce?: boolean | undefined;
+                    scopes?: string[] | undefined;
+                    authorizationEndpoint?: string | undefined;
                     tokenEndpoint?: string | undefined;
                     userInfoEndpoint?: string | undefined;
-                    tokenEndpointAuthentication?: "client_secret_post" | "client_secret_basic" | undefined;
+                    tokenEndpointAuthentication?: "client_secret_basic" | "client_secret_post" | undefined;
                     jwksEndpoint?: string | undefined;
                     discoveryEndpoint?: string | undefined;
                     mapping?: {
@@ -216,11 +216,11 @@ declare const sso: (options?: SSOOptions) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -228,9 +228,9 @@ declare const sso: (options?: SSOOptions) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -396,12 +396,12 @@ declare const sso: (options?: SSOOptions) => {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
                     callbackURL: string;
-                    email?: string | undefined;
-                    providerId?: string | undefined;
-                    errorCallbackURL?: string | undefined;
                     newUserCallbackURL?: string | undefined;
+                    errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
+                    email?: string | undefined;
+                    providerId?: string | undefined;
                     domain?: string | undefined;
                     organizationSlug?: string | undefined;
                 };
@@ -447,22 +447,22 @@ declare const sso: (options?: SSOOptions) => {
                     requestSignUp: z.ZodOptional<z.ZodBoolean>;
                 }, "strip", z.ZodTypeAny, {
                     callbackURL: string;
-                    email?: string | undefined;
-                    providerId?: string | undefined;
-                    errorCallbackURL?: string | undefined;
                     newUserCallbackURL?: string | undefined;
+                    errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
+                    email?: string | undefined;
+                    providerId?: string | undefined;
                     domain?: string | undefined;
                     organizationSlug?: string | undefined;
                 }, {
                     callbackURL: string;
-                    email?: string | undefined;
-                    providerId?: string | undefined;
-                    errorCallbackURL?: string | undefined;
                     newUserCallbackURL?: string | undefined;
+                    errorCallbackURL?: string | undefined;
                     scopes?: string[] | undefined;
                     requestSignUp?: boolean | undefined;
+                    email?: string | undefined;
+                    providerId?: string | undefined;
                     domain?: string | undefined;
                     organizationSlug?: string | undefined;
                 }>;
@@ -546,8 +546,8 @@ declare const sso: (options?: SSOOptions) => {
             } & {
                 query: {
                     state: string;
-                    code?: string | undefined;
                     error?: string | undefined;
+                    code?: string | undefined;
                     error_description?: string | undefined;
                 };
             } & {
@@ -579,13 +579,13 @@ declare const sso: (options?: SSOOptions) => {
                     error_description: z.ZodOptional<z.ZodString>;
                 }, "strip", z.ZodTypeAny, {
                     state: string;
-                    code?: string | undefined;
                     error?: string | undefined;
+                    code?: string | undefined;
                     error_description?: string | undefined;
                 }, {
                     state: string;
-                    code?: string | undefined;
                     error?: string | undefined;
+                    code?: string | undefined;
                     error_description?: string | undefined;
                 }>;
                 metadata: {

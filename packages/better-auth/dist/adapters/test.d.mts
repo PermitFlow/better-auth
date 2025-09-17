@@ -1,4 +1,4 @@
-import { B as BetterAuthOptions, a as Adapter } from '../shared/better-auth.CtaKr0Wt.mjs';
+import { B as BetterAuthOptions, a as Adapter } from '../shared/better-auth.E3L52tTa.mjs';
 import '../shared/better-auth.9XhOL8gb.mjs';
 import 'zod';
 import '../shared/better-auth.uZ__EClU.mjs';
