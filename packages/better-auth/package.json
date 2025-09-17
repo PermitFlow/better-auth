@@ -1,6 +1,6 @@
 {
   "name": "better-auth",
-  "version": "1.3.12",
+  "version": "1.3.14",
   "description": "The most comprehensive authentication library for TypeScript.",
   "type": "module",
   "license": "MIT",
@@ -672,7 +672,7 @@
     "@noble/hashes": "^1.6.1",
     "@simplewebauthn/browser": "^13.0.0",
     "@simplewebauthn/server": "^13.0.0",
-    "better-call": "^1.0.12",
+    "better-call": "1.0.19",
     "defu": "^6.1.4",
     "jose": "^6.0.11",
     "kysely": "^0.28.2",

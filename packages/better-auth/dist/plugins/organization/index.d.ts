@@ -1,7 +1,7 @@
 import { Role, AccessControl, Statements } from '../access/index.js';
 import { z, ZodLiteral } from 'zod';
 import * as better_call from 'better-call';
-import { G as GenericEndpointContext, S as Session, U as User, p as AuthContext } from '../../shared/better-auth.Cn_Jnzzl.js';
+import { G as GenericEndpointContext, S as Session, U as User, p as AuthContext } from '../../shared/better-auth.D8yupvwL.js';
 import { defaultRoles } from './access/index.js';
 export { adminAc, defaultAc, defaultStatements, memberAc, ownerAc } from './access/index.js';
 import '../../shared/better-auth.9XhOL8gb.js';
@@ -68,7 +68,7 @@ declare const invitationSchema: z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     id: string;
     email: string;
-    status: "accepted" | "canceled" | "rejected" | "pending";
+    status: "pending" | "accepted" | "rejected" | "canceled";
     expiresAt: Date;
     organizationId: string;
     role: string;
@@ -81,7 +81,7 @@ declare const invitationSchema: z.ZodObject<{
     role: string;
     inviterId: string;
     id?: string | undefined;
-    status?: "accepted" | "canceled" | "rejected" | "pending" | undefined;
+    status?: "pending" | "accepted" | "rejected" | "canceled" | undefined;
     teamId?: string | undefined;
 }>;
 declare const teamSchema: z.ZodObject<{
@@ -2303,7 +2303,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -2313,7 +2313,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;
@@ -2472,7 +2472,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -2482,7 +2482,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;
@@ -2595,7 +2595,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     invitation: {
                         id: string;
                         email: string;
-                        status: "accepted" | "canceled" | "rejected" | "pending";
+                        status: "pending" | "accepted" | "rejected" | "canceled";
                         expiresAt: Date;
                         organizationId: string;
                         role: string;
@@ -2615,7 +2615,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 invitation: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -2744,7 +2744,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     inviterEmail: string;
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -2757,7 +2757,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 inviterEmail: string;
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;
@@ -2870,7 +2870,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     invitation: {
                         id: string;
                         email: string;
-                        status: "accepted" | "canceled" | "rejected" | "pending";
+                        status: "pending" | "accepted" | "rejected" | "canceled";
                         expiresAt: Date;
                         organizationId: string;
                         role: string;
@@ -2883,7 +2883,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 invitation: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -3002,7 +3002,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -3012,7 +3012,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;
@@ -3939,7 +3939,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -3949,7 +3949,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;
@@ -5186,7 +5186,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -5196,7 +5196,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;
@@ -5355,7 +5355,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -5365,7 +5365,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;
@@ -5478,7 +5478,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     invitation: {
                         id: string;
                         email: string;
-                        status: "accepted" | "canceled" | "rejected" | "pending";
+                        status: "pending" | "accepted" | "rejected" | "canceled";
                         expiresAt: Date;
                         organizationId: string;
                         role: string;
@@ -5498,7 +5498,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 invitation: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -5627,7 +5627,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     inviterEmail: string;
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -5640,7 +5640,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 inviterEmail: string;
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;
@@ -5753,7 +5753,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                     invitation: {
                         id: string;
                         email: string;
-                        status: "accepted" | "canceled" | "rejected" | "pending";
+                        status: "pending" | "accepted" | "rejected" | "canceled";
                         expiresAt: Date;
                         organizationId: string;
                         role: string;
@@ -5766,7 +5766,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 invitation: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -5885,7 +5885,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -5895,7 +5895,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;
@@ -6822,7 +6822,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
                 response: {
                     id: string;
                     email: string;
-                    status: "accepted" | "canceled" | "rejected" | "pending";
+                    status: "pending" | "accepted" | "rejected" | "canceled";
                     expiresAt: Date;
                     organizationId: string;
                     role: string;
@@ -6832,7 +6832,7 @@ declare const organization: <O extends OrganizationOptions>(options?: O) => {
             } : {
                 id: string;
                 email: string;
-                status: "accepted" | "canceled" | "rejected" | "pending";
+                status: "pending" | "accepted" | "rejected" | "canceled";
                 expiresAt: Date;
                 organizationId: string;
                 role: string;

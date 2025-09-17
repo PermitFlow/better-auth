@@ -1,4 +1,4 @@
-import { H as HookEndpointContext, p as AuthContext } from '../../shared/better-auth.CtaKr0Wt.mjs';
+import { H as HookEndpointContext, p as AuthContext } from '../../shared/better-auth.E3L52tTa.mjs';
 import * as better_call from 'better-call';
 import { z } from 'zod';
 import '../../shared/better-auth.9XhOL8gb.mjs';

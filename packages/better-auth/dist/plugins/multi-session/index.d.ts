@@ -1,6 +1,6 @@
 import * as better_call from 'better-call';
 import { z } from 'zod';
-import { S as Session, U as User, H as HookEndpointContext } from '../../shared/better-auth.Cn_Jnzzl.js';
+import { S as Session, U as User, H as HookEndpointContext } from '../../shared/better-auth.D8yupvwL.js';
 import '../../shared/better-auth.9XhOL8gb.js';
 import '../../shared/better-auth.R7C454Vo.js';
 import 'kysely';
@@ -104,11 +104,11 @@ declare const multiSession: (options?: MultiSessionConfig) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -116,9 +116,9 @@ declare const multiSession: (options?: MultiSessionConfig) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };
@@ -195,11 +195,11 @@ declare const multiSession: (options?: MultiSessionConfig) => {
                     session: {
                         session: Record<string, any> & {
                             id: string;
+                            token: string;
+                            expiresAt: Date;
                             createdAt: Date;
                             updatedAt: Date;
                             userId: string;
-                            expiresAt: Date;
-                            token: string;
                             ipAddress?: string | null | undefined;
                             userAgent?: string | null | undefined;
                         };
@@ -207,9 +207,9 @@ declare const multiSession: (options?: MultiSessionConfig) => {
                             id: string;
                             email: string;
                             emailVerified: boolean;
-                            name: string;
                             createdAt: Date;
                             updatedAt: Date;
+                            name: string;
                             image?: string | null | undefined;
                         };
                     };

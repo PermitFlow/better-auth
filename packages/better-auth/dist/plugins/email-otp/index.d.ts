@@ -1,5 +1,5 @@
 import * as better_call from 'better-call';
-import { p as AuthContext, U as User, H as HookEndpointContext } from '../../shared/better-auth.Cn_Jnzzl.js';
+import { p as AuthContext, U as User, H as HookEndpointContext } from '../../shared/better-auth.D8yupvwL.js';
 import { z } from 'zod';
 import '../../shared/better-auth.9XhOL8gb.js';
 import '../../shared/better-auth.R7C454Vo.js';
@@ -89,8 +89,8 @@ declare const emailOTP: (options: EmailOTPOptions) => {
         createVerificationOTP: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
-                    email: string;
                     type: "sign-in" | "forget-password" | "email-verification";
+                    email: string;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -120,11 +120,11 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                     email: z.ZodString;
                     type: z.ZodEnum<["email-verification", "sign-in", "forget-password"]>;
                 }, "strip", z.ZodTypeAny, {
-                    email: string;
                     type: "sign-in" | "forget-password" | "email-verification";
+                    email: string;
                 }, {
-                    email: string;
                     type: "sign-in" | "forget-password" | "email-verification";
+                    email: string;
                 }>;
                 metadata: {
                     SERVER_ONLY: true;
@@ -156,8 +156,8 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                 method?: "GET" | undefined;
             } & {
                 query: {
-                    email: string;
                     type: "sign-in" | "forget-password" | "email-verification";
+                    email: string;
                 };
             } & {
                 params?: Record<string, any>;
@@ -191,11 +191,11 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                     email: z.ZodString;
                     type: z.ZodEnum<["email-verification", "sign-in", "forget-password"]>;
                 }, "strip", z.ZodTypeAny, {
-                    email: string;
                     type: "sign-in" | "forget-password" | "email-verification";
+                    email: string;
                 }, {
-                    email: string;
                     type: "sign-in" | "forget-password" | "email-verification";
+                    email: string;
                 }>;
                 metadata: {
                     SERVER_ONLY: true;
@@ -519,8 +519,8 @@ declare const emailOTP: (options: EmailOTPOptions) => {
         resetPasswordEmailOTP: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
-                    email: string;
                     password: string;
+                    email: string;
                     otp: string;
                 };
             } & {
@@ -556,12 +556,12 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                     otp: z.ZodString;
                     password: z.ZodString;
                 }, "strip", z.ZodTypeAny, {
-                    email: string;
                     password: string;
+                    email: string;
                     otp: string;
                 }, {
-                    email: string;
                     password: string;
+                    email: string;
                     otp: string;
                 }>;
                 metadata: {
@@ -594,8 +594,8 @@ declare const emailOTP: (options: EmailOTPOptions) => {
         sendVerificationOTP: {
             <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0: {
                 body: {
-                    email: string;
                     type: "sign-in" | "forget-password" | "email-verification";
+                    email: string;
                 };
             } & {
                 method?: "POST" | undefined;
@@ -629,11 +629,11 @@ declare const emailOTP: (options: EmailOTPOptions) => {
                     email: z.ZodString;
                     type: z.ZodEnum<["email-verification", "sign-in", "forget-password"]>;
                 }, "strip", z.ZodTypeAny, {
-                    email: string;
                     type: "sign-in" | "forget-password" | "email-verification";
+                    email: string;
                 }, {
-                    email: string;
                     type: "sign-in" | "forget-password" | "email-verification";
+                    email: string;
                 }>;
                 metadata: {
                     openapi: {
