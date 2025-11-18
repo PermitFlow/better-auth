@@ -1255,7 +1255,7 @@ export const sso = (options?: SSOOptions) => {
 						attributes: parsedResponse.extract.attributes,
 					};
 					if (!userInfo.email && !userInfo.id) {
-						throw new Error("Missing email or id in userInfo from identify provider.")
+						throw new Error(`Missing email or id in userInfo from identify provider. ${JSON.stringify(attributes)}`)
 					}
 
 					let user: User;
