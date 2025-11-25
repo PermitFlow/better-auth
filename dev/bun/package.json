@@ -14,7 +14,7 @@
   "dependencies": {
     "@noble/ciphers": "^0.6.0",
     "@types/better-sqlite3": "^7.6.12",
-    "better-auth": "https://gitpkg.now.sh/PermitFlow/better-auth/packages/better-auth?v1.3",
+    "better-auth": "https://gitpkg-lake.vercel.app/PermitFlow/better-auth/packages/better-auth?v1.3",
     "better-sqlite3": "^11.6.0",
     "pg": "^8.13.1"
   }
