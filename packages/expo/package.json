@@ -47,7 +47,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "better-auth": "https://gitpkg-lake.vercel.app/PermitFlow/better-auth/packages/better-auth?v1.3",
+    "better-auth": "https://gitpkg-lake.vercel.app/PermitFlow/better-auth/packages/better-auth?v1.3.17",
     "better-sqlite3": "^11.6.0",
     "expo-constants": "~17.0.8",
     "expo-crypto": "^13.0.2",
@@ -58,7 +58,7 @@
     "vitest": "^1.6.0"
   },
   "peerDependencies": {
-    "better-auth": "https://gitpkg-lake.vercel.app/PermitFlow/better-auth/packages/better-auth?v1.3"
+    "better-auth": "https://gitpkg-lake.vercel.app/PermitFlow/better-auth/packages/better-auth?v1.3.17"
   },
   "dependencies": {
     "@better-fetch/fetch": "^1.1.18",
