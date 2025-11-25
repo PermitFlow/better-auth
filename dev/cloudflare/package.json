@@ -8,7 +8,7 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"better-auth": "https://gitpkg-lake.vercel.app/PermitFlow/better-auth/packages/better-auth?v1.3",
+		"better-auth": "https://gitpkg-lake.vercel.app/PermitFlow/better-auth/packages/better-auth?v1.3.17",
 		"drizzle-orm": "^0.39.3",
 		"hono": "^4.7.2"
 	},
